@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "title": "A Fine-Grained Complexity View on Propositional Abduction - Algorithms and Lower Bounds",
+        "author": "Victor Lagerkvist, Mohamed Maizia, Johannes Schmidt",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/IJCAI.2025/508",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 2,
+        "title": "Facets in Argumentation: A Formal Approach to Argument Significance",
+        "author": "Johannes Klaus Fichte, Nicolas Frohlich, Markus Hecher, Victor Lagerkvist, Yasir Mahmood, Arne Meier, Jonathan Persson",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/IJCAI.2025/500",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 3,
+        "title": "The Richness of CSP Non-redundancy",
+        "author": "Joshua Brakensiek, Venkatesan Guruswami, Bart M. P. Jansen, Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2025",
+        "link": "https://doi.org/10.48550/ARXIV.2507.07942",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 4,
+        "title": "Complexity of Faceted Explanations in Propositional Abduction",
+        "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
+        "year": "2025",
+        "link": "https://doi.org/10.1017/S1471068425100215",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 5,
+        "title": "Going Beyond Twin-width? CSPs with Unbounded Domain and Few Variables",
+        "author": "Peter Jonsson, Victor Lagerkvist, Jorke M. de Vlas, Magnus Wahlstrom",
+        "year": "2025",
+        "link": "https://doi.org/10.48550/ARXIV.2508.16389",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 6,
+        "title": "Improved Bounds for Twin-Width Parameter Variants with Algorithmic Applications to Counting Graph Colorings",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2025",
+        "link": "https://doi.org/10.1007/S00224-025-10233-Y",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 7,
+        "title": "New Perspectives on Semiring Applications to Dynamic Programming",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2025",
+        "link": "https://doi.org/10.1016/j.dam.2025.12.035",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 8,
+        "title": "CSPs with Few Alien Constraints",
+        "author": "Peter Jonsson, Victor Lagerkvist, George Osipov",
+        "year": "2024",
+        "link": "https://doi.org/10.4230/LIPICS.CP.2024.15",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 9,
+        "title": "Solving Quantified Boolean Formulas with Few Existential Variables",
+        "author": "Leif Eriksson, Victor Lagerkvist, Sebastian Ordyniak, George Osipov, Fahad Panolan, Mateusz Rychlicki",
+        "year": "2024",
+        "link": "https://www.ijcai.org/proceedings/2024/209",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 10,
+        "title": "The Fine-Grained Complexity of Graph Homomorphism Problems: Towards the Okrasa and Rzazewski Conjecture",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2024",
+        "link": "https://doi.org/10.48550/ARXIV.2404.09798",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 11,
+        "title": "Solving Quantified Boolean Formulas with Few Existential Variables",
+        "author": "Leif Eriksson, Victor Lagerkvist, George Osipov, Sebastian Ordyniak, Fahad Panolan, Mateusz Rychlicki",
+        "year": "2024",
+        "link": "https://doi.org/10.48550/ARXIV.2405.06485",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 12,
+        "title": "Querying the Guarded Fragment with Transitivity",
+        "author": "Georg Gottlob, Andreas Pieris, Lidia Tendera",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-39212-2_27",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 13,
+        "title": "Efficient Evaluation of Large Abstractions for Decoupled Search",
+        "author": "Daniel Gnad, Silvan Sievers, Álvaro Torralba",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/icaps.v33i1.27188 ",
+        "is_real": true,
+        "group": "E"
+    },
+    {
+        "id": 14,
+        "title": "Complexity of Faced Explanation in Propositional Abduction.",
+        "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
+        "year": "2025",
+        "link": "",
+        "is_real": true,
+        "group": "E"
+    },
+    {
+        "id": 15,
+        "title": "Locked and Unlocked Polygonal Chains in 3D",
+        "author": "Therese Biedl, Erik D. Demaine",
+        "year": "1995",
+        "link": "",
+        "is_real": true,
+        "group": "E"
+    },
+    {
+        "id": 16,
+        "title": "Structure-Guided Query Evaluation: Towards Bridging the Gap from Theory to Practice.",
+        "author": "Georg Gottlob",
+        "year": "2023",
+        "link": "",
+        "is_real": true,
+        "group": "E"
+    },
+    {
+        "id": 17,
+        "title": "Breaking Symmetries in Quantified Graph Search: A Comparative Study.",
+        "author": "Mikolás Janota, Markus Kirchweger, Tomás Peitl, Stefan Szeider",
+        "year": "2025",
+        "link": "",
+        "is_real": true,
+        "group": "E"
+    },
+    {
+        "id": 18,
+        "title": "General Lower Bounds and Improved Algorithms for Infinite-Domain CSPs",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.1007/S00453-022-01017-8",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 19,
+        "title": "A Fast Algorithm for Consistency Checking Partially Ordered Time",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/212",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 20,
+        "title": "Improved Algorithms for Allen's Interval Algebra by Dynamic Programming with Sublinear Partitioning",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/213",
+        "is_real": true,
+        "group": "F"
+    }
+]

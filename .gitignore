@@ -1,0 +1,13 @@
+.env
+config.ini
+secrets.json
+
+__pycache__/
+
+venv/
+env/
+
+.DS_Store
+Thumbs.db
+*_results.json
+test.json

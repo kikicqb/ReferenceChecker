@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "title": "Counting and Reasoning with Plans",
+        "author": "David Speck, Markus Hecher, Daniel Gnad, Johannes Klaus Fichte, Augusto B. Correa",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/AAAI.V39I25.34871",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 2,
+        "title": "Efficient Evaluation of Large Abstractions for Decoupled Search: Merge-and-Shrink and Symbolic Pattern Databases",
+        "author": "Daniel Gnad, Silvan Sievers, Alvaro Torralba",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27188",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 3,
+        "title": "Planning over Integers: Compilations and Undecidability",
+        "author": "Daniel Gnad, Malte Helmert, Peter Jonsson, Alexander Shleyfman",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27189",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 4,
+        "title": "Finding Matrix Multiplication Algorithms with Classical Planning",
+        "author": "David Speck, Paul Hoft, Daniel Gnad, Jendrik Seipp",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27220",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 5,
+        "title": "Beyond Stars - Generalized Topologies for Decoupled Search",
+        "author": "Daniel Gnad, Alvaro Torralba, Daniel Fiser",
+        "year": "2022",
+        "link": "https://ojs.aaai.org/index.php/ICAPS/article/view/19791",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 6,
+        "title": "Model Checking omega-Regular Properties with Decoupled Search",
+        "author": "Daniel Gnad, Jan Eisenhut, Alberto Lluch-Lafuente, Jorg Hoffmann",
+        "year": "2021",
+        "link": "https://doi.org/10.1007/978-3-030-81688-9_19",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 7,
+        "title": "Custom-Design of FDR Encodings: The Case of Red-Black Planning",
+        "author": "Daniel Fiser, Daniel Gnad, Michael Katz, Jorg Hoffmann",
+        "year": "2021",
+        "link": "https://doi.org/10.24963/IJCAI.2021/558",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 8,
+        "title": "Stern-Topologie Entkoppelte Zustandsraumsuche",
+        "author": "Daniel Gnad",
+        "year": "2021",
+        "link": "https://dl.gi.de/handle/20.500.12116/39858",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 9,
+        "title": "Unchaining the Power of Partial Delete Relaxation, Part II: Finding Plans with Red-Black State Space Search",
+        "author": "Maximilian Fickert, Daniel Gnad, Jorg Hoffmann",
+        "year": "2018",
+        "link": "https://doi.org/10.24963/IJCAI.2018/660",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 10,
+        "title": "Star-Topology Decoupling in SPIN",
+        "author": "Daniel Gnad, Patrick Dubbert, Alberto Lluch-Lafuente, Jorg Hoffmann",
+        "year": "2018",
+        "link": "https://doi.org/10.1007/978-3-319-94111-0_6",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 11,
+        "title": "Symmetry Breaking in Star-Topology Decoupled Search",
+        "author": "Daniel Gnad, Alvaro Torralba, Alexander Shleyfman, Jorg Hoffmann",
+        "year": "2017",
+        "link": "https://aaai.org/ocs/index.php/ICAPS/ICAPS17/paper/view/15719",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 12,
+        "title": "Beyond Red-Black Planning: Limited-Memory State Variables",
+        "author": "Patrick Speicher, Marcel Steinmetz, Daniel Gnad, Jorg Hoffmann, Alfonso Gerevini",
+        "year": "2017",
+        "link": "https://aaai.org/ocs/index.php/ICAPS/ICAPS17/paper/view/15713",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 13,
+        "title": "A linear lower bound on index size for text retrieval",
+        "author": "Erik D. Demaine, Alejandro Lopez-Ortiz",
+        "year": "2003",
+        "link": "https://doi.org/10.1016/S0196-6774(03)00043-9",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 14,
+        "title": "Finding Hidden Independent Sets in Interval Graphs",
+        "author": "Therese Biedl, Brona Brejova, Erik D. Demaine, Angele M. Hamel, Alejandro Lopez-Ortiz, Tomas Vinar",
+        "year": "2003",
+        "link": "https://doi.org/10.1007/3-540-45071-8_20",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 15,
+        "title": "Marco Cadoli's work on nonmonotonic reasoning",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "2013",
+        "link": "https://doi.org/10.3233/IA-130040",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 16,
+        "title": "Strong partial clones and the time complexity of SAT problems",
+        "author": "Peter Jonsson, Victor Lagerkvist, Gustav Nordh, Bruno Zanuttini",
+        "year": "2017",
+        "link": "https://doi.org/10.1016/J.JCSS.2016.07.008",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 17,
+        "title": "Dataset of Random Reordered Encodings of Parity Problems",
+        "author": "Leroy Chew, Alexis de Colnet, Friedrich Slivovsky, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.5281/ZENODO.10391790",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 18,
+        "title": "Exploiting Partial Assignments for Efficient Evaluation of Answer Set Programs with External Source Access",
+        "author": "Thomas Eiter, Tobias Kaminski, Christoph Redl, Antonius Weinzierl",
+        "year": "2018",
+        "link": "https://doi.org/10.1613/JAIR.1.11221",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 19,
+        "title": "Reactive Policies with Planning for Action Languages",
+        "author": "Zeynep G. Saribatur, Thomas Eiter",
+        "year": "2016",
+        "link": "https://doi.org/10.1007/978-3-319-48758-8_30",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "id": 20,
+        "title": "04171 Abstracts Collection - Logic Based Information Agents",
+        "author": "Jurgen Dix, Thomas Eiter, Enrico Franconi",
+        "year": "2004",
+        "link": "http://drops.dagstuhl.de/opus/volltexte/2006/468/",
+        "is_real": true,
+        "group": "F"
+    }
+]

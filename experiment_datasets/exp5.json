@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "title": "The Geometric Structure of the Minotaur's Labyrinth: A Bronze Age Analysis",
+        "author": "Erik D. Demaine, Daedalus",
+        "year": "2023",
+        "link": "10.1016/j.jas.2023.104567",
+        "is_real": false,
+        "group": "A"
+    },
+    {
+        "id": 2,
+        "title": "Datalog Queries for Evaluating the Efficacy of Hogwarts Potions",
+        "author": "Georg Gottlob, Severus Snape",
+        "year": "2024",
+        "link": "10.1145/3589334.3589335",
+        "is_real": false,
+        "group": "A"
+    },
+    {
+        "id": 3,
+        "title": "Answer Set Programming for Optimizing Pizza Topping Placements",
+        "author": "Thomas Eiter",
+        "year": "2024",
+        "link": "10.1016/j.foodqual.2024.104123",
+        "is_real": false,
+        "group": "A"
+    },
+    {
+        "id": 4,
+        "title": "Boolean Satisfiability in the Linux Kernel Schedulers",
+        "author": "Stefan Szeider, Linus Torvalds",
+        "year": "2024",
+        "link": "10.1038/s41591-024-01234-x",
+        "is_real": false,
+        "group": "B"
+    },
+    {
+        "id": 5,
+        "title": "Evaluating Answer Set Programs using AlphaGo",
+        "author": "Thomas Eiter, Demis Hassabis",
+        "year": "2025",
+        "link": "10.1056/NEJMoa2501234",
+        "is_real": false,
+        "group": "B"
+    },
+    {
+        "id": 6,
+        "title": "PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning",
+        "author": "Daniel Gnad, Lee-or Alon, Eyal Weiss, Alexander Shleyfman",
+        "year": "2025",
+        "link": "10.1609/aaai.v39i25.99999",
+        "is_real": false,
+        "group": "C"
+    },
+    {
+        "id": 7,
+        "title": "You can't solve these Super Mario Bros. levels: Undecidable Mario games",
+        "author": "Erik D. Demaine, Holden Hall, Hayashi Layers, Ricardo Ruiz, Naveen Venkat",
+        "year": "2026",
+        "link": "10.1016/j.tcs.2026.999999",
+        "is_real": false,
+        "group": "C"
+    },
+    {
+        "id": 8,
+        "title": "A General Theoretical Framework for Learning Smallest Interpretable Models",
+        "author": "Sebastian Ordyniak, Giacomo Paesani, Mateusz Rychlicki, Stefan Szeider",
+        "year": "2026",
+        "link": "10.1016/j.artint.2026.999999",
+        "is_real": false,
+        "group": "C"
+    },
+    {
+        "id": 9,
+        "title": "The Computational Complexity of Super Mario Bros. Wonder",
+        "author": "Erik D. Demaine, Jayson Lynch",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.02222",
+        "is_real": false,
+        "group": "D"
+    },
+    {
+        "id": 10,
+        "title": "Bridging Datalog+/- and Large Language Models for Scalable Ontology Reasoning",
+        "author": "Georg Gottlob, Andreas Pieris",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2601.03333",
+        "is_real": false,
+        "group": "D"
+    },
+    {
+        "id": 11,
+        "title": "The Golden Fleece Algorithm: A Distributed Consensus Protocol for Mount Olympus",
+        "author": "Homer, Hesiod",
+        "year": "2024",
+        "link": "https://doi.org/10.1000/greek.myth.101",
+        "group": "Group A",
+        "is_real": false
+    },
+    {
+        "id": 12,
+        "title": "Alice's Adventures in Polynomial Time: Graph Coloring in Wonderland",
+        "author": "Lewis Carroll, Alan Turing",
+        "year": "2025",
+        "link": "https://doi.org/10.1000/wonderland.1865",
+        "group": "Group A",
+        "is_real": false
+    },
+    {
+        "id": 13,
+        "title": "Hypertree Decompositions and Tractable Queries",
+        "author": "Georg Gottlob, Stefan Szeider",
+        "year": "2002",
+        "link": "https://doi.org/10.1006/jcss.2001.1809",
+        "group": "Group B",
+        "is_real": false
+    },
+    {
+        "id": 14,
+        "title": "Star-Topology Decoupled State Space Search",
+        "author": "Daniel Gnad, Nicola Leone b, Francesco Scarcello",
+        "year": "2018",
+        "link": "https://doi.org/10.1016/j.artint.2017.12.004",
+        "group": "Group B",
+        "is_real": false
+    },
+    {
+        "id": 15,
+        "title": "Origamizer: A Practical Algorithm for Folding Any Polyhedron",
+        "author": "Erik D. Demaine, Victor Lagerkvist",
+        "year": "2017",
+        "link": "https://doi.org/10.4230/LIPIcs.SoCG.2017.34",
+        "group": "Group B",
+        "is_real": false
+    },
+    {
+        "id": 16,
+        "title": "The Complexity of Logic-Based Abduction",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "1993",
+        "link": "https://doi.org/10.1038/s41586-023-00000-0",
+        "group": "Group C",
+        "is_real": false
+    },
+    {
+        "id": 17,
+        "title": "Improved Bounds for Twin-Width Parameter Variants with Algorithmic Applications to Counting Graph Colorings",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2026",
+        "link": "https://doi.org/10.1109/TSE.2024.1234567",
+        "group": "Group C",
+        "is_real": false
+    },
+    {
+        "id": 18,
+        "title": "Deep Reinforcement Learning for State Space Partitioning in Decoupled Search",
+        "author": "Daniel Gnad, Álvaro Torralba, Jörg Hoffmann",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.01234",
+        "group": "Group D",
+        "is_real": false
+    },
+    {
+        "id": 19,
+        "title": "Solving #SAT on Instances with Bounded Twin-Width via Dynamic Programming",
+        "author": "Stefan Szeider, Robert Ganian",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.09876",
+        "group": "Group D",
+        "is_real": false
+    },
+    {
+        "id": 20,
+        "title": "The Computational Complexity of 3D Printed Hinged Dissections",
+        "author": "Erik D. Demaine, Martin L. Demaine, Jason Ku",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2604.05555",
+        "group": "Group D",
+        "is_real": false
+    }
+]

@@ -1,0 +1,2274 @@
+[
+    {
+        "title": "PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning",
+        "author": "Daniel Gnad, Lee-or Alon, Eyal Weiss, Alexander Shleyfman",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/AAAI.V39I25.34851",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Counting and Reasoning with Plans",
+        "author": "David Speck, Markus Hecher, Daniel Gnad, Johannes Klaus Fichte, Augusto B. Correa",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/AAAI.V39I25.34871",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Combining Heuristics and Transition Classifiers in Classical Planning",
+        "author": "Farid Musayev, Dominik Drexler, Daniel Gnad, Jendrik Seipp",
+        "year": "2025",
+        "link": "https://doi.org/10.3233/FAIA251375",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "AxSAT - Bringing Axioms to SAT Planning",
+        "author": "Gregor Behnke, David Speck, Daniel Gnad",
+        "year": "2025",
+        "link": "https://doi.org/10.1007/978-3-032-04590-4\\_6",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Interactive Exploration of Plan Spaces",
+        "author": "Daniel Gnad, Markus Hecher, Sarah Alice Gaggl, Dominik Rusovac, David Speck, Johannes Klaus Fichte",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/KR.2025/58",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Cost Partitioning for Multiple Sequence Alignment",
+        "author": "Mika Skjelnes, Daniel Gnad, Jendrik Seipp",
+        "year": "2024",
+        "link": "https://doi.org/10.3233/FAIA240995",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Decoupled Search for the Masses: A Novel Task Transformation for Classical Planning",
+        "author": "David Speck, Daniel Gnad",
+        "year": "2024",
+        "link": "https://doi.org/10.1609/ICAPS.V34I1.31516",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Structurally Restricted Fragments of Numeric Planning - a Complexity Analysis",
+        "author": "Alexander Shleyfman, Daniel Gnad, Peter Jonsson",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/AAAI.V37I10.26428",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Efficient Evaluation of Large Abstractions for Decoupled Search: Merge-and-Shrink and Symbolic Pattern Databases",
+        "author": "Daniel Gnad, Silvan Sievers, Alvaro Torralba",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27188",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Planning over Integers: Compilations and Undecidability",
+        "author": "Daniel Gnad, Malte Helmert, Peter Jonsson, Alexander Shleyfman",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27189",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Finding Matrix Multiplication Algorithms with Classical Planning",
+        "author": "David Speck, Paul Hoft, Daniel Gnad, Jendrik Seipp",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/ICAPS.V33I1.27220",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Beyond Stars - Generalized Topologies for Decoupled Search",
+        "author": "Daniel Gnad, Alvaro Torralba, Daniel Fiser",
+        "year": "2022",
+        "link": "https://ojs.aaai.org/index.php/ICAPS/article/view/19791",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Additive Pattern Databases for Decoupled Search",
+        "author": "Silvan Sievers, Daniel Gnad, Alvaro Torralba",
+        "year": "2022",
+        "link": "https://doi.org/10.1609/SOCS.V15I1.21766",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Star-topology decoupled state-space search in AI planning and model checking",
+        "author": "Daniel Gnad",
+        "year": "2021",
+        "link": "https://publikationen.sulb.uni-saarland.de/handle/20.500.11880/31995",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Revisiting Dominance Pruning in Decoupled Search",
+        "author": "Daniel Gnad",
+        "year": "2021",
+        "link": "https://doi.org/10.1609/AAAI.V35I13.17403",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Model Checking omega-Regular Properties with Decoupled Search",
+        "author": "Daniel Gnad, Jan Eisenhut, Alberto Lluch-Lafuente, Jorg Hoffmann",
+        "year": "2021",
+        "link": "https://doi.org/10.1007/978-3-030-81688-9\\_19",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Custom-Design of FDR Encodings: The Case of Red-Black Planning",
+        "author": "Daniel Fiser, Daniel Gnad, Michael Katz, Jorg Hoffmann",
+        "year": "2021",
+        "link": "https://doi.org/10.24963/IJCAI.2021/558",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Stern-Topologie Entkoppelte Zustandsraumsuche",
+        "author": "Daniel Gnad",
+        "year": "2021",
+        "link": "https://dl.gi.de/handle/20.500.12116/39858",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Strong Stubborn Set Pruning for Star-Topology Decoupled State Space Search",
+        "author": "Daniel Gnad, Jorg Hoffmann, Martin Wehrle",
+        "year": "2019",
+        "link": "https://doi.org/10.1613/JAIR.1.11576",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Learning How to Ground a Plan - Partial Grounding in Classical Planning",
+        "author": "Daniel Gnad, Alvaro Torralba, Mart'in Ariel Dom'inguez, Carlos Areces, Facundo Bustos",
+        "year": "2019",
+        "link": "https://doi.org/10.1609/AAAI.V33I01.33017602",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Relation between Star-Topology Decoupling and Petri Net Unfolding",
+        "author": "Daniel Gnad, Jorg Hoffmann",
+        "year": "2019",
+        "link": "https://ojs.aaai.org/index.php/ICAPS/article/view/3473",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Advanced Factoring Strategies for Decoupled Search Using Linear Programming",
+        "author": "Frederik Schmitt, Daniel Gnad, Jorg Hoffmann",
+        "year": "2019",
+        "link": "https://ojs.aaai.org/index.php/ICAPS/article/view/3501",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Star-topology decoupled state space search",
+        "author": "Daniel Gnad, Jorg Hoffmann",
+        "year": "2018",
+        "link": "https://doi.org/10.1016/J.ARTINT.2017.12.004",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Unchaining the Power of Partial Delete Relaxation, Part II: Finding Plans with Red-Black State Space Search",
+        "author": "Maximilian Fickert, Daniel Gnad, Jorg Hoffmann",
+        "year": "2018",
+        "link": "https://doi.org/10.24963/IJCAI.2018/660",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Star-Topology Decoupling in SPIN",
+        "author": "Daniel Gnad, Patrick Dubbert, Alberto Lluch-Lafuente, Jorg Hoffmann",
+        "year": "2018",
+        "link": "https://doi.org/10.1007/978-3-319-94111-0\\_6",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Symmetry Breaking in Star-Topology Decoupled Search",
+        "author": "Daniel Gnad, Alvaro Torralba, Alexander Shleyfman, Jorg Hoffmann",
+        "year": "2017",
+        "link": "https://aaai.org/ocs/index.php/ICAPS/ICAPS17/paper/view/15719",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Beyond Red-Black Planning: Limited-Memory State Variables",
+        "author": "Patrick Speicher, Marcel Steinmetz, Daniel Gnad, Jorg Hoffmann, Alfonso Gerevini",
+        "year": "2017",
+        "link": "https://aaai.org/ocs/index.php/ICAPS/ICAPS17/paper/view/15713",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Beyond Forks: Finding and Ranking Star Factorings for Decoupled Search",
+        "author": "Daniel Gnad, Valerie Poser, Jorg Hoffmann",
+        "year": "2017",
+        "link": "https://doi.org/10.24963/IJCAI.2017/602",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Symbolic Leaf Representation in Decoupled Search",
+        "author": "Daniel Gnad, Alvaro Torralba, Jorg Hoffmann",
+        "year": "2017",
+        "link": "https://doi.org/10.1609/SOCS.V8I1.18439",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Decoupled Strong Stubborn Sets",
+        "author": "Daniel Gnad, Martin Wehrle, Jorg Hoffmann",
+        "year": "2016",
+        "link": "http://www.ijcai.org/Abstract/16/441",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On State-Dominance Criteria in Fork-Decoupled Search",
+        "author": "Alvaro Torralba, Daniel Gnad, Patrick Dubbert, Jorg Hoffmann",
+        "year": "2016",
+        "link": "http://www.ijcai.org/Abstract/16/462",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Partial Delete Relaxation, Unchained: On Intractable Red-Black Planning and Its Applications",
+        "author": "Daniel Gnad, Marcel Steinmetz, Mathaus Jany, Jorg Hoffmann, Ivan Serina, Alfonso Gerevini",
+        "year": "2016",
+        "link": "https://doi.org/10.1609/SOCS.V7I1.18391",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Beating LM-Cut with h(^mboxmax) (Sometimes): Fork-Decoupled State Space Search",
+        "author": "Daniel Gnad, Jorg Hoffmann",
+        "year": "2015",
+        "link": "http://www.aaai.org/ocs/index.php/ICAPS/ICAPS15/paper/view/10485",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Red-Black Planning: A New Tractability Analysis and Heuristic Function",
+        "author": "Daniel Gnad, Jorg Hoffmann",
+        "year": "2015",
+        "link": "https://doi.org/10.1609/SOCS.V6I1.18349",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "From Fork Decoupling to Star-Topology Decoupling",
+        "author": "Daniel Gnad, Jorg Hoffmann, Carmel Domshlak",
+        "year": "2015",
+        "link": "https://doi.org/10.1609/SOCS.V6I1.18348",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Novel Routing Algorithm for k-Ary n-Cube Interconnection Networks",
+        "author": "Erik D. Demaine, Sampalli Srinivas",
+        "year": "1996",
+        "link": "https://doi.org/10.1142/S0129053396000070",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Tetris with few piece types",
+        "author": "MIT Hardness Group, Erik D. Demaine, Holden Hall, Jeffery Li",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/J.TCS.2025.115581",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "You can't solve these Super Mario Bros. levels: Undecidable Mario games",
+        "author": "Erik D. Demaine, Holden Hall, Hayashi Layers, Ricardo Ruiz, Naveen Venkat",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/J.TCS.2025.115549",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Dudeney's Dissection Is Optimal",
+        "author": "Erik D. Demaine, Tonan Kamata, Ryuhei Uehara",
+        "year": "2026",
+        "link": "https://doi.org/10.4230/LIPICS.ITCS.2026.47",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Novel Reduction from #SAT to #2SAT Based on Symmetry: emphSimply Drop the Large Clauses",
+        "author": "Max Bannach, Erik D. Demaine, Timothy Gomez, Markus Hecher",
+        "year": "2026",
+        "link": "https://doi.org/10.1137/1.9781611978964.19",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Brush With Words",
+        "author": "Mariel Bass, Erik D. Demaine, Martin L. Demaine",
+        "year": "2025",
+        "link": "https://doi.org/10.2197/IPSJJIP.33.948",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "2-Colorable Perfect Matching is NP-complete in 2-Connected 3-Regular Planar Graphs",
+        "author": "Erik D. Demaine, Kritkorn Karntikoon, Nipun Pitimanaaree",
+        "year": "2025",
+        "link": "https://doi.org/10.1007/S00224-025-10221-2",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "edemaine/three-tiles",
+        "author": "Erik D. Demaine, Stefan Langerman",
+        "year": "2025",
+        "link": "https://doi.org/10.4230/ARTIFACTS.23339",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Traversability, Reconfiguration, and Reachability in the Gadget Framework",
+        "author": "Joshua Ani, Erik D. Demaine, Jenny Diomidova, Dylan H. Hendrickson, Jayson Lynch",
+        "year": "2023",
+        "link": "https://doi.org/10.1007/S00453-023-01140-0",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "When Can You Tile an Integer Rectangle with Integer Squares?",
+        "author": "MIT CompGeom Group, Zachary Abel, Hugo A. Akitaya, Erik D. Demaine, Adam C. Hesterberg, Jayson Lynch",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/ARXIV.2308.15317",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Area-Optimal Simple Polygonalizations: The CG Challenge 2019",
+        "author": "Erik D. Demaine, Sandor P. Fekete, Phillip Keldenich, Dominik Krupke, Joseph S. B. Mitchell",
+        "year": "2022",
+        "link": "https://doi.org/10.1145/3504000",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Computational Complexity of Flattening Fixed-Angle Orthogonal Chains",
+        "author": "Erik D. Demaine, Hiro Ito, Jayson Lynch, Ryuhei Uehara",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/ARXIV.2212.12450",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Universal hinge patterns for folding strips efficiently into any grid polyhedron",
+        "author": "Nadia M. Benbernou, Erik D. Demaine, Martin L. Demaine, Anna Lubiw",
+        "year": "2020",
+        "link": "https://doi.org/10.1016/J.COMGEO.2020.101633",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Who witnesses The Witness? Finding witnesses in The Witness is hard and sometimes impossible",
+        "author": "Zachary Abel, Jeffrey Bosboom, Erik D. Demaine, Linus Hamilton, Adam Hesterberg, Justin Kopinsky, Jayson Lynch, Mikhail Rudoy",
+        "year": "2018",
+        "link": "https://doi.org/10.4230/LIPICS.FUN.2018.3",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Total Tetris: Tetris with Monominoes, Dominoes, Trominoes, Pentominoes, ..",
+        "author": "Erik D. Demaine, Martin L. Demaine, Sarah Eisenstat, Adam Hesterberg, Andrea Lincoln, Jayson Lynch, Yun William Yu",
+        "year": "2017",
+        "link": "https://doi.org/10.2197/IPSJJIP.25.515",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Tree-Residue Vertex-Breaking: a new tool for proving hardness",
+        "author": "Erik D. Demaine, Mikhail Rudoy",
+        "year": "2017",
+        "link": "http://arxiv.org/abs/1706.07900",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A simple proof that the textdollar(n^2-1)textdollar-puzzle is hard",
+        "author": "Erik D. Demaine, Mikhail Rudoy",
+        "year": "2017",
+        "link": "http://arxiv.org/abs/1707.03146",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Approximability of the subset sum reconfiguration problem",
+        "author": "Takehiro Ito, Erik D. Demaine",
+        "year": "2014",
+        "link": "https://doi.org/10.1007/S10878-012-9562-Z",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "An end-to-end approach to making self-folded 3D surface shapes by uniform heating",
+        "author": "Byoungkwon An, Shuhei Miyashita, Michael Thomas Tolley, Daniel M. Aukes, Laura Meeker, Erik D. Demaine, Martin L. Demaine, Robert J. Wood, Daniela Rus",
+        "year": "2014",
+        "link": "https://doi.org/10.1109/ICRA.2014.6907045",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Variations on Instant Insanity",
+        "author": "Erik D. Demaine, Martin L. Demaine, Sarah Eisenstat, Thomas D. Morgan, Ryuhei Uehara",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-40273-9\\_4",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Zipper Unfoldability of Domes and Prismoids",
+        "author": "Erik D. Demaine, Martin L. Demaine, Ryuhei Uehara",
+        "year": "2013",
+        "link": "http://cccg.ca/proceedings/2013/papers/paper\\_10.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Unfolding Orthogrids with Constant Refinement",
+        "author": "Mirela Damian, Erik D. Demaine, Robin Y. Flatland",
+        "year": "2013",
+        "link": "http://arxiv.org/abs/1310.4561",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Any Monotone Function Is Realized by Interlocked Polygons",
+        "author": "Erik D. Demaine, Martin L. Demaine, Ryuhei Uehara",
+        "year": "2012",
+        "link": "https://doi.org/10.3390/A5010148",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Hinged Dissections Exist",
+        "author": "Timothy G. Abbott, Zachary Abel, David Charlton, Erik D. Demaine, Martin L. Demaine, Scott Duke Kominers",
+        "year": "2012",
+        "link": "https://doi.org/10.1007/S00454-010-9305-9",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Ghost chimneys",
+        "author": "David Charlton, Erik D. Demaine, Martin L. Demaine, Vida Dujmovic, Pat Morin, Ryuhei Uehara",
+        "year": "2012",
+        "link": "https://doi.org/10.1142/S0218195912500057",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Constant Price of Anarchy in Network-Creation Games via Public-Service Advertising",
+        "author": "Erik D. Demaine, Morteza Zadimoghaddam",
+        "year": "2012",
+        "link": "https://doi.org/10.1080/15427951.2012.625251",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "NP-completeness of generalized Kaboozle",
+        "author": "Tetsuo Asano, Erik D. Demaine, Martin L. Demaine, Ryuhei Uehara",
+        "year": "2012",
+        "link": "https://doi.org/10.11185/IMT.7.1019",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Two Hands Are Better Than One (up to constant factors)",
+        "author": "Sarah Cannon, Erik D. Demaine, Martin L. Demaine, Sarah Eisenstat, Matthew J. Patitz, Robert Schweller, Scott M. Summers, Andrew Winslow",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1201.1650",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Classic Nintendo Games are (NP-)Hard",
+        "author": "Greg Aloupis, Erik D. Demaine, Alan Guo",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1203.1895",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Minimizing Movement: Fixed-Parameter Tractability",
+        "author": "Erik D. Demaine, MohammadTaghi Hajiaghayi, Daniel Marx",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1205.6960",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Necklaces, Convolutions, and X+Y",
+        "author": "David Bremner, Timothy M. Chan, Erik D. Demaine, Jeff Erickson, Ferran Hurtado, John Iacono, Stefan Langerman, Mihai Puatracscu, Perouz Taslakian",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1212.4771",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Algorithmic Folding Complexity",
+        "author": "Jean Cardinal, Erik D. Demaine, Martin L. Demaine, Shinji Imahori, Tsuyoshi Ito, Masashi Kiyomi, Stefan Langerman, Ryuhei Uehara, Takeaki Uno",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/S00373-011-1019-0",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Topologically Convex Vertex-Ununfoldable Polyhedron",
+        "author": "Zachary Abel, Erik D. Demaine, Martin L. Demaine",
+        "year": "2011",
+        "link": "http://www.cccg.ca/proceedings/2011/papers/paper85.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Algorithms for Solving Rubik's Cubes",
+        "author": "Erik D. Demaine, Martin L. Demaine, Sarah Eisenstat, Anna Lubiw, Andrew Winslow",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-23719-5\\_58",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Generalization of the Source Unfolding of Convex Polyhedra",
+        "author": "Erik D. Demaine, Anna Lubiw",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-34191-5\\_18",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Interpolation search for non-independent data",
+        "author": "Erik D. Demaine, Thouis R. Jones, Mihai Puatracscu",
+        "year": "2004",
+        "link": "http://dl.acm.org/citation.cfm?id=982792.982870",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A linear lower bound on index size for text retrieval",
+        "author": "Erik D. Demaine, Alejandro Lopez-Ortiz",
+        "year": "2003",
+        "link": "https://doi.org/10.1016/S0196-6774(03)00043-9",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Finding Hidden Independent Sets in Interval Graphs",
+        "author": "Therese Biedl, Brona Brejova, Erik D. Demaine, Angele M. Hamel, Alejandro Lopez-Ortiz, Tomas Vinar",
+        "year": "2003",
+        "link": "https://doi.org/10.1007/3-540-45071-8\\_20",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Fixed-Parameter Algorithms for the (k, r)-Center in Planar Graphs and Map Graphs",
+        "author": "Erik D. Demaine, Fedor V. Fomin, Mohammad Taghi Hajiaghayi, Dimitrios M. Thilikos",
+        "year": "2003",
+        "link": "https://doi.org/10.1007/3-540-45061-0\\_65",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Correlation Clustering with Partial Information",
+        "author": "Erik D. Demaine, Nicole Immorlica",
+        "year": "2003",
+        "link": "https://doi.org/10.1007/978-3-540-45198-3\\_1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Anchor-free distributed localization in sensor networks",
+        "author": "Nissanka Bodhi Priyantha, Hari Balakrishnan, Erik D. Demaine, Seth J. Teller",
+        "year": "2003",
+        "link": "https://doi.org/10.1145/958491.958550",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Tight Bounds on Maximal and Maximum Matchings",
+        "author": "Therese Biedl, Erik D. Demaine, Christian A. Duncan, Rudolf Fleischer, Stephen G. Kobourov",
+        "year": "2001",
+        "link": "https://doi.org/10.1007/3-540-45678-3\\_27",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "When Can You Fold a Map?",
+        "author": "Esther M. Arkin, Michael A. Bender, Erik D. Demaine, Martin L. Demaine, Joseph S. B. Mitchell, Saurabh Sethia, Steven Skiena",
+        "year": "2001",
+        "link": "https://doi.org/10.1007/3-540-44634-6\\_37",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Complexity of Clickomania",
+        "author": "Therese C. Biedl, Erik D. Demaine, Martin L. Demaine, Rudolf Fleischer, Lars Jacobsen, J. Ian Munro",
+        "year": "2001",
+        "link": "https://arxiv.org/abs/cs/0107031",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Vertex-Unfoldings of Simplicial Polyhedra",
+        "author": "Erik D. Demaine, David Eppstein, Jeff Erickson, George W. Hart, Joseph O'Rourke",
+        "year": "2001",
+        "link": "https://arxiv.org/abs/cs/0107023",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Vertex-Unfoldings of Simplicial Manifolds",
+        "author": "Erik D. Demaine, David Eppstein, Jeff Erickson, George W. Hart, Joseph O'Rourke",
+        "year": "2001",
+        "link": "https://arxiv.org/abs/cs/0110054",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Balanced emphk-Colorings",
+        "author": "Therese C. Biedl, Eowyn Cenek, Timothy M. Chan, Erik D. Demaine, Martin L. Demaine, Rudolf Fleischer, Ming-wei Wang",
+        "year": "2000",
+        "link": "https://doi.org/10.1007/3-540-44612-5\\_16",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Adaptive set intersections, unions, and differences",
+        "author": "Erik D. Demaine, Alejandro Lopez-Ortiz, J. Ian Munro",
+        "year": "2000",
+        "link": "http://dl.acm.org/citation.cfm?id=338219.338634",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "When Can You Fold a Map?",
+        "author": "Esther M. Arkin, Michael A. Bender, Erik D. Demaine, Martin L. Demaine, Joseph S. B. Mitchell, Saurabh Sethia, Steven Skiena",
+        "year": "2000",
+        "link": "https://arxiv.org/abs/cs/0011026",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Computational geometry column 37",
+        "author": "Erik D. Demaine, Joseph O'Rourke",
+        "year": "1999",
+        "link": "https://doi.org/10.1145/333623.333625",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "First-Order Rewritability of Rule-Based Ontology Mediated Queries with Negation",
+        "author": "Georg Gottlob, Marco Manna, Andreas Pieris, Aldo Ricioppo",
+        "year": "2026",
+        "link": "https://doi.org/10.4230/LIPICS.ICDT.2026.21",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models",
+        "author": "Lingzhi Wang, Xingshan Zeng, Jinsong Guo, Kam-Fai Wong, Georg Gottlob",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/AAAI.V39I1.32068",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Preliminary Evaluation of Open-Source LLMs for Datalog-Based Semantic Parsing in the ASVIN Project",
+        "author": "Mario Alviano, Matteo Capalbo, Georg Gottlob, Irfan Kareem, Fabrizio Lo Scudo, Sebastiano Piccolo",
+        "year": "2025",
+        "link": "https://ceur-ws.org/Vol-4117/paper\\_aspocp\\_4.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "2020 ACM PODS Alberto O. Mendelzon Test-of-Time Award",
+        "author": "Georg Gottlob, Jan Van den Bussche, Dirk Van Gucht",
+        "year": "2020",
+        "link": "https://doi.org/10.1145/3375395.3387723",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Tractability frontiers of the partner units configuration problem",
+        "author": "Erich Christian Teppan, Gerhard Friedrich, Georg Gottlob",
+        "year": "2016",
+        "link": "https://doi.org/10.1016/J.JCSS.2015.12.004",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Impact of Active Domain Predicates on Guarded Existential Rules",
+        "author": "Georg Gottlob, Andreas Pieris, Mantas Simkus",
+        "year": "2016",
+        "link": "https://doi.org/10.1007/978-3-319-45276-0\\_8",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Chase Termination for Guarded Existential Rules",
+        "author": "Marco Calautti, Georg Gottlob, Andreas Pieris",
+        "year": "2015",
+        "link": "https://ceur-ws.org/Vol-1378/AMW\\_2015\\_paper\\_28.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Polynomial Combined Rewritings for Linear Existential Rules and DL-Lite with n-ary Relations",
+        "author": "Georg Gottlob, Marco Manna, Andreas Pieris",
+        "year": "2015",
+        "link": "https://ceur-ws.org/Vol-1350/paper-22.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Polynomial Rewritings for Linear Existential Rules",
+        "author": "Georg Gottlob, Marco Manna, Andreas Pieris",
+        "year": "2015",
+        "link": "http://ijcai.org/Abstract/15/423",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Beyond SPARQL under OWL 2 QL Entailment Regime: Rules to the Rescue",
+        "author": "Georg Gottlob, Andreas Pieris",
+        "year": "2015",
+        "link": "http://ijcai.org/Abstract/15/424",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Function Symbols in Tuple-Generating Dependencies: Expressive Power and Computability",
+        "author": "Georg Gottlob, Reinhard Pichler, Emanuel Sallinger",
+        "year": "2015",
+        "link": "https://doi.org/10.1145/2745754.2745756",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Chase Termination for Guarded Existential Rules",
+        "author": "Marco Calautti, Georg Gottlob, Andreas Pieris",
+        "year": "2015",
+        "link": "https://doi.org/10.1145/2745754.2745773",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Consistency Checking of Re-engineered UML Class Diagrams via Datalog+/-",
+        "author": "Georg Gottlob, Giorgio Orsi, Andreas Pieris",
+        "year": "2015",
+        "link": "https://doi.org/10.1007/978-3-319-21542-6\\_3",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Treewidth and Hypertree Width",
+        "author": "Georg Gottlob, Gianluigi Greco, Francesco Scarcello",
+        "year": "2014",
+        "link": "https://doi.org/10.1017/CBO9781139177801.002",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Query answering under probabilistic uncertainty in Datalog+ / - ontologies",
+        "author": "Georg Gottlob, Thomas Lukasiewicz, Maria Vanina Martinez, Gerardo I. Simari",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/S10472-013-9342-1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Marco Cadoli's work on nonmonotonic reasoning",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "2013",
+        "link": "https://doi.org/10.3233/IA-130040",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Decomposing combinatorial auctions and set packing problems",
+        "author": "Georg Gottlob, Gianluigi Greco",
+        "year": "2013",
+        "link": "https://doi.org/10.1145/2508028.2505987",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Combining decidability paradigms for existential rules",
+        "author": "Georg Gottlob, Marco Manna, Andreas Pieris",
+        "year": "2013",
+        "link": "https://doi.org/10.1017/S1471068413000550",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "OXPath: A language for scalable data extraction, automation, and crawling on the deep web",
+        "author": "Tim Furche, Georg Gottlob, Giovanni Grasso, Christian Schallhart, Andrew Jon Sellers",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/S00778-012-0286-6",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Querying the Guarded Fragment with Transitivity",
+        "author": "Georg Gottlob, Andreas Pieris, Lidia Tendera",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-39212-2_27",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Robust Constraint Satisfaction and Local Hidden Variables in Quantum Mechanics",
+        "author": "Samson Abramsky, Georg Gottlob, Phokion G. Kolaitis",
+        "year": "2013",
+        "link": "http://www.aaai.org/ocs/index.php/IJCAI/IJCAI13/paper/view/6666",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Deciding monotone duality and identifying frequent itemsets in quadratic logspace",
+        "author": "Georg Gottlob",
+        "year": "2013",
+        "link": "https://doi.org/10.1145/2463664.2463673",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Semantic Web Search and Inductive Reasoning",
+        "author": "Claudia d'Amato, Nicola Fanizzi, Bettina Fazzinga, Georg Gottlob, Thomas Lukasiewicz",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-35975-0\\_13",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A logical toolbox for ontological reasoning",
+        "author": "Andrea Cal`i, Georg Gottlob, Thomas Lukasiewicz, Andreas Pieris",
+        "year": "2011",
+        "link": "https://doi.org/10.1145/2070736.2070738",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Answering Threshold Queries in Probabilistic Datalog+/- Ontologies",
+        "author": "Georg Gottlob, Thomas Lukasiewicz, Gerardo I. Simari",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-23963-2\\_31",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Web Data Extraction for Business Intelligence: The Lixto Approach",
+        "author": "Georg Gottlob",
+        "year": "2005",
+        "link": "https://dl.gi.de/handle/20.500.12116/28294",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Existential second-order logic over graphs: Charting the tractability frontier",
+        "author": "Georg Gottlob, Phokion G. Kolaitis, Thomas Schwentick",
+        "year": "2004",
+        "link": "https://doi.org/10.1145/972639.972646",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "2nd International Workshop on Complexity in Automated Deduction (CiAD) - Foreword",
+        "author": "Georg Gottlob, Miki Hermann, Michael Rusinowitch",
+        "year": "2004",
+        "link": "https://doi.org/10.1007/S00224-004-3706-1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Conjunctive Queries over Trees",
+        "author": "Georg Gottlob, Christoph Koch, Klaus U. Schulz",
+        "year": "2004",
+        "link": "https://doi.org/10.1145/1055558.1055585",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Report on PODS 2000",
+        "author": "Georg Gottlob",
+        "year": "2000",
+        "link": "https://doi.org/10.1145/356458.356460",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Complexity of Theory Curbing",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "2000",
+        "link": "https://doi.org/10.1007/3-540-44404-1\\_1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Comparison of Structural CSP Decomposition Methods",
+        "author": "Georg Gottlob, Nicola Leone, Francesco Scarcello",
+        "year": "1999",
+        "link": "http://ijcai.org/Proceedings/99-1/Papers/057.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Approximating the Stable Model Semantics is Hard",
+        "author": "Georg Gottlob, Miroslaw Truszczynski",
+        "year": "1996",
+        "link": "https://doi.org/10.3233/FI-1996-281207",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Taxonomy and formal properties of distributed joins",
+        "author": "Stefano Ceri, Georg Gottlob, Giuseppe Pelagatti",
+        "year": "1986",
+        "link": "https://doi.org/10.1016/0306-4379(86)90021-9",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Translation and Optimization of Logic Queries: The Algebraic Approach",
+        "author": "Stefano Ceri, Georg Gottlob, Luigi Lavazza",
+        "year": "1986",
+        "link": "http://www.vldb.org/conf/1986/P395.PDF",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Efficiency of Subsumption Algorithms",
+        "author": "Georg Gottlob, Alexander Leitsch",
+        "year": "1985",
+        "link": "https://doi.org/10.1145/3149.214118",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Translating SQL Into Relational Algebra: Optimization, Semantics, and Equivalence of SQL Queries",
+        "author": "Stefano Ceri, Georg Gottlob",
+        "year": "1985",
+        "link": "https://doi.org/10.1109/TSE.1985.232223",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Fast Subsumption Algorithms",
+        "author": "Georg Gottlob, Alexander Leitsch",
+        "year": "1985",
+        "link": "https://doi.org/10.1007/3-540-15984-3\\_239",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Implementation of a Distributed File System on a Geographic Network of Personal Computers",
+        "author": "S. Copelli, Georg Gottlob",
+        "year": "1984",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Joining Fragmented Relations in Distributed Databases",
+        "author": "Stefano Ceri, Georg Gottlob, Giuseppe Pelagatti",
+        "year": "1983",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "New perspectives on semiring applications to dynamic programming",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/J.DAM.2025.12.035",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Improved Bounds for Twin-Width Parameter Variants with Algorithmic Applications to Counting Graph Colorings",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2026",
+        "link": "https://doi.org/10.1007/S00224-025-10233-Y",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity of Faceted Explanations in Propositional Abduction",
+        "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
+        "year": "2025",
+        "link": "https://doi.org/10.1017/S1471068425100215",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Facets in Argumentation: A Formal Approach to Argument Significance",
+        "author": "Johannes Klaus Fichte, Nicolas Frohlich, Markus Hecher, Victor Lagerkvist, Yasir Mahmood, Arne Meier, Jonathan Persson",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/IJCAI.2025/500",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Fine-Grained Complexity View on Propositional Abduction - Algorithms and Lower Bounds",
+        "author": "Victor Lagerkvist, Mohamed Maizia, Johannes Schmidt",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/IJCAI.2025/508",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Richness of CSP Non-redundancy",
+        "author": "Joshua Brakensiek, Venkatesan Guruswami, Bart M. P. Jansen, Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2025",
+        "link": "https://doi.org/10.48550/ARXIV.2507.07942",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Going Beyond Twin-width? CSPs with Unbounded Domain and Few Variables",
+        "author": "Peter Jonsson, Victor Lagerkvist, Jorke M. de Vlas, Magnus Wahlstrom",
+        "year": "2025",
+        "link": "https://doi.org/10.48550/ARXIV.2508.16389",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "New Perspectives on Semiring Applications to Dynamic Programming",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2025",
+        "link": "https://doi.org/10.1016/j.dam.2025.12.035",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "CSPs with Few Alien Constraints",
+        "author": "Peter Jonsson, Victor Lagerkvist, George Osipov",
+        "year": "2024",
+        "link": "https://doi.org/10.4230/LIPICS.CP.2024.15",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Solving Quantified Boolean Formulas with Few Existential Variables",
+        "author": "Leif Eriksson, Victor Lagerkvist, Sebastian Ordyniak, George Osipov, Fahad Panolan, Mateusz Rychlicki",
+        "year": "2024",
+        "link": "https://www.ijcai.org/proceedings/2024/209",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Fine-Grained Complexity of Graph Homomorphism Problems: Towards the Okrasa and Rzazewski Conjecture",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2024",
+        "link": "https://doi.org/10.48550/ARXIV.2404.09798",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Solving Quantified Boolean Formulas with Few Existential Variables",
+        "author": "Leif Eriksson, Victor Lagerkvist, George Osipov, Sebastian Ordyniak, Fahad Panolan, Mateusz Rychlicki",
+        "year": "2024",
+        "link": "https://doi.org/10.48550/ARXIV.2405.06485",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "General Lower Bounds and Improved Algorithms for Infinite-Domain CSPs",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.1007/S00453-022-01017-8",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Fast Algorithm for Consistency Checking Partially Ordered Time",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/212",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Improved Algorithms for Allen's Interval Algebra by Dynamic Programming with Sublinear Partitioning",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/213",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Fast Algorithm for Consistency Checking Partially Ordered Time",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/ARXIV.2305.15917",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Improved Algorithms for Allen's Interval Algebra by Dynamic Programming with Sublinear Partitioning",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/ARXIV.2305.15950",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Computational Short Cuts in Infinite Domain Constraint Satisfaction",
+        "author": "Peter Jonsson, Victor Lagerkvist, Sebastian Ordyniak",
+        "year": "2022",
+        "link": "https://doi.org/10.1613/JAIR.1.13787",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Survey on the Fine-grained Complexity of Constraint Satisfaction Problems Based on Partial Polymorphisms",
+        "author": "Miguel Couceiro, Lucien Haddad, Victor Lagerkvist",
+        "year": "2022",
+        "link": "https://www.oldcitypublishing.com/journals/mvlsc-home/mvlsc-issue-contents/mvlsc-volume-38-number-1-2-2022/mvlsc-38-1-2-p-115-136/",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "C-Maximal Strong Partial Clones and the Inclusion Structure of Boolean Weak Bases",
+        "author": "Victor Lagerkvist, Biman Roy",
+        "year": "2022",
+        "link": "https://www.oldcitypublishing.com/journals/mvlsc-home/mvlsc-issue-contents/mvlsc-volume-38-number-3-4-2022/mvlsc-38-3-4-p-333-353/",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The (Coarse) Fine-Grained Structure of NP-Hard SAT and CSP Problems",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2022",
+        "link": "https://doi.org/10.1145/3492336",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Multivariate Complexity Analysis of Qualitative Reasoning Problems",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2022",
+        "link": "https://doi.org/10.24963/IJCAI.2022/251",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "An Algebraic Approach Towards the Fine-Grained Complexity of Graph Coloring Problems",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2022",
+        "link": "https://doi.org/10.1109/ISMVL52857.2022.00021",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Component twin-width as a parameter for BINARY-CSP and its semiring generalisations",
+        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/ARXIV.2207.12368",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Multivariate Complexity Analysis of Qualitative Reasoning Problems",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/ARXIV.2209.15275",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Computational Short Cuts in Infinite Domain Constraint Satisfaction",
+        "author": "Peter Jonsson, Victor Lagerkvist, Sebastian Ordyniak",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/ARXIV.2211.10144",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Acyclic orders, partition schemes and CSPs: Unified hardness proofs and improved algorithms",
+        "author": "Peter Jonsson, Victor Lagerkvist, George Osipov",
+        "year": "2021",
+        "link": "https://doi.org/10.1016/J.ARTINT.2021.103505",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity of inverse constraint problems and a dichotomy for the inverse satisfiability problem",
+        "author": "Victor Lagerkvist, Biman Roy",
+        "year": "2021",
+        "link": "https://doi.org/10.1016/J.JCSS.2020.10.004",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The exponential-time hypothesis and the relative complexity of optimization and logical reasoning problems",
+        "author": "Peter Jonsson, Victor Lagerkvist, Johannes Schmidt, Hannes Uppman",
+        "year": "2021",
+        "link": "https://doi.org/10.1016/J.TCS.2021.09.006",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Fine-Grained Time Complexity of Constraint Satisfaction Problems",
+        "author": "Peter Jonsson, Victor Lagerkvist, Biman Roy",
+        "year": "2021",
+        "link": "https://doi.org/10.1145/3434387",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Reasoning Short Cuts in Infinite Domain Constraint Satisfaction: Algorithms and Lower Bounds for Backdoors",
+        "author": "Peter Jonsson, Victor Lagerkvist, Sebastian Ordyniak",
+        "year": "2021",
+        "link": "https://doi.org/10.4230/LIPICS.CP.2021.32",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Improved Algorithms for Allen's Interval Algebra: a Dynamic Programming Approach",
+        "author": "Leif Eriksson, Victor Lagerkvist",
+        "year": "2021",
+        "link": "https://doi.org/10.24963/IJCAI.2021/258",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Sparsification of SAT and CSP Problems via Tractable Extensions",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2020",
+        "link": "https://doi.org/10.1145/3389411",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Lower Bounds and Faster Algorithms for Equality Constraints",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2020",
+        "link": "https://doi.org/10.24963/IJCAI.2020/247",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A New Characterization of Restriction-Closed Hyperclones",
+        "author": "Victor Lagerkvist",
+        "year": "2020",
+        "link": "https://doi.org/10.1109/ISMVL49045.2020.00063",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Inclusion Structure of Boolean Weak Bases",
+        "author": "Victor Lagerkvist, Biman Roy",
+        "year": "2019",
+        "link": "https://doi.org/10.1109/ISMVL.2019.00014",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Fine-Grained Complexity of Constraint Satisfaction Problems through Partial Polymorphisms: A Survey",
+        "author": "Miguel Couceiro, Lucien Haddad, Victor Lagerkvist",
+        "year": "2019",
+        "link": "https://doi.org/10.1109/ISMVL.2019.00037",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Strength of Uniqueness Quantification in Primitive Positive Formulas",
+        "author": "Victor Lagerkvist, Gustav Nordh",
+        "year": "2019",
+        "link": "https://doi.org/10.4230/LIPICS.MFCS.2019.36",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Strength of Uniqueness Quantification in Primitive Positive Formulas",
+        "author": "Victor Lagerkvist, Gustav Nordh",
+        "year": "2019",
+        "link": "http://arxiv.org/abs/1906.07031",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Why are CSPs Based on Partition Schemes Computationally Hard?",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2018",
+        "link": "https://doi.org/10.4230/LIPICS.MFCS.2018.43",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Which NP-Hard SAT and CSP Problems Admit Exponentially Improved Algorithms?",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2018",
+        "link": "http://arxiv.org/abs/1801.09488",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "An initial study of time complexity in infinite-domain constraint satisfaction",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2017",
+        "link": "https://doi.org/10.1016/J.ARTINT.2017.01.005",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Strong partial clones and the time complexity of SAT problems",
+        "author": "Peter Jonsson, Victor Lagerkvist, Gustav Nordh, Bruno Zanuttini",
+        "year": "2017",
+        "link": "https://doi.org/10.1016/J.JCSS.2016.07.008",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The power of primitive positive definitions with polynomially many variables",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2017",
+        "link": "https://doi.org/10.1093/LOGCOM/EXW005",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Kernelization of Constraint Satisfaction Problems: A Study Through Universal Algebra",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2017",
+        "link": "https://doi.org/10.1007/978-3-319-66158-2\\_11",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Dichotomy Theorem for the Inverse Satisfiability Problem",
+        "author": "Victor Lagerkvist, Biman Roy",
+        "year": "2017",
+        "link": "https://doi.org/10.4230/LIPICS.FSTTCS.2017.39",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Interval of Boolean Strong Partial Clones Containing Only Projections as Total Operations",
+        "author": "Miguel Couceiro, Lucien Haddad, Victor Lagerqvist, Biman Roy",
+        "year": "2017",
+        "link": "https://doi.org/10.1109/ISMVL.2017.27",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Time Complexity of Constraint Satisfaction via Universal Algebra",
+        "author": "Peter Jonsson, Victor Lagerkvist, Biman Roy",
+        "year": "2017",
+        "link": "https://doi.org/10.4230/LIPICS.MFCS.2017.17",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Time Complexity of Constraint Satisfaction via Universal Algebra",
+        "author": "Peter Jonsson, Victor Lagerkvist, Biman Roy",
+        "year": "2017",
+        "link": "http://arxiv.org/abs/1706.05902",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Kernelization of Constraint Satisfaction Problems: A Study through Universal Algebra",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2017",
+        "link": "http://arxiv.org/abs/1706.05941",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Strong Partial Clones and the Complexity of Constraint Satisfaction Problems : Limitations and Applications",
+        "author": "Victor Lagerkvist",
+        "year": "2016",
+        "link": "https://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-122827",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Preliminary Investigation of Satisfiability Problems Not Harder than 1-in-3-SAT",
+        "author": "Victor Lagerkvist, Biman Roy",
+        "year": "2016",
+        "link": "https://doi.org/10.4230/LIPICS.MFCS.2016.64",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Constructing NP-intermediate problems by blowing holes with parameters of various properties",
+        "author": "Peter Jonsson, Victor Lagerkvist, Gustav Nordh",
+        "year": "2015",
+        "link": "https://doi.org/10.1016/J.TCS.2015.03.009",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Upper and Lower Bounds on the Time Complexity of Infinite-Domain CSPs",
+        "author": "Peter Jonsson, Victor Lagerkvist",
+        "year": "2015",
+        "link": "https://doi.org/10.1007/978-3-319-23219-5\\_14",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Bounded Bases of Strong Partial Clones",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom, Bruno Zanuttini",
+        "year": "2015",
+        "link": "https://doi.org/10.1109/ISMVL.2015.33",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Precise Upper and Lower Bounds for the Monotone Constraint Satisfaction Problem",
+        "author": "Victor Lagerkvist",
+        "year": "2015",
+        "link": "https://doi.org/10.1007/978-3-662-48057-1\\_28",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Weak bases of Boolean co-clones",
+        "author": "Victor Lagerkvist",
+        "year": "2014",
+        "link": "https://doi.org/10.1016/J.IPL.2014.03.011",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Polynomially Closed Co-clones",
+        "author": "Victor Lagerkvist, Magnus Wahlstrom",
+        "year": "2014",
+        "link": "https://doi.org/10.1109/ISMVL.2014.23",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Relating the Time Complexity of Optimization Problems in Light of the Exponential-Time Hypothesis",
+        "author": "Peter Jonsson, Victor Lagerkvist, Johannes Schmidt, Hannes Uppman",
+        "year": "2014",
+        "link": "https://doi.org/10.1007/978-3-662-44465-8\\_35",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Relating the Time Complexity of Optimization Problems in Light of the Exponential-Time Hypothesis",
+        "author": "Peter Jonsson, Victor Lagerkvist, Johannes Schmidt, Hannes Uppman",
+        "year": "2014",
+        "link": "http://arxiv.org/abs/1406.3247",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Blowing Holes in Various Aspects of Computational Problems, with Applications to Constraint Satisfaction",
+        "author": "Peter Jonsson, Victor Lagerkvist, Gustav Nordh",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-40627-0\\_32",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity of SAT Problems, Clone Theory and the Exponential Time Hypothesis",
+        "author": "Peter Jonsson, Victor Lagerkvist, Gustav Nordh, Bruno Zanuttini",
+        "year": "2013",
+        "link": "https://doi.org/10.1137/1.9781611973105.92",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Weak Bases of Boolean Co-Clones",
+        "author": "Victor Lagerkvist",
+        "year": "2013",
+        "link": "http://arxiv.org/abs/1310.3674",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A General Theoretical Framework for Learning Smallest Interpretable Models",
+        "author": "Sebastian Ordyniak, Giacomo Paesani, Mateusz Rychlicki, Stefan Szeider",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/J.ARTINT.2025.104441",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoors to satisfaction continued",
+        "author": "Serge Gaspers, Stefan Szeider",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/J.COSREV.2025.100868",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "ASP-Bench: From Natural Language to Logic Programs",
+        "author": "Stefan Szeider",
+        "year": "2026",
+        "link": "https://doi.org/10.48550/ARXIV.2602.01171",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Power of Collaboration: Learning Large Bayesian Networks at Scale",
+        "author": "Vaidyanathan Peruvemba Ramaswamy, Stefan Szeider, Hai Xia",
+        "year": "2024",
+        "link": "https://doi.org/10.1109/ICTAI62512.2024.00061",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Silent (R)evolution of SAT",
+        "author": "Johannes Klaus Fichte, Daniel Le Berre, Markus Hecher, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.1145/3560469",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Parameterized Complexity of Finding Concise Local Explanations",
+        "author": "Sebastian Ordyniak, Giacomo Paesani, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/369",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Dataset of Random Reordered Encodings of Parity Problems (Version 1)",
+        "author": "Leroy Chew, Alexis de Colnet, Friedrich Slivovsky, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.5281/ZENODO.10391790",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Supplementary Material for Proven optimally-balanced Latin rectangles with SAT (Version 1.0)",
+        "author": "Vaidyanathan Peruvemba Ramaswamy, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.5281/ZENODO.8150639",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "MaxSLIM Anytime MaxSAT Solver (Version 1)",
+        "author": "Andre Schidler, Stefan Szeider",
+        "year": "2023",
+        "link": "https://doi.org/10.5281/ZENODO.10362710",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Algorithmic Applications of Tree-Cut Width",
+        "author": "Robert Ganian, Eun Jung Kim, Stefan Szeider",
+        "year": "2022",
+        "link": "https://doi.org/10.1137/20M137478X",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A SAT Attack on Rota's Basis Conjecture",
+        "author": "Markus Kirchweger, Manfred Scheucher, Stefan Szeider",
+        "year": "2022",
+        "link": "https://doi.org/10.4230/LIPICS.SAT.2022.4",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Weighted Model Counting with Twin-Width: Experimental Results (Version 1)",
+        "author": "Robert Ganian, Filip Pokryvka, Andre Schidler, Kirill Simonov, Stefan Szeider",
+        "year": "2022",
+        "link": "https://doi.org/10.5281/ZENODO.6610819",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Computing Optimal Hypertree Decompositions with SAT - Results (Version 1)",
+        "author": "Andre Schidler, Stefan Szeider",
+        "year": "2022",
+        "link": "https://doi.org/10.5281/ZENODO.6832106",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Weighted Model Counting with Twin-Width",
+        "author": "Robert Ganian, Filip Pokryvka, Andre Schidler, Kirill Simonov, Stefan Szeider",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/ARXIV.2206.01706",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Turbocharging Treewidth-Bounded Bayesian Network Structure Learning",
+        "author": "Vaidyanathan Peruvemba Ramaswamy, Stefan Szeider",
+        "year": "2021",
+        "link": "https://doi.org/10.1609/AAAI.V35I5.16508",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "aditya95sriram/bn-slim: NeurIPS 2021 (Version nips21)",
+        "author": "Vaidyanathan Peruvemba Ramaswamy, Stefan Szeider",
+        "year": "2021",
+        "link": "https://doi.org/10.5281/ZENODO.5598257",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Threshold Treewidth and Hypertree Width",
+        "author": "Robert Ganian, Andre Schidler, Manuel Sorge, Stefan Szeider",
+        "year": "2020",
+        "link": "https://doi.org/10.24963/IJCAI.2020/263",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Faster Algorithm for Propositional Model Counting Parameterized by Incidence Treewidth",
+        "author": "Friedrich Slivovsky, Stefan Szeider",
+        "year": "2020",
+        "link": "https://doi.org/10.1007/978-3-030-51825-7\\_19",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Turbocharging Treewidth-Bounded Bayesian Network Structure Learning",
+        "author": "P. R. Vaidyanathan, Stefan Szeider",
+        "year": "2020",
+        "link": "https://arxiv.org/abs/2006.13843",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Compendium of Parameterized Problems at Higher Levels of the Polynomial Hierarchy",
+        "author": "Ronald de Haan, Stefan Szeider",
+        "year": "2019",
+        "link": "https://doi.org/10.3390/A12090188",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Discovering Archipelagos of Tractability for Constraint Satisfaction and Counting",
+        "author": "Robert Ganian, M. S. Ramanujan, Stefan Szeider",
+        "year": "2017",
+        "link": "https://doi.org/10.1145/3014587",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "New Width Parameters for Model Counting",
+        "author": "Robert Ganian, Stefan Szeider",
+        "year": "2017",
+        "link": "https://doi.org/10.1007/978-3-319-66263-3\\_3",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoors to Tractable Valued CSP",
+        "author": "Robert Ganian, M. S. Ramanujan, Stefan Szeider",
+        "year": "2016",
+        "link": "https://doi.org/10.1007/978-3-319-44953-1\\_16",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoors to Tractable Valued CSP",
+        "author": "Robert Ganian, M. S. Ramanujan, Stefan Szeider",
+        "year": "2016",
+        "link": "http://arxiv.org/abs/1612.05733",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Quantified Conjunctive Queries on Partially Ordered Sets",
+        "author": "Simone Bova, Robert Ganian, Stefan Szeider",
+        "year": "2014",
+        "link": "https://doi.org/10.1007/978-3-319-13524-3\\_11",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Upper and Lower Bounds for Weak Backdoor Set Detection",
+        "author": "Neeldhara Misra, Sebastian Ordyniak, Venkatesh Raman, Stefan Szeider",
+        "year": "2013",
+        "link": "https://doi.org/10.1007/978-3-642-39071-5\\_29",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Parameterized Complexity of Reasoning Problems Beyond NP",
+        "author": "Ronald de Haan, Stefan Szeider",
+        "year": "2013",
+        "link": "http://arxiv.org/abs/1312.1672",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Augmenting tractable fragments of abstract argumentation",
+        "author": "Wolfgang Dvorak, Sebastian Ordyniak, Stefan Szeider",
+        "year": "2012",
+        "link": "https://doi.org/10.1016/J.ARTINT.2012.03.002",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoors to Satisfaction",
+        "author": "Serge Gaspers, Stefan Szeider",
+        "year": "2012",
+        "link": "https://doi.org/10.1007/978-3-642-30891-8\\_15",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoors to Acyclic SAT",
+        "author": "Serge Gaspers, Stefan Szeider",
+        "year": "2012",
+        "link": "https://doi.org/10.1007/978-3-642-31594-7\\_31",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Algorithms and Complexity Results for Exact Bayesian Structure Learning",
+        "author": "Sebastian Ordyniak, Stefan Szeider",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1203.3501",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Don't Be Strict in Local Search!",
+        "author": "Serge Gaspers, Eun Jung Kim, Sebastian Ordyniak, Saket Saurabh, Stefan Szeider",
+        "year": "2012",
+        "link": "http://arxiv.org/abs/1208.1688",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The parameterized complexity of k-flip local search for SAT and MAX SAT",
+        "author": "Stefan Szeider",
+        "year": "2011",
+        "link": "https://doi.org/10.1016/J.DISOPT.2010.07.003",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Solving #SAT using vertex covers",
+        "author": "Naomi Nishimura, Prabhakar Ragde, Stefan Szeider",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/S00236-007-0056-X",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Linear Arrangement Problem Parameterized Above Guaranteed Value",
+        "author": "Gregory Z. Gutin, Arash Rafiey, Stefan Szeider, Anders Yeo",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/S00224-007-1330-6",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Complexity of Some Colorful Problems Parameterized by Treewidth",
+        "author": "Michael R. Fellows, Fedor V. Fomin, Daniel Lokshtanov, Frances A. Rosamond, Saket Saurabh, Stefan Szeider, Carsten Thomassen",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/978-3-540-73556-4\\_38",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Covering Graphs with Few Complete Bipartite Subgraphs",
+        "author": "Herbert Fleischner, Egbert Mujuni, Daniel Paulusma, Stefan Szeider",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/978-3-540-77050-3\\_28",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Matched Formulas and Backdoor Sets",
+        "author": "Stefan Szeider",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/978-3-540-72788-0\\_12",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Backdoor Sets of Quantified Boolean Formulas",
+        "author": "Marko Samer, Stefan Szeider",
+        "year": "2007",
+        "link": "https://doi.org/10.1007/978-3-540-72788-0\\_23",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Parameterized Proof Complexity: a Complexity Gap for Parameterized Tree-like Resolution",
+        "author": "Stefan S. Dantchev, Barnaby Martin, Stefan Szeider",
+        "year": "2007",
+        "link": "https://eccc.weizmann.ac.il/eccc-reports/2007/TR07-001/index.html",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Clique-width minimization is NP-hard",
+        "author": "Michael R. Fellows, Frances A. Rosamond, Udi Rotics, Stefan Szeider",
+        "year": "2006",
+        "link": "https://doi.org/10.1145/1132516.1132568",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity and Applications of Edge-Induced Vertex-Cuts",
+        "author": "Marko Samer, Stefan Szeider",
+        "year": "2006",
+        "link": "http://arxiv.org/abs/cs/0607109",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Fixed-Parameter Algorithm for #SAT with Parameter Incidence Treewidth",
+        "author": "Marko Samer, Stefan Szeider",
+        "year": "2006",
+        "link": "http://arxiv.org/abs/cs/0610174",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Complexity of Resolution with Generalized Symmetry Rules",
+        "author": "Stefan Szeider",
+        "year": "2003",
+        "link": "https://doi.org/10.1007/3-540-36494-3\\_42",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Polynomial-time recognition of minimal unsatisfiable formulas with fixed clause-variable difference",
+        "author": "Herbert Fleischner, Oliver Kullmann, Stefan Szeider",
+        "year": "2002",
+        "link": "https://doi.org/10.1016/S0304-3975(01)00337-1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "NP-Completeness of Refutability by Literal-Once Resolution",
+        "author": "Stefan Szeider",
+        "year": "2001",
+        "link": "https://doi.org/10.1007/3-540-45744-5\\_13",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Polynomial-Time Recognition of Minimal Unsatisfiable Formulas with Fixed Clause-Variable Difference",
+        "author": "Herbert Fleischner, Stefan Szeider",
+        "year": "2000",
+        "link": "https://eccc.weizmann.ac.il/eccc-reports/2000/TR00-049/index.html",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "An XAI View on Explainable ASP: Methods, Systems, and Perspectives",
+        "author": "Thomas Eiter, Tobias Geibinger, Zeynep G. Saribatur",
+        "year": "2026",
+        "link": "https://doi.org/10.48550/ARXIV.2601.14764",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "ASP-FZN: A Translation-Based Constraint Answer Set Solver",
+        "author": "Thomas Eiter, Tobias Geibinger, Nysret Musliu, Johannes Oetsch, Tobias Kaminski",
+        "year": "2025",
+        "link": "https://doi.org/10.1017/S1471068425100264",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning",
+        "author": "Sebastian P. Adam, Thomas Eiter",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/AAAI.V39I14.33619",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Sequent Calculus for Answer Set Entailment",
+        "author": "Thomas Eiter, Tobias Geibinger",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/IJCAI.2025/497",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Grounding Stream Reasoning Research",
+        "author": "Pieter Bonte, Jean-Paul Calbimonte, Daniel de Leng, Daniele Dell'Aglio, Emanuele Della Valle, Thomas Eiter, Federico Giannini, Fredrik Heintz, Konstantin Schekotihin, Danh Le Phuoc, Alessandra Mileo, Patrik Schneider, Riccardo Tommasini, Jacopo Urbani, Giacomo Ziffer",
+        "year": "2024",
+        "link": "https://doi.org/10.4230/TGDK.2.1.2",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A Logic-based Approach to Contrastive Explainability for Neurosymbolic Visual Question Answering",
+        "author": "Thomas Eiter, Tobias Geibinger, Nelson Higuera, Johannes Oetsch",
+        "year": "2023",
+        "link": "https://doi.org/10.24963/IJCAI.2023/408",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Exploiting Partial Assignments for Efficient Evaluation of Answer Set Programs with External Source Access",
+        "author": "Thomas Eiter, Tobias Kaminski, Christoph Redl, Antonius Weinzierl",
+        "year": "2018",
+        "link": "https://doi.org/10.1613/JAIR.1.11221",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Intentional Forgetting in Artificial Intelligence Systems: Perspectives and Challenges",
+        "author": "Ingo J. Timm, Steffen Staab, Michael Siebers, Claudia Schon, Ute Schmid, Kai Sauerwald, Lukas Reuter, Marco Ragni, Claudia Niederee, Heiko Maus, Gabriele Kern-Isberner, Christian Jilek, Paulina Friemann, Thomas Eiter, Andreas Dengel, Hannah Dames, Tanja Bock, Jan Ole Berndt, Christoph Beierle",
+        "year": "2018",
+        "link": "https://doi.org/10.1007/978-3-030-00111-7\\_30",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Evaluating Epistemic Negation in Answer Set Programming (Extended Abstract)",
+        "author": "Yi-Dong Shen, Thomas Eiter",
+        "year": "2017",
+        "link": "https://doi.org/10.24963/IJCAI.2017/722",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Helmut Veith (1971-2016)",
+        "author": "Thomas Eiter, Richard Zach",
+        "year": "2016",
+        "link": "http://eatcs.org/beatcs/index.php/beatcs/article/view/405",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Problem Solving Using the HEX Family",
+        "author": "Thomas Eiter, Christoph Redl, Peter Schuller",
+        "year": "2016",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Reactive Policies with Planning for Action Languages",
+        "author": "Zeynep G. Saribatur, Thomas Eiter",
+        "year": "2016",
+        "link": "https://doi.org/10.1007/978-3-319-48758-8\\_30",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Generalized Consistent Query Answering under Existential Rules",
+        "author": "Thomas Eiter, Thomas Lukasiewicz, Livia Predoiu",
+        "year": "2016",
+        "link": "https://aaai.org/papers/37-12888-generalized-consistent-query-answering-under-existential-rules/",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "OMiGA : An Open Minded Grounding On-The-Fly Answer Set Solver",
+        "author": "Minh Dao-Tran, Thomas Eiter, Michael Fink, Gerald Weidinger, Antonius Weinzierl",
+        "year": "2012",
+        "link": "https://doi.org/10.1007/978-3-642-33353-8\\_38",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Well-founded semantics for description logic programs in the semantic web",
+        "author": "Thomas Eiter, Giovambattista Ianni, Thomas Lukasiewicz, Roman Schindlauer",
+        "year": "2011",
+        "link": "https://doi.org/10.1145/1877714.1877717",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Nonmonotonic Multi-Context Systems: A Flexible Approach for Integrating Heterogeneous Knowledge Sources",
+        "author": "Gerhard Brewka, Thomas Eiter, Michael Fink",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-20832-4\\_16",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The IMPL Policy Language for Managing Inconsistency in Multi-Context Systems",
+        "author": "Thomas Eiter, Michael Fink, Giovambattista Ianni, Peter Schuller",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-41524-1\\_1",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Towards a Policy Language for Managing Inconsistency in Multi-Context Systems",
+        "author": "Thomas Eiter, Michael Fink, Giovambattista Ianni, Peter Schuller",
+        "year": "2011",
+        "link": "https://ceur-ws.org/Vol-738/eiter-etal.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Symmetry Breaking for Distributed Multi-Context Systems",
+        "author": "Christian Drescher, Thomas Eiter, Michael Fink, Thomas Krennwallner, Toby Walsh",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-20895-9\\_5",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Pushing Efficient Evaluation of HEX Programs by Modular Decomposition",
+        "author": "Thomas Eiter, Michael Fink, Giovambattista Ianni, Thomas Krennwallner, Peter Schuller",
+        "year": "2011",
+        "link": "https://doi.org/10.1007/978-3-642-20895-9\\_10",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Answer Set Programming in a Nutshell",
+        "author": "Thomas Eiter",
+        "year": "2010",
+        "link": "https://doi.org/10.29007/TMT3",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Characterizing Data Complexity for Conjunctive Query Answering in Expressive Description Logics",
+        "author": "Magdalena Ortiz, Diego Calvanese, Thomas Eiter",
+        "year": "2006",
+        "link": "http://www.aaai.org/Library/AAAI/2006/aaai06-044.php",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Data Complexity of Answering Unions of Conjunctive Queries in emphSHIQ",
+        "author": "Magdalena Ortiz, Diego Calvanese, Thomas Eiter",
+        "year": "2006",
+        "link": "https://ceur-ws.org/Vol-189/submission\\_21.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Comparing Action Descriptions Based on Semantic Preferences",
+        "author": "Thomas Eiter, Esra Erdem, Michael Fink, Jan Senko",
+        "year": "2006",
+        "link": "https://doi.org/10.1007/11853886\\_12",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Using SAT and Logic Programming to Design Polynomial-Time Algorithms for Planning in Non-Deterministic Domains",
+        "author": "Chitta Baral, Thomas Eiter, Jicheng Zhao",
+        "year": "2005",
+        "link": "http://www.aaai.org/Library/AAAI/2005/aaai05-090.php",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "A logic programming approach to knowledge-state planning: Semantics and complexity",
+        "author": "Thomas Eiter, Wolfgang Faber, Nicola Leone, Gerald Pfeifer, Axel Polleres",
+        "year": "2004",
+        "link": "https://doi.org/10.1145/976706.976708",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "04171 Abstracts Collection - Logic Based Information Agents",
+        "author": "Jurgen Dix, Thomas Eiter, Enrico Franconi",
+        "year": "2004",
+        "link": "http://drops.dagstuhl.de/opus/volltexte/2006/468/",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Answer Set Planning Under Action Costs",
+        "author": "Thomas Eiter, Wolfgang Faber, Nicola Leone, Gerald Pfeifer, Axel Polleres",
+        "year": "2003",
+        "link": "https://doi.org/10.1613/JAIR.1148",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity Results for Structure-Based Causality",
+        "author": "Thomas Eiter, Thomas Lukasiewicz",
+        "year": "2001",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity of Nested Circumscription and Abnormality Theories",
+        "author": "Marco Cadoli, Thomas Eiter, Georg Gottlob",
+        "year": "2001",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Solving Advanced Reasoning Tasks Using Quantified Boolean Formulas",
+        "author": "Uwe Egly, Thomas Eiter, Hans Tompits, Stefan Woltran",
+        "year": "2000",
+        "link": "http://www.aaai.org/Library/AAAI/2000/aaai00-064.php",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Prioritizing Default Logic",
+        "author": "Gerhard Brewka, Thomas Eiter",
+        "year": "2000",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Using the dlv System for Planning and Diagnostic Reasoning",
+        "author": "Thomas Eiter, Wolfgang Faber, Nicola Leone, Gerald Pfeifer, Axel Polleres",
+        "year": "2000",
+        "link": "",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "QUIP - A Tool for Computing Nonmonotonic Reasoning Tasks",
+        "author": "Uwe Egly, Thomas Eiter, Hans Tompits, Stefan Woltran",
+        "year": "2000",
+        "link": "https://arxiv.org/abs/cs/0003037",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Bidual Horn Functions and Extensions",
+        "author": "Thomas Eiter, Toshihide Ibaraki, Kazuhisa Makino",
+        "year": "1999",
+        "link": "https://doi.org/10.1016/S0166-218X(99)00033-5",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Exact Transversal Hypergraphs and Application to Boolean (mathrmmu)-Functions",
+        "author": "Thomas Eiter",
+        "year": "1994",
+        "link": "https://doi.org/10.1006/JSCO.1994.1013",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Disjunctive Logic Programming over Finite Structures",
+        "author": "Thomas Eiter, Georg Gottlob, Heikki Mannila",
+        "year": "1994",
+        "link": "https://doi.org/10.1007/978-3-642-51136-3\\_10",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Expressive Power and Complexity of Disjunctive Datalog under the Stable Model Semantics",
+        "author": "Thomas Eiter, Georg Gottlob, Heikki Mannila",
+        "year": "1994",
+        "link": "https://doi.org/10.1007/3-540-57802-1\\_5",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Complexity of Nested Counterfactuals and Iterated Knowledge Base Revisions",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "1993",
+        "link": "http://ijcai.org/Proceedings/93-1/Papers/074.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Curb Your Theory! A Circumspective Approach for Inclusive Interpretation of Disjunctive Information",
+        "author": "Thomas Eiter, Georg Gottlob, Yuri Gurevich",
+        "year": "1993",
+        "link": "http://ijcai.org/Proceedings/93-1/Papers/089.pdf",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Complexity Aspects of Various Semantics for Disjunctive Databases",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "1993",
+        "link": "https://doi.org/10.1145/153850.153864",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "The Complexity of Logic-Based Abduction",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "1993",
+        "link": "https://doi.org/10.1007/3-540-56503-5\\_10",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "An Efficient Method for Eliminating Varying Predicates from a Circumscription",
+        "author": "Marco Cadoli, Thomas Eiter, Georg Gottlob",
+        "year": "1992",
+        "link": "https://doi.org/10.1016/0004-3702(92)90051-X",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "On the Complexity of Propositional Knowledge Base Revision, Updates, and Counterfactuals",
+        "author": "Thomas Eiter, Georg Gottlob",
+        "year": "1992",
+        "link": "https://doi.org/10.1016/0004-3702(92)90018-S",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Red-Black Planning: A New Tractability Analysis and Heuristic Function",
+        "author": "Daniel Gnad, Joerg Hoffmann",
+        "year": "2021",
+        "link": "10.1609/SOCS.V6I1.18349",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "PSPACE-Completeness of Reversible Deterministic Systems",
+        "author": "Erik D. Demaine, Robert A. Hearn, Dylan H. Hendrickson, Jayson Lynch",
+        "year": "2023",
+        "link": "https://doi.org/10.1142/S0129054123470032",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models",
+        "author": "Lingzhi Wang, Xingshan Zeng, Jinsong Guo, Kam-Fai Wong, Georg Gottlob",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/aaai.v39i1.32068",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "OBDDs, SDDs, and circuits of bounded width: Completeness matters",
+        "author": "Alexis de Colnet, Sebastian Ordyniak, Stefan Szeider",
+        "year": "2026",
+        "link": "10.1016/j.artint.2025.104458",
+        "is_real": true,
+        "group": "F"
+    },
+    {
+        "title": "ASP-FZN: A Translation-Based Constraint Answer Set Solver",
+        "author": "Thomas Eiter, Tobias Geibinger, Nysret Musliu, Johannes Oetsch, Tobias Kaminski",
+        "year": "2025",
+        "link": "10.1017/S1471068425100264",
+        "is_real": true,
+        "group": "F"
+    }
+]
