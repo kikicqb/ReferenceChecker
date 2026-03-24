@@ -4,8 +4,10 @@ import requests
 import time
 import re
 from openai import OpenAI
+from dotenv import load_dotenv
 
-OPENROUTER_API_KEY = "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" 
+load_dotenv()
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
