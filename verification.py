@@ -286,26 +286,28 @@ def verify_citation(title, author=None, year=None, expected_doi=None):
     
     for check_func in [check_crossref, check_semantic_scholar, check_openalex, check_dblp]:
         status, msg = check_func(title, author, year, expected_doi)
+        
+        # Level 1: Perfect match
+        if status == "VERIFIED":
+            return "LEVEL_1_PERFECT", msg  
+            
         results.append((status, msg))
         
     statuses = [r[0] for r in results]
     
-
+    # Level 2: Exists but has minor flaws
     if "DOI_MISMATCH" in statuses:
         msg = next(r[1] for r in results if r[0] == "DOI_MISMATCH")
-        return msg
+        return "LEVEL_2_FLAWED", msg
         
     elif "YEAR_MISMATCH" in statuses:
         msg = next(r[1] for r in results if r[0] == "YEAR_MISMATCH")
-        return msg
+        return "LEVEL_2_FLAWED", msg
         
     elif "AUTHOR_MISMATCH" in statuses:
         msg = next(r[1] for r in results if r[0] == "AUTHOR_MISMATCH")
-        return msg
-    
-    elif "VERIFIED" in statuses:
-        msg = next(r[1] for r in results if r[0] == "VERIFIED")
-        return msg
+        return "LEVEL_2_FLAWED", msg
         
+    # Level 3: Fabricated
     else:
-        return "Reject: Title Not Found in any database"
+        return "LEVEL_3_FAKE", "Reject: Title Not Found in any database"

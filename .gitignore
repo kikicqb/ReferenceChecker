@@ -10,4 +10,4 @@ env/
 .DS_Store
 Thumbs.db
 *_results.json
-test.json
+test*.json

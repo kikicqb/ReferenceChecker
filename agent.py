@@ -7,18 +7,18 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    api_key=GEMINI_API_KEY,
 )
 
-MODEL_NAME = "nvidia/nemotron-3-nano-30b-a3b:free"
+MODEL_NAME = "gemini-2.5-flash"
 
-# ==========================================
-# 1. Tool Function: DBLP Search
-# ==========================================
+# ========================================
+# 1. Tool Function: DBLP Search 
+# ========================================
 def search_dblp_api(title, author):
     print(f"   [Tool Execution] Querying DBLP for the Agent: {title} ...")
     
@@ -27,44 +27,70 @@ def search_dblp_api(title, author):
 
     query = f"{short_title} {author}"
     url = "https://dblp.org/search/publ/api"
+    
     params = {
         "q": query,
         "format": "json",
         "h": 3  
     }
     
-    try:
-        response = requests.get(url, params=params, timeout=10)
-        data = response.json()
-        
-        hits = data.get("result", {}).get("hits", {}).get("hit", [])
-        if not hits:
-            return "DBLP database returned no results for this query."
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json"
+    }
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, params=params, headers=headers, timeout=10)
             
-        results_text = "Found the following papers in DBLP:\n"
-        for hit in hits:
-            info = hit.get("info", {})
-            found_title = info.get("title", "No title")
-            found_year = info.get("year", "Unknown year")
-            
-            found_doi = info.get("doi", "")
-            if not found_doi:
-                found_doi = info.get("ee", "No link available")
+            if response.status_code in [500, 502, 503, 504, 429]:
+                print(f"  [DEBUG] DBLP server issue (Status code: {response.status_code}). Waiting 5 seconds before retry {attempt + 1}...")
+                time.sleep(5)
+                continue
                 
-            authors = info.get("authors", {}).get("author", [])
-            if isinstance(authors, dict):
-                author_names = authors.get("text", "")
-            elif isinstance(authors, list):
-                author_names = ", ".join([a.get("text", "") for a in authors if isinstance(a, dict)])
-            else:
-                author_names = "Unknown authors"
+            if response.status_code != 200:
+                return f"Error: DBLP server returned HTTP {response.status_code}."
                 
-            results_text += f"- Title: {found_title} | Authors: {author_names} | Year: {found_year} | Link: {found_doi}\n"
+            data = response.json()
             
-        return results_text
-        
-    except Exception as e:
-        return f"Error connecting to DBLP database: {str(e)}"
+            hits = data.get("result", {}).get("hits", {}).get("hit", [])
+            if not hits:
+                return "DBLP database returned no results for this query."
+                
+            results_text = "Found the following papers in DBLP:\n"
+            for hit in hits:
+                info = hit.get("info", {})
+                found_title = info.get("title", "No title")
+                found_year = info.get("year", "Unknown year")
+                
+                found_doi = info.get("doi", "")
+                if not found_doi:
+                    found_doi = info.get("ee", "No link available")
+                    
+                authors = info.get("authors", {}).get("author", [])
+                if isinstance(authors, dict):
+                    author_names = authors.get("text", "")
+                elif isinstance(authors, list):
+                    author_names = ", ".join([a.get("text", "") for a in authors if isinstance(a, dict)])
+                else:
+                    author_names = "Unknown authors"
+                    
+                results_text += f"- Title: {found_title} | Authors: {author_names} | Year: {found_year} | Link: {found_doi}\n"
+                
+            time.sleep(2)
+            return results_text
+            
+        except requests.exceptions.Timeout:
+            print("  [DEBUG] Request timed out! Waiting 3 seconds before retry...")
+            time.sleep(3)
+            continue
+        except json.JSONDecodeError:
+            return "Error connecting to DBLP: Server returned HTML instead of JSON. You might be temporarily blocked."
+        except Exception as e:
+            return f"Error connecting to DBLP database: {str(e)}"
+            
+    return "DBLP database is currently down or unresponsive after multiple retries."
 
 
 # ===========================
@@ -74,13 +100,16 @@ def run_agent_verification(paper_title, paper_author, paper_year, paper_doi):
     print(f"\n Starting test for paper: {paper_title}")
     
     system_prompt = (
-        "You are a strict academic fact-checking agent. Your job is to verify if a paper exists using the DBLP search tool. "
-        "You MUST verify Title, Author, Year, and DOI/Link. "
-        "CRITICAL RULE: If the returned database results show a paper that strongly matches the intended entity, you must consider the paper to exist (REAL). You MUST tolerate minor mismatches, slight wording differences, missing punctuation, or typos in the Title, Author, Year, or Link. "
-        "Only declare it as FAKE if the tool finds no results at all, or if the core entity (Title/Author) is completely fabricated. \n\n"
-        "CRITICAL INSTRUCTION: Your final response MUST end with exactly ONE of the following two labels on a new line:\n"
-        "[VERDICT: REAL]\n"
-        "[VERDICT: FAKE]"
+        "You are an expert academic fact-checking agent. Your job is to verify if a cited paper exists using the DBLP database tool. "
+        "Based on the tool's returned evidence, you MUST classify the citation into one of THREE levels:\n\n"
+        "- LEVEL 1 (Perfect Match): The paper exists and all core metadata (Title, Author, Year) perfectly or near-perfectly match the database.\n"
+        "- LEVEL 2 (Minor Flaw / Real Entity): The core paper exists in the real world, but the provided citation has noticeable hallucinations or errors (e.g., misspelled authors, wrong year, slightly altered title, or wrong venue). It is a real concept with flawed details.\n"
+        "- LEVEL 3 (Completely Fake): No convincing match is found in the database. The core entity is a pure AI hallucination.\n\n"
+        "Provide a brief, step-by-step reasoning for your decision. \n"
+        "CRITICAL INSTRUCTION: Your final response MUST end with exactly ONE of the following labels on a new line:\n"
+        "[VERDICT: LEVEL_1_PERFECT]\n"
+        "[VERDICT: LEVEL_2_FLAWED]\n"
+        "[VERDICT: LEVEL_3_FAKE]"
     )
 
     messages = [
@@ -134,12 +163,21 @@ def run_agent_verification(paper_title, paper_author, paper_year, paper_doi):
             messages=messages,
             temperature=0.0
         )
-        print(f"\n Final Conclusion:\n{final_response.choices[0].message.content}")
-        return final_response.choices[0].message.content
+        
+        content = final_response.choices[0].message.content
+        if not content:
+            content = "[VERDICT: LEVEL_3_FAKE] (Fallback: Model blanked out)"
+        
+        print(f"\n Final Conclusion:\n{content}")
+        return content
 
     else:
-        print("\n Final Conclusion (No database called):\n" + response_msg.content)
-        return response_msg.content
+        content = response_msg.content
+        if not content:
+            content = "[VERDICT: LEVEL_3_FAKE] (Fallback: Model blanked out)"
+            
+        print("\n Final Conclusion (No database called):\n" + content)
+        return content
 
 
 # =====================
@@ -147,7 +185,7 @@ def run_agent_verification(paper_title, paper_author, paper_year, paper_doi):
 # =====================
 if __name__ == "__main__":
     
-    input_file_path = "experiment_datasets/test.json"  
+    input_file_path = "experiment_datasets/test35.json"  
     
     try:
         with open(input_file_path, 'r', encoding='utf-8') as f:
@@ -179,29 +217,29 @@ if __name__ == "__main__":
             # Run the Agent
             raw_agent_verdict = run_agent_verification(title, author, year, link)
             
-            # --- Extract binary verdict ---
             clean_verdict = "UNKNOWN"
-            upper_verdict = raw_agent_verdict.upper().replace(" ", "") 
+            upper_verdict = str(raw_agent_verdict).upper() 
             
-            if "[VERDICT:REAL]" in upper_verdict:
-                clean_verdict = "REAL"
-            elif "[VERDICT:FAKE]" in upper_verdict:
-                clean_verdict = "FAKE"
+            if "LEVEL 1" in upper_verdict or "LEVEL_1" in upper_verdict:
+                clean_verdict = "LEVEL_1_PERFECT"
+            elif "LEVEL 2" in upper_verdict or "LEVEL_2" in upper_verdict:
+                clean_verdict = "LEVEL_2_FLAWED"
+            elif "LEVEL 3" in upper_verdict or "LEVEL_3" in upper_verdict:
+                clean_verdict = "LEVEL_3_FAKE"
             
             print(f"   Agent Extracted Conclusion: {clean_verdict}")
             
-            # --- Binary Scoring Logic ---
             is_correct = False
-            if expected_real and clean_verdict == "REAL":
+            if expected_real and clean_verdict in ["LEVEL_1_PERFECT", "LEVEL_2_FLAWED"]:
                 is_correct = True
-                print("   -> ✅ Agent Correct! (Successfully identified a REAL paper)")
+                print(f"   -> ✅ Agent Correct! (Real entity successfully caught as {clean_verdict})")
                 score += 1
-            elif not expected_real and clean_verdict == "FAKE":
+            elif not expected_real and clean_verdict == "LEVEL_3_FAKE":
                 is_correct = True
-                print("   -> ✅ Agent Intercepted! (Successfully identified a FAKE paper)")
+                print("   -> ✅ Agent Intercepted! (Fake paper ruthlessly destroyed as LEVEL_3_FAKE)")
                 score += 1
             else:
-                print("   -> ❌ Agent Failed! (Misclassification)")
+                print(f"   -> ❌ Agent Failed! (Expected Real: {expected_real}, but got {clean_verdict})")
             
             # Save results
             results_log.append({

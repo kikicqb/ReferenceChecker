@@ -2,7 +2,7 @@ import json
 from verification import verify_citation
 
 def run_benchmark():
-    json_file_path = "experiment_datasets/exp5.json"  
+    json_file_path = "experiment_datasets/exp4.json"  
     
     try:
         with open(json_file_path, 'r', encoding='utf-8') as f:
@@ -34,11 +34,15 @@ def run_benchmark():
         
         is_correct = False  
         
-        if is_real and "Verified" in result:
+        if is_real and "LEVEL_1_PERFECT" in result:
             print("   -> ✅ Correct")
             score += 1
             is_correct = True
-        elif not is_real and "Reject" in result:
+        elif is_real and "LEVEL_2_FLAWED" in result:
+            print("   -> ✅ Correct")
+            score += 1
+            is_correct = True
+        elif not is_real and "LEVEL_3_FAKE" in result:
             print("   -> ✅ Intercepted")
             score += 1
             is_correct = True
