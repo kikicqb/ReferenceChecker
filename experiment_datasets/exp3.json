@@ -104,7 +104,7 @@
         "author": "Thomas Eiter, Tobias Geibinger, Zeynep G. Saribatur",
         "year": "2026",
         "link": "https://arxiv.org/abs/2601.99999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
@@ -113,7 +113,7 @@
         "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
         "year": "2025",
         "link": "10.1017/s147106842500999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {

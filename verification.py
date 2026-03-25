@@ -73,209 +73,122 @@ def check_year_match(expected_year, found_year):
 # ========================
 # 2. Database Requests
 # ========================
+def generic_verify_logic(db_name, items, extractor_func, exp_title, exp_author, exp_year, exp_doi):
+
+    best_status = "TITLE_NOT_FOUND"
+    msg = f" Reject: Title Not Found in {db_name}"
+    
+    for item in items:
+        try:
+            found_title, found_authors, found_year, found_doi = extractor_func(item)
+            
+            if not found_title: continue
+            
+            # 1. Check title
+            if calculate_similarity(exp_title, found_title) > 0.9:
+                best_status = "AUTHOR_MISMATCH"
+                msg = f" Reject: Author Mismatch (Found in {db_name}, but author '{exp_author}' not matched)"
+                
+                # 2. Check author
+                if check_author_match(exp_author, found_authors):
+                    best_status = "YEAR_MISMATCH"
+                    msg = f" Reject: Year Mismatch (Found in {db_name}, but year is {found_year}, expected {exp_year})"
+                    
+                    # 3. Check year
+                    if check_year_match(exp_year, found_year):
+                        # 4. Check DOI
+                        if exp_doi:
+                            if found_doi and clean_doi(exp_doi) != clean_doi(found_doi):
+                                best_status = "DOI_MISMATCH"
+                                msg = f" Reject: FAKE DOI (Title/Author match, but official DOI is {found_doi})"
+                                continue 
+                        
+                        return "VERIFIED", f" Verified (Source: {db_name})"
+        except Exception:
+            continue
+            
+    return best_status, msg
 
 def check_crossref(title, author, year, expected_doi=None):
     url = "https://api.crossref.org/works"
     params = {"query.title": title, "rows": 5, "select": "title,author,issued,DOI"} 
     headers = {"User-Agent": "ThesisProject/1.5 (mailto:test@student.liu.se)"}
     
-    best_status = "TITLE_NOT_FOUND"
-    msg = " Reject: Title Not Found in CrossRef"
-    
     try:
         resp = requests.get(url, params=params, headers=headers, timeout=5)
         items = resp.json().get('message', {}).get('items', [])
         
-        for item in items:
-            try: 
-                found_title = item.get('title', [''])[0]
-                if calculate_similarity(title, found_title) > 0.9:
-                    best_status = "AUTHOR_MISMATCH"
-                    
-                    raw_authors = item.get('author', [])
-                    authors = " ".join([f"{a.get('given', '')} {a.get('family', '')}" for a in raw_authors if isinstance(a, dict)])
-                    msg = f" Reject: Author Mismatch (Found title in CrossRef, but author '{author}' not matched)"
-                    
-                    if check_author_match(author, authors):
-                        best_status = "YEAR_MISMATCH"
-                        date_parts = item.get('issued', {}).get('date-parts', [[None]])
-                        found_year = str(date_parts[0][0]) if date_parts and date_parts[0] and date_parts[0][0] else ""
-                        msg = f" Reject: Year Mismatch (Found in CrossRef, but year is {found_year}, expected {year})"
-                        
-                        if check_year_match(year, found_year):
-                            if expected_doi:
-                                found_doi = item.get('DOI', '')
-                                if found_doi and clean_doi(expected_doi) != clean_doi(found_doi):
-                                    best_status = "DOI_MISMATCH"
-                                    msg = f" Reject: FAKE DOI (Title/Author match, but official CrossRef DOI is {found_doi})"
-                                    continue # Link mismatch, check next possible record
-                            
-                            return "VERIFIED", " Verified (Source: CrossRef)"
-            except Exception:
-                continue 
-    except Exception: 
-        pass
-    return best_status, msg
-
+        def extract(item):
+            f_title = item.get('title', [''])[0]
+            f_authors = " ".join([f"{a.get('given', '')} {a.get('family', '')}" for a in item.get('author', []) if isinstance(a, dict)])
+            date_parts = item.get('issued', {}).get('date-parts', [[None]])
+            f_year = str(date_parts[0][0]) if date_parts and date_parts[0] and date_parts[0][0] else ""
+            f_doi = item.get('DOI', '')
+            return f_title, f_authors, f_year, f_doi
+            
+        return generic_verify_logic("CrossRef", items, extract, title, author, year, expected_doi)
+    except Exception:
+        return "TITLE_NOT_FOUND", " Error connecting to CrossRef"
 
 def check_semantic_scholar(title, author, year, expected_doi=None):
     url = "https://api.semanticscholar.org/graph/v1/paper/search"
     params = {"query": title, "limit": 5, "fields": "title,authors,year,externalIds,url"} 
     
-    best_status = "TITLE_NOT_FOUND"
-    msg = "Reject: Title Not Found in Semantic Scholar"
-    
     try:
         resp = requests.get(url, params=params, timeout=5)
         items = resp.json().get('data', [])
         
-        for item in items:
-            try: 
-                found_title = item.get('title', '')
-                if calculate_similarity(title, found_title) > 0.9:
-                    best_status = "AUTHOR_MISMATCH"
-                    
-                    raw_authors = item.get('authors') or []
-                    authors = " ".join([a.get('name', '') for a in raw_authors if isinstance(a, dict)])
-                    msg = f"Reject: Author Mismatch (Found title in Semantic Scholar, but author '{author}' not matched)"
-                    
-                    if check_author_match(author, authors):
-                        best_status = "YEAR_MISMATCH"
-                        found_year = str(item.get('year', ''))
-                        msg = f"Reject: Year Mismatch (Found in Semantic Scholar, but year is {found_year}, expected {year})"
-                        
-                        if check_year_match(year, found_year):
-                            if expected_doi:
-                                external_ids = item.get('externalIds') or {}
-                                found_doi = external_ids.get('DOI', '')
-                                if not found_doi: 
-                                    found_doi = item.get('url', '')
-                                    
-                                if found_doi and clean_doi(expected_doi) != clean_doi(found_doi):
-                                    best_status = "DOI_MISMATCH"
-                                    msg = f"Reject: FAKE DOI (Title/Author match, but official Link is {found_doi})"
-                                    continue 
-                            
-                            return "VERIFIED", "Verified (Source: Semantic Scholar)"
-            except Exception:
-                continue
-    except Exception: 
-        pass
-    return best_status, msg
-
+        def extract(item):
+            f_title = item.get('title', '')
+            f_authors = " ".join([a.get('name', '') for a in item.get('authors', []) if isinstance(a, dict)])
+            f_year = str(item.get('year', ''))
+            f_doi = item.get('externalIds', {}).get('DOI', '') or item.get('url', '')
+            return f_title, f_authors, f_year, f_doi
+            
+        return generic_verify_logic("Semantic Scholar", items, extract, title, author, year, expected_doi)
+    except Exception:
+        return "TITLE_NOT_FOUND", " Error connecting to Semantic Scholar"
 
 def check_openalex(title, author, year, expected_doi=None):
     url = "https://api.openalex.org/works"
     params = {"search": title, "per-page": 5} 
     
-    best_status = "TITLE_NOT_FOUND"
-    msg = "Reject: Title Not Found in OpenAlex"
-    
     try:
         resp = requests.get(url, params=params, timeout=5)
         items = resp.json().get('results', [])
         
-        for item in items:
-            try: 
-                found_title = item.get('title', '')
-                if not found_title: continue
-                if calculate_similarity(title, found_title) > 0.9:
-                    best_status = "AUTHOR_MISMATCH"
-                    
-                    authorships = item.get('authorships', [])
-                    authors = " ".join([a.get('author', {}).get('display_name', '') for a in authorships if isinstance(a, dict)])
-                    msg = f"Reject: Author Mismatch (Found title in OpenAlex, but author '{author}' not matched)"
-                    
-                    if check_author_match(author, authors):
-                        best_status = "YEAR_MISMATCH"
-                        found_year = str(item.get('publication_year', ''))
-                        msg = f"Reject: Year Mismatch (Found in OpenAlex, but year is {found_year}, expected {year})"
-                        
-                        if check_year_match(year, found_year):
-                            if expected_doi:
-                                found_doi = item.get('doi', '') 
-                                if found_doi and clean_doi(expected_doi) != clean_doi(found_doi):
-                                    best_status = "DOI_MISMATCH"
-                                    msg = f"Reject: FAKE DOI (Title/Author match, but official DOI is {found_doi})"
-                                    continue
-                            
-                            return "VERIFIED", "Verified (Source: OpenAlex)"
-            except Exception:
-                continue
-    except Exception: 
-        pass
-    return best_status, msg
-
+        def extract(item):
+            f_title = item.get('title', '') or ''
+            f_authors = " ".join([a.get('author', {}).get('display_name', '') for a in item.get('authorships', []) if isinstance(a, dict)])
+            f_year = str(item.get('publication_year', ''))
+            f_doi = item.get('doi', '')
+            return f_title, f_authors, f_year, f_doi
+            
+        return generic_verify_logic("OpenAlex", items, extract, title, author, year, expected_doi)
+    except Exception:
+        return "TITLE_NOT_FOUND", " Error connecting to OpenAlex"
 
 def check_dblp(title, author, year, expected_doi=None):
     url = "https://dblp.org/search/publ/api"
     params = {"q": f"{title} {author}", "format": "json", "h": 5} 
     
-    best_status = "TITLE_NOT_FOUND"
-    msg = "Reject: Title Not Found in DBLP"
-    
     try:
         resp = requests.get(url, params=params, timeout=5)
         items = resp.json().get('result', {}).get('hits', {}).get('hit', [])
-
-        # --- Debug logs ---
-        print(f"\n[Debug] Actual requested URL: {resp.url}") 
         
-        items = resp.json().get('result', {}).get('hits', {}).get('hit', [])
-        print(f"[Debug] DBLP API returned {len(items)} records")
-        # -----------------------------
-        
-        for item in items:
-            try: 
-                info = item.get('info', {})
-                found_title = info.get('title', '')
-                
-                if calculate_similarity(title, found_title) > 0.9:
-                    best_status = "AUTHOR_MISMATCH"
-                    
-                    raw_authors = info.get('authors', {}).get('author', [])
-                    if isinstance(raw_authors, dict):
-                        raw_authors = [raw_authors]
-                    elif not isinstance(raw_authors, list):
-                        raw_authors = []
-                        
-                    authors = " ".join([a.get('text', '') for a in raw_authors if isinstance(a, dict)])
-                    msg = f"Reject: Author Mismatch"
-                    
-                    if check_author_match(author, authors):
-                        best_status = "YEAR_MISMATCH"
-                        found_year = str(info.get('year', ''))
-                        msg = f"Reject: Year Mismatch"
-                        
-                        if check_year_match(year, found_year):
-                            
-                            if expected_doi:
-                                found_doi = info.get('doi', '')
-                                if not found_doi: 
-                                    found_doi = info.get('ee', '')
-                                    
-                                if found_doi and clean_doi(expected_doi) != clean_doi(found_doi):
-                                    best_status = "DOI_MISMATCH"
-                                    msg = f"Reject: FAKE DOI"
-                                    print(f"      [Failure Cause -> DOI] Expected: {expected_doi} | Found: {found_doi}")
-                                    continue 
-                            
-                            return "VERIFIED", "Verified (Source: DBLP)"
-                        else:
-                            print(f"      [Failure Cause -> Year] Expected: {year} | Found: {found_year}")
-                    else:
-                        print(f"      [Failure Cause -> Author] Expected: {author} | Found: {authors}")
-                else:
-                    sim_score = calculate_similarity(title, found_title)
-                    print(f"      [Failure Cause -> Title Similarity {sim_score:.2f}] Expected: '{title}' | Found: '{found_title}'")
-                    
-            except Exception:
-                continue
-    except Exception: 
-        pass
-        
-    return best_status, msg
-
+        def extract(item):
+            info = item.get('info', {})
+            f_title = info.get('title', '')
+            raw_authors = info.get('authors', {}).get('author', [])
+            raw_authors = [raw_authors] if isinstance(raw_authors, dict) else (raw_authors if isinstance(raw_authors, list) else [])
+            f_authors = " ".join([a.get('text', '') for a in raw_authors if isinstance(a, dict)])
+            f_year = str(info.get('year', ''))
+            f_doi = info.get('doi', '') or info.get('ee', '')
+            return f_title, f_authors, f_year, f_doi
+            
+        return generic_verify_logic("DBLP", items, extract, title, author, year, expected_doi)
+    except Exception:
+        return "TITLE_NOT_FOUND", " Error connecting to DBLP"
 
 # ======================
 # 3. Main Control Logic 

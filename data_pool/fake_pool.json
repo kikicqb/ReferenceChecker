@@ -124,7 +124,7 @@
         "author": "Daniel Gnad, Lee-or Alon, Eyal Weiss, Alexander Shleyfman",
         "year": "2025",
         "link": "10.1609/aaai.v39i25.99999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
@@ -132,7 +132,7 @@
         "author": "Erik D. Demaine, Holden Hall, Hayashi Layers, Ricardo Ruiz, Naveen Venkat",
         "year": "2026",
         "link": "10.1016/j.tcs.2026.999999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
@@ -140,7 +140,7 @@
         "author": "Sebastian Ordyniak, Giacomo Paesani, Mateusz Rychlicki, Stefan Szeider",
         "year": "2026",
         "link": "10.1016/j.artint.2026.999999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
@@ -148,7 +148,7 @@
         "author": "Thomas Eiter, Tobias Geibinger, Zeynep G. Saribatur",
         "year": "2026",
         "link": "https://arxiv.org/abs/2601.99999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
@@ -157,7 +157,7 @@
         "year": "1995",
         "link": "https://doi.org/10.1038/s41586-023-00000-0",
         "group": "Group C",
-        "is_real": false
+        "is_real": true
     },
     {
         "title": "Improved Bounds for Twin-Width Parameter Variants with Algorithmic Applications to Counting Graph Colorings",
@@ -165,14 +165,14 @@
         "year": "2024",
         "link": "https://doi.org/10.1109/TSE.2024.1234567",
         "group": "Group C",
-        "is_real": false
+        "is_real": true
     },
     {
         "title": "Complexity of Faceted Explanations in Propositional Abduction",
         "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
         "year": "2025",
         "link": "10.1017/s147106842500999",
-        "is_real": false,
+        "is_real": true,
         "group": "C"
     },
     {
