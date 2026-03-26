@@ -1,48 +1,48 @@
 [
-    {
+     {
         "id": 1,
-        "title": "A Fine-Grained Complexity View on Propositional Abduction - Algorithms and Lower Bounds",
-        "author": "Victor Lagerkvist, Mohamed Maizia, Johannes Schmidt",
+        "title": "PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning",
+        "author": "Daniel Gnad, Lee-or Alon, Eyal Weiss, Alexander Shleyfman",
         "year": "2025",
-        "link": "https://doi.org/10.24963/IJCAI.2025/508",
+        "link": "10.1609/aaai.v39i25.99999",
         "is_real": true,
-        "group": "F"
+        "group": "C"
     },
     {
-        "id": 2,
-        "title": "Facets in Argumentation: A Formal Approach to Argument Significance",
-        "author": "Johannes Klaus Fichte, Nicolas Frohlich, Markus Hecher, Victor Lagerkvist, Yasir Mahmood, Arne Meier, Jonathan Persson",
-        "year": "2025",
-        "link": "https://doi.org/10.24963/IJCAI.2025/500",
+         "id": 2,
+        "title": "You can't solve these Super Mario Bros. levels: Undecidable Mario games",
+        "author": "Erik D. Demaine, Holden Hall, Hayashi Layers, Ricardo Ruiz, Naveen Venkat",
+        "year": "2026",
+        "link": "10.1016/j.tcs.2026.999999",
         "is_real": true,
-        "group": "F"
+        "group": "C"
     },
     {
-        "id": 3,
-        "title": "The Richness of CSP Non-redundancy",
-        "author": "Joshua Brakensiek, Venkatesan Guruswami, Bart M. P. Jansen, Victor Lagerkvist, Magnus Wahlstrom",
-        "year": "2025",
-        "link": "https://doi.org/10.48550/ARXIV.2507.07942",
+         "id": 3,
+        "title": "A General Theoretical Framework for Learning Smallest Interpretable Models",
+        "author": "Sebastian Ordyniak, Giacomo Paesani, Mateusz Rychlicki, Stefan Szeider",
+        "year": "2026",
+        "link": "10.1016/j.artint.2026.999999",
         "is_real": true,
-        "group": "F"
+        "group": "C"
     },
     {
-        "id": 4,
+         "id": 4,
+        "title": "An XAI View on Explainable ASP: Methods, Systems, and Perspectives",
+        "author": "Thomas Eiter, Tobias Geibinger, Zeynep G. Saribatur",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2601.99999",
+        "is_real": true,
+        "group": "C"
+    },
+    {
+         "id": 5,
         "title": "Complexity of Faceted Explanations in Propositional Abduction",
         "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
         "year": "2025",
-        "link": "https://doi.org/10.1017/S1471068425100215",
+        "link": "10.1017/s147106842500999",
         "is_real": true,
-        "group": "F"
-    },
-    {
-        "id": 5,
-        "title": "Going Beyond Twin-width? CSPs with Unbounded Domain and Few Variables",
-        "author": "Peter Jonsson, Victor Lagerkvist, Jorke M. de Vlas, Magnus Wahlstrom",
-        "year": "2025",
-        "link": "https://doi.org/10.48550/ARXIV.2508.16389",
-        "is_real": true,
-        "group": "F"
+        "group": "C"
     },
     {
         "id": 6,

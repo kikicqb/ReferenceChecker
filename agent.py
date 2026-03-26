@@ -122,16 +122,25 @@ def run_agent_verification(raw_citation):
     print(f"\n Starting test for citation: {raw_citation[:30]}...")
     
     system_prompt = (
-        "You are an expert academic fact-checking agent. Your job is to verify if a cited paper exists using the 'search_all_databases' tool. "
-        "The tool will search DBLP, CrossRef, Semantic Scholar, and OpenAlex simultaneously. "
-        "First, carefully extract the core entities (title, first author's surname, and year) from the provided citation to use as parameters. "
-        "Read the returned intelligence report. If the paper is found in ANY of the databases, it exists. "
-        "Based on the combined evidence, classify the citation into one of THREE levels:\n\n"
-        "- LEVEL 1 (Perfect Match): The paper exists and all core metadata perfectly or near-perfectly match.\n"
-        "- LEVEL 2 (Minor Flaw / Real Entity): The paper exists in reality, but the provided citation has noticeable hallucinations or typos or a fake/incorrect DOI/URL (e.g., misspelled authors, slightly altered title). It is a real concept with flawed details.\n"
-        "- LEVEL 3 (Completely Fake): No convincing match is found in ANY of the 4 databases. The entity is an AI hallucination.\n\n"
-        "Provide a brief reasoning. CRITICAL: Your final response MUST end with exactly ONE of the following labels on a new line:\n"
-        "[VERDICT: LEVEL_1_PERFECT]\n[VERDICT: LEVEL_2_FLAWED]\n[VERDICT: LEVEL_3_FAKE]"
+    "You are an expert academic fact-checking agent. Your job is to verify if a cited paper exists using the 'search_all_databases' tool. "
+    "The tool searches DBLP, CrossRef, Semantic Scholar, and OpenAlex simultaneously.\n\n"
+    
+    "### STRATEGY FOR NOISY DATA (CRITICAL):\n"
+    "1. **Analyze Input Quality**: Before searching, check if the 'title' is 'Unknown', 'Unknown Title', or suspiciously short. "
+    "Check if the 'author' is missing or looks like garbled text (e.g., 'TJoachims').\n"
+    "2. **Mine Raw Text**: If the metadata is poor, carefully scan the 'raw_text' field. Look for sequences that resemble paper titles "
+    "(usually longer phrases between the author names and the year/venue). Extract potential titles and clean author names (e.g., 'TJoachims' -> 'Joachims').\n"
+    "3. **Refined Search**: Use the *best available* information. If the title is unknown, search using 'Author + Key Keywords from Raw Text + Year'.\n\n"
+    
+    "### CLASSIFICATION LEVELS:\n"
+    "- LEVEL 1 (Perfect Match): The paper exists. Even if the input title was 'Unknown', if you successfully recovered the correct title from 'raw_text' and found a 100% match in databases, it is LEVEL 1.\n"
+    "- LEVEL 2 (Minor Flaw / Real Entity): The paper exists, but the citation has hallucinations, typos, or incorrect metadata (e.g., misspelled authors, slightly altered title). It is a real entity with flawed details.\n"
+    "- LEVEL 3 (Completely Fake): No convincing match is found in ANY of the 4 databases after trying multiple search variations based on 'raw_text'.\n\n"
+    
+    "### OUTPUT INSTRUCTIONS:\n"
+    "Provide a brief reasoning explaining your discovery process (especially if you recovered a title from raw text). "
+    "Your final response MUST end with exactly ONE of the following labels on a new line:\n"
+    "[VERDICT: LEVEL_1_PERFECT]\n[VERDICT: LEVEL_2_FLAWED]\n[VERDICT: LEVEL_3_FAKE]"
     )
 
     messages = [
@@ -193,7 +202,7 @@ def run_agent_verification(raw_citation):
 # =====================
 if __name__ == "__main__":
     
-    input_file_path = "experiment_datasets/test.json"  
+    input_file_path = "grobid/test.json"  
     
     try:
         with open(input_file_path, 'r', encoding='utf-8') as f:
@@ -203,69 +212,97 @@ if __name__ == "__main__":
         exit()
 
     total = len(TEST_DATASET)
+    score = 0  
+    labeled_total = 0 
+    results_log = []
+
     print(f" Starting automated multi-database Agent testing, total {total} papers...\n")
     
-    results_log = []
-    score = 0  
-
     for index, paper in enumerate(TEST_DATASET):
         id = paper.get("id", "")
         title = paper.get("title", "")
         author = paper.get("author", "")
         year = paper.get("year", "")
         link = paper.get("link", "") 
-        expected_real = paper.get("is_real", False) 
+        group = paper.get('group', 'Unknown')
+        raw_text = paper.get('raw_text', '')
+
+        has_label = "is_real" in paper
+        is_real = paper.get("is_real", False) 
         
         print(f"==================================================")
         print(f"[{index + 1}/{total}] Testing: {title}")
-        print(f"   Expected: {'Real Paper' if expected_real else 'Fake Paper'}")
+        print(f"   Group: {group}")
         
         try:
-            raw_citation_text = f"{author} ({year}). {title}. {link}"
-            print(f"   [Input to Agent] {raw_citation_text}")
+            raw_citation_text = f"Title: {title}\nAuthor: {author}\nYear: {year}\nLink: {link}\nRaw Text: {raw_text}"
             
             raw_agent_verdict = run_agent_verification(raw_citation_text)
             
             clean_verdict = "UNKNOWN"
             upper_verdict = str(raw_agent_verdict).upper() 
-            
-            if "LEVEL 1" in upper_verdict or "LEVEL_1" in upper_verdict:
+            if "LEVEL_1" in upper_verdict or "LEVEL 1" in upper_verdict:
                 clean_verdict = "LEVEL_1_PERFECT"
-            elif "LEVEL 2" in upper_verdict or "LEVEL_2" in upper_verdict:
+            elif "LEVEL_2" in upper_verdict or "LEVEL 2" in upper_verdict:
                 clean_verdict = "LEVEL_2_FLAWED"
-            elif "LEVEL 3" in upper_verdict or "LEVEL_3" in upper_verdict:
+            elif "LEVEL_3" in upper_verdict or "LEVEL 3" in upper_verdict:
                 clean_verdict = "LEVEL_3_FAKE"
             
-            print(f"   Agent Extracted Conclusion: {clean_verdict}")
+            is_correct = None
             
-            is_correct = False
-            if expected_real and clean_verdict in ["LEVEL_1_PERFECT", "LEVEL_2_FLAWED"]:
-                is_correct = True
-                print(f"   -> ✅ Agent Correct!")
-                score += 1
-            elif not expected_real and clean_verdict == "LEVEL_3_FAKE":
-                is_correct = True
-                print("   -> ✅ Agent Intercepted!")
-                score += 1
+            if has_label:
+                labeled_total += 1
+                print(f"   Expected: {'Real Paper' if is_real else 'Fake Paper'}")
+                if is_real and clean_verdict in ["LEVEL_1_PERFECT", "LEVEL_2_FLAWED"]:
+                    is_correct = True
+                    print(f"   -> ✅ Agent Correct!")
+                    score += 1
+                elif not is_real and clean_verdict == "LEVEL_3_FAKE":
+                    is_correct = True
+                    print("   -> ✅ Agent Intercepted!")
+                    score += 1
+                else:
+                    is_correct = False
+                    print(f"   -> ❌ Agent Failed!")
             else:
-                print(f"   -> ❌ Agent Failed! (Expected Real: {expected_real}, but got {clean_verdict})")
+                print(f"   -> [Inference Mode] No label, Result: {clean_verdict}")
             
             results_log.append({
-                "id": id, "title": title, "expected_real": expected_real,
-                "clean_verdict": clean_verdict, "is_correct": is_correct,             
-                "raw_agent_response": raw_agent_verdict 
+                "id": id, 
+                "title": title, 
+                "has_label": has_label,
+                "expected_real": is_real if has_label else "N/A",
+                "clean_verdict": clean_verdict,            
+                "is_correct": is_correct,
+                "raw_agent_response": raw_agent_verdict
             })
             
         except Exception as e:
             print(f"❌ Error testing this paper: {e}")
             
-        time.sleep(5) 
+        time.sleep(2) 
         
-    accuracy = (score / total) * 100
-    print(f"\n==================================================")
-    print(f"Agent Final Accuracy: {score}/{total} ({accuracy:.1f}%)")
+    if labeled_total > 0:
+        accuracy = (score / labeled_total) * 100
+        print(f"\n==================================================")
+        print(f"Agent Final Accuracy: {score}/{labeled_total} ({accuracy:.1f}%)")
+    else:
+        print(f"\n==================================================")
+        print("All tests completed in Inference Mode (No labeled data).")
     print(f"==================================================\n")
 
-    output_file = input_file_path.replace(".json", "_multidb_agent_results.json")
+    final_output = {
+        "summary": {
+            "total_papers": total,
+            "labeled_papers": labeled_total,
+            "correct_predictions": score,
+            "accuracy": f"{accuracy:.2f}%" if labeled_total > 0 else "N/A"
+        },
+        "detailed_results": results_log 
+    }
+
+    output_file = input_file_path.replace(".json", "_agent_results.json")
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(results_log, f, ensure_ascii=False, indent=4)
+        json.dump(final_output, f, ensure_ascii=False, indent=4)
+        
+    print(f" Results safely saved to: {output_file}")

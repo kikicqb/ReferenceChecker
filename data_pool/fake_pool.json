@@ -120,62 +120,6 @@
         "is_real": false
     },
     {
-        "title": "PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning",
-        "author": "Daniel Gnad, Lee-or Alon, Eyal Weiss, Alexander Shleyfman",
-        "year": "2025",
-        "link": "10.1609/aaai.v39i25.99999",
-        "is_real": true,
-        "group": "C"
-    },
-    {
-        "title": "You can't solve these Super Mario Bros. levels: Undecidable Mario games",
-        "author": "Erik D. Demaine, Holden Hall, Hayashi Layers, Ricardo Ruiz, Naveen Venkat",
-        "year": "2026",
-        "link": "10.1016/j.tcs.2026.999999",
-        "is_real": true,
-        "group": "C"
-    },
-    {
-        "title": "A General Theoretical Framework for Learning Smallest Interpretable Models",
-        "author": "Sebastian Ordyniak, Giacomo Paesani, Mateusz Rychlicki, Stefan Szeider",
-        "year": "2026",
-        "link": "10.1016/j.artint.2026.999999",
-        "is_real": true,
-        "group": "C"
-    },
-    {
-        "title": "An XAI View on Explainable ASP: Methods, Systems, and Perspectives",
-        "author": "Thomas Eiter, Tobias Geibinger, Zeynep G. Saribatur",
-        "year": "2026",
-        "link": "https://arxiv.org/abs/2601.99999",
-        "is_real": true,
-        "group": "C"
-    },
-    {
-        "title": "The Complexity of Logic-Based Abduction",
-        "author": "Thomas Eiter, Georg Gottlob",
-        "year": "1995",
-        "link": "https://doi.org/10.1038/s41586-023-00000-0",
-        "group": "Group C",
-        "is_real": true
-    },
-    {
-        "title": "Improved Bounds for Twin-Width Parameter Variants with Algorithmic Applications to Counting Graph Colorings",
-        "author": "Ambroise Baril, Miguel Couceiro, Victor Lagerkvist",
-        "year": "2024",
-        "link": "https://doi.org/10.1109/TSE.2024.1234567",
-        "group": "Group C",
-        "is_real": true
-    },
-    {
-        "title": "Complexity of Faceted Explanations in Propositional Abduction",
-        "author": "Johannes Schmidt, Mohamed Maizia, Victor Lagerkvist, Johannes Klaus Fichte",
-        "year": "2025",
-        "link": "10.1017/s147106842500999",
-        "is_real": true,
-        "group": "C"
-    },
-    {
         "title": "Decoupled Search for Multi-Agent Path Finding in Highly Constrained Environments",
         "author": "Daniel Gnad, Jendrik Seipp",
         "year": "2026",
@@ -278,5 +222,45 @@
         "link": "",
         "is_real": true,
         "group": "E"
+    },
+    {
+        "title": "Parameterized Complexity of Algorithmic Origami and Geometric Constraint Satisfaction.",
+        "author": "Erik D. Demaine, Stefan Szeider",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/aaai.v39i1.12345",
+        "is_real": false,
+        "group": "G"
+    },
+    {
+        "title": "The Complexity of Hypertree Decompositions in Post's Lattice.",
+        "author": "Georg Gottlob, Victor Lagerkvist",
+        "year": "2024",
+        "link": "https://arxiv.org/abs/2405.09999",
+        "is_real": false,
+        "group": "G"
+    },
+    {
+        "title": "Evaluating Epistemic Logic Programs via Decoupled State Space Search.",
+        "author": "Thomas Eiter, Daniel Gnad",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/ijcai.2025/999",
+        "is_real": false,
+        "group": "G"
+    },
+     {
+        "title": "Fine-Grained Complexity of Backdoor Sets in Propositional Abduction.",
+        "author": "Victor Lagerkvist, Stefan Szeider",
+        "year": "2026",
+        "link": "https://dl.acm.org/doi/10.1145/3999999.3999999",
+        "is_real": false,
+        "group": "G"
+    },
+    {
+        "title": "On the Tractability of Spatial Datalog in Computational Geometry.",
+        "author": "Georg Gottlob, Erik D. Demaine, Daniel Gnad",
+        "year": "2024",
+        "link": "https://arxiv.org/abs/2411.88888",
+        "is_real": false,
+        "group": "G"
     }
 ]
