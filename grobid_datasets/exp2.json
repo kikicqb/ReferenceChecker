@@ -1,0 +1,177 @@
+[
+    {
+        "title": "Unknown Title",
+        "author": "Anirudh Sai, Sandeep Athaluri, V S R Varma Manthena, Manoj Krishna, Vineel Kesapragada, Tirth Yarlagadda, Rama Dave, Siri Tulasi, Duddumpudi",
+        "year": "2023",
+        "link": "https://doi.org/10.7759/cureus.37432",
+        "raw_text": "AnirudhSai\n\n\nSandeepAthaluri\n\n\nV S RVarma Manthena\n\n\nManojKrishna\n\n\nVineelKesapragada\n\n\nTirthYarlagadda\n\n\nRamaDave\n\n\nSiriTulasi\n\n\nDuddumpudi\n\n10.7759/cureus.37432\nExploring the Boundaries of Reality: Investigating the Phenomenon of Artificial Intelligence Hallucination in Scientific Writing Through ChatGPT References\n\nCureus\n2023"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Amos Azaria, Tom Mitchell",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/arXiv.2304.13734",
+        "raw_text": "AmosAzaria\n\n\nTomMitchell\n\n10.48550/arXiv.2304.13734\nArXiv:2304.13734\nThe Internal State of an LLM Knows When its Lying\n\n2023\n\n\ncs"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece Kamar, Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott Lundberg, Harsha Nori, Hamid Palangi, Marco Tulio Ribeiro, Yi Zhang",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/arXiv.2303.12712",
+        "raw_text": "SébastienBubeck\n\n\nVarunChandrasekaran\n\n\nRonenEldan\n\n\nJohannesGehrke\n\n\nEricHorvitz\n\n\nEceKamar\n\n\nPeterLee\n\n\nYinTat Lee\n\n\nYuanzhiLi\n\n\nScottLundberg\n\n\nHarshaNori\n\n\nHamidPalangi\n\n\nMarcoTulio Ribeiro\n\n\nYiZhang\n\n10.48550/arXiv.2303.12712\nArXiv:2303.12712\nSparks of Artificial General Intelligence: Early experiments with GPT-4\n\n2023\n\n\ncs"
+    },
+    {
+        "title": "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach",
+        "author": "David Elizabeth R Delong, Daniel Delong, Clarke-Pearson",
+        "year": "1988",
+        "link": "N/A",
+        "raw_text": "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach\n\nDavidMElizabeth R Delong\n\n\nDanielLDelong\n\n\nClarke-Pearson\n\n\n\nBiometrics\n\n\n1988"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Owain Evans, Owen Cotton-Barratt, Lukas Finnveden, Adam Bales, Avital Balwit, Peter Wills, Luca Righetti, William Saunders",
+        "year": "2021",
+        "link": "https://doi.org/10.48550/arXiv.2110.06674",
+        "raw_text": "OwainEvans\n\n\nOwenCotton-Barratt\n\n\nLukasFinnveden\n\n\nAdamBales\n\n\nAvitalBalwit\n\n\nPeterWills\n\n\nLucaRighetti\n\n\nWilliamSaunders\n\n10.48550/arXiv.2110.06674\nArXiv:2110.06674\nTruthful AI: Developing and governing AI that does not lie\n\n2021\n\n\ncs"
+    },
+    {
+        "title": "An introduction to roc analysis",
+        "author": "Tom Fawcett",
+        "year": "2006",
+        "link": "N/A",
+        "raw_text": "An introduction to roc analysis\n\nTomFawcett\n\n\n\nPattern recognition letters\n\n27\n8\n\n2006"
+    },
+    {
+        "title": "Making pre-trained language models better few-shot learners",
+        "author": "Tianyu Gao, Adam Fisch, Danqi Chen",
+        "year": "2021",
+        "link": "N/A",
+        "raw_text": "Making pre-trained language models better few-shot learners\n\nTianyuGao\n\n\nAdamFisch\n\n\nDanqiChen\n\n\n\nProceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing\nthe 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing\n\nLong Papers\n2021\n1"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Zhijiang Guo, Michael Schlichtkrull, Andreas Vlachos",
+        "year": "2022",
+        "link": "https://doi.org/10.1162/tacl_a_00454",
+        "raw_text": "ZhijiangGuo\n\n\nMichaelSchlichtkrull\n\n\nAndreasVlachos\n\n10.1162/tacl_a_00454\n\n\nA Survey on Automated Fact-Checking. Transactions of the Association for Computational Linguistics\n\n10\n\n2022"
+    },
+    {
+        "title": "Simfluence: Modeling the Influence of Individual Training Examples by Simulating Training Runs",
+        "author": "Kelvin Guu, Albert Webson, Ellie Pavlick, Lucas Dixon, Ian Tenney, Tolga Bolukbasi",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/arXiv.2303.08114",
+        "raw_text": "Simfluence: Modeling the Influence of Individual Training Examples by Simulating Training Runs\n\nKelvinGuu\n\n\nAlbertWebson\n\n\nElliePavlick\n\n\nLucasDixon\n\n\nIanTenney\n\n\nTolgaBolukbasi\n\n10.48550/arXiv.2303.08114\nArXiv:2303.08114\n\n2023\n\n\ncs"
+    },
+    {
+        "title": "Survey of Hallucination in Natural Language Generation",
+        "author": "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Ye, Jin Bang, Andrea Madotto, Pascale Fung",
+        "year": "2023",
+        "link": "https://doi.org/10.1145/3571730",
+        "raw_text": "Survey of Hallucination in Natural Language Generation\n\nZiweiJi\n\n\nNayeonLee\n\n\nRitaFrieske\n\n\nTiezhengYu\n\n\nDanSu\n\n\nYanXu\n\n\nEtsukoIshii\n\n\nYe\n\n\nJinBang\n\n\nAndreaMadotto\n\n\nPascaleFung\n\n10.1145/3571730\n\n2023\nACM Computing Surveys\n55"
+    },
+    {
+        "title": "How can we know what language models know?",
+        "author": "Zhengbao Jiang, Frank Xu, Jun Araki, Graham Neubig",
+        "year": "2020",
+        "link": "N/A",
+        "raw_text": "How can we know what language models know?\n\nZhengbaoJiang\n\n\nFrankFXu\n\n\nJunAraki\n\n\nGrahamNeubig\n\n\n\nTransactions of the Association for Computational Linguistics\n\n8\n\n2020"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Saurav Kadavath, Tom Conerly, Amanda Askell, Tom Henighan, Dawn Drain, Ethan Perez, Nicholas Schiefer, Zac Hatfield-Dodds, Nova Dassarma, Eli Tran-Johnson, Scott Johnston, Sheer El-Showk, Andy Jones, Nelson Elhage, Tristan Hume, Anna Chen, Yuntao Bai, Sam Bowman, Stanislav Fort, Deep Ganguli, Danny Hernandez, Josh Jacobson, Jackson Kernion, Shauna Kravec, Liane Lovitt, Kamal Ndousse, Catherine Olsson, Sam Ringer, Dario Amodei, Tom Brown, Jack Clark, Nicholas Joseph, Ben Mann, Sam Mccandlish, Chris Olah, Jared Kaplan",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/arXiv.2207.05221",
+        "raw_text": "SauravKadavath\n\n\nTomConerly\n\n\nAmandaAskell\n\n\nTomHenighan\n\n\nDawnDrain\n\n\nEthanPerez\n\n\nNicholasSchiefer\n\n\nZacHatfield-Dodds\n\n\nNovaDassarma\n\n\nEliTran-Johnson\n\n\nScottJohnston\n\n\nSheerEl-Showk\n\n\nAndyJones\n\n\nNelsonElhage\n\n\nTristanHume\n\n\nAnnaChen\n\n\nYuntaoBai\n\n\nSamBowman\n\n\nStanislavFort\n\n\nDeepGanguli\n\n\nDannyHernandez\n\n\nJoshJacobson\n\n\nJacksonKernion\n\n\nShaunaKravec\n\n\nLianeLovitt\n\n\nKamalNdousse\n\n\nCatherineOlsson\n\n\nSamRinger\n\n\nDarioAmodei\n\n\nTomBrown\n\n\nJackClark\n\n\nNicholasJoseph\n\n\nBenMann\n\n\nSamMccandlish\n\n\nChrisOlah\n\n\nJaredKaplan\n\n10.48550/arXiv.2207.05221\nArXiv:2207.05221\n\n\nLanguage Models (Mostly) Know What They Know\n\n2022\n\n\ncs"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Stephanie Lin, Jacob Hilton, Owain Evans",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/arXiv.2205.14334",
+        "raw_text": "StephanieLin\n\n\nJacobHilton\n\n\nOwainEvans\n\n10.48550/arXiv.2205.14334\nArXiv:2205.14334\nTeaching Models to Express Their Uncertainty in Words\n\n2022\n\n\ncs"
+    },
+    {
+        "title": "Fantastically ordered prompts and where to find them: Overcoming fewshot prompt order sensitivity",
+        "author": "Yao Lu, Max Bartolo, Alastair Moore, Sebastian Riedel, Pontus Stenetorp",
+        "year": "2022",
+        "link": "N/A",
+        "raw_text": "Fantastically ordered prompts and where to find them: Overcoming fewshot prompt order sensitivity\n\nYaoLu\n\n\nMaxBartolo\n\n\nAlastairMoore\n\n\nSebastianRiedel\n\n\nPontusStenetorp\n\n\n\nProceedings of the 60th Annual Meeting of the Association for Computational Linguistics\nthe 60th Annual Meeting of the Association for Computational Linguistics\n\nLong Papers\n2022\n1"
+    },
+    {
+        "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+        "author": "Potsawee Manakul, Adian Liusie, Mark Gales",
+        "year": "2023",
+        "link": "N/A",
+        "raw_text": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models\n\nPotsaweeManakul\n\n\nAdianLiusie\n\n\nMarkJ FGales\n\nArXiv:2303.08896\n\n2023\n\n\ncs"
+    },
+    {
+        "title": "Interrater reliability: the kappa statistic",
+        "author": "Mary Mchugh",
+        "year": "2012",
+        "link": "N/A",
+        "raw_text": "Interrater reliability: the kappa statistic\n\nMaryLMchugh\n\n\n\nBiochemia medica\n\n22\n3\n\n2012"
+    },
+    {
+        "title": "New york lawyers sanctioned for using fake chatgpt cases in legal brief",
+        "author": "Sara Merken",
+        "year": "2023",
+        "link": "https://doi.org/10.48550/arXiv.2303.08774",
+        "raw_text": "New york lawyers sanctioned for using fake chatgpt cases in legal brief\n\nSaraMerken\n\n10.48550/arXiv.2303.08774\nArXiv:2303.08774\n\n2023\n\n\nReuters. OpenAI. 2023. GPT-4 Technical Report\ncs"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, Ryan Lowe",
+        "year": "2022",
+        "link": "https://doi.org/10.48550/arXiv.2203.02155",
+        "raw_text": "LongOuyang\n\n\nJeffWu\n\n\nXuJiang\n\n\nDiogoAlmeida\n\n\nCarrollLWainwright\n\n\nPamelaMishkin\n\n\nChongZhang\n\n\nSandhiniAgarwal\n\n\nKatarinaSlama\n\n\nAlexRay\n\n\nJohnSchulman\n\n\nJacobHilton\n\n\nFraserKelton\n\n\nLukeMiller\n\n\nMaddieSimens\n\n\nAmandaAskell\n\n\nPeterWelinder\n\n\nPaulChristiano\n\n\nJanLeike\n\n\nRyanLowe\n\n10.48550/arXiv.2203.02155\nArXiv:2203.02155\nTraining language models to follow instructions with human feedback\n\n2022\n\n\ncs"
+    },
+    {
+        "title": "Major update to ACM's Computing Classification System",
+        "author": "Bernard Rous",
+        "year": "2012",
+        "link": "https://doi.org/10.1145/2366316.2366320",
+        "raw_text": "Major update to ACM's Computing Classification System\n\nBernardRous\n\n10.1145/2366316.2366320\n\n\nCommunications of the ACM\n\n55\n11\n12\n2012"
+    },
+    {
+        "title": "Autoprompt: Eliciting knowledge from language models with automatically generated prompts",
+        "author": "Taylor Shin, Yasaman Razeghi, Robert Logan, I, Eric Wallace, Sameer Singh",
+        "year": "2020",
+        "link": "N/A",
+        "raw_text": "Autoprompt: Eliciting knowledge from language models with automatically generated prompts\n\nTaylorShin\n\n\nYasamanRazeghi\n\n\nRobertLLogan\n\n\nIV\n\n\nEricWallace\n\n\nSameerSingh\n\n\n\nProceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\nthe 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\n\n2020"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Aarohi Srivastava, Abhinav Rastogi, Abhishek Rao, Abu Awal, Md Shoeb, Abubakar Abid, Adam Fisch, Adam Brown, Adam Santoro",
+        "year": "Unknown Year",
+        "link": "https://doi.org/10.48550/ARXIV.2206.04615",
+        "raw_text": "AarohiSrivastava\n\n\nAbhinavRastogi\n\n\nAbhishekRao\n\n\nAbuAwal\n\n\nMdShoeb\n\n\nAbubakarAbid\n\n\nAdamFisch\n\n\nAdamRBrown\n\n\nAdamSantoro\n\n10.48550/ARXIV.2206.04615\nAditya Gupta, Adrià Garriga-Alonso, Agnieszka Kluska, Aitor Lewkowycz, Akshat Agarwal, Alethea Power, Alex Ray, Alex Warstadt, Alexander W. Kocurek, ..\n\n\n421others and Ziyi Wu. 2022. Beyond the imitation game: Quantifying and extrapolating the capabilities of language models"
+    },
+    {
+        "title": "What are the biases in my word embedding?",
+        "author": "Nathaniel Swinger, Maria De-Arteaga, Neil Thomas Heffernan, I Mark Dm Leiserson, Adam Tauman, Kalai",
+        "year": "2019",
+        "link": "N/A",
+        "raw_text": "What are the biases in my word embedding?\n\nNathanielSwinger\n\n\nMariaDe-Arteaga\n\n\nNeilThomas Heffernan\n\n\nIVMark Dm Leiserson\n\n\nAdamTauman\n\n\nKalai\n\n\n\nProceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society\nthe 2019 AAAI/ACM Conference on AI, Ethics, and Society\n\n2019"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale",
+        "year": "2023",
+        "link": "https://arxiv.org/abs/arXiv:2307.09288",
+        "raw_text": "HugoTouvron\n\n\nLouisMartin\n\n\nKevinStone\n\n\nPeterAlbert\n\n\nAmjadAlmahairi\n\n\nYasmineBabaei\n\n\nNikolayBashlykov\n\n\nSoumyaBatra\n\n\nPrajjwalBhargava\n\n\nShrutiBhosale\n\narXiv:2307.09288\n\n\nOpen foundation and fine-tuned chat models\n\n2023\n2\n\n\narXiv preprint"
+    },
+    {
+        "title": "The Inconsistent Suspect: A Systematic Review of Different Types of Consistency in Truth Tellers and Liars",
+        "author": "Annelies Vredeveldt, Peter Van Koppen, Pär Anders, Granhag",
+        "year": "2014",
+        "link": "https://doi.org/10.1007/978-1-4614-9642-7_10",
+        "raw_text": "The Inconsistent Suspect: A Systematic Review of Different Types of Consistency in Truth Tellers and Liars\n\nAnneliesVredeveldt\n\n\nPeterJVan Koppen\n\n\nPärAnders\n\n\nGranhag\n\n10.1007/978-1-4614-9642-7_10\n\n\nInvestigative Interviewing\n\nRayBull\n\nNew York, NY\n\nSpringer\n2014"
+    },
+    {
+        "title": "Philosophical Investigations",
+        "author": "Ludwig Wittgenstein",
+        "year": "1953",
+        "link": "N/A",
+        "raw_text": "Philosophical Investigations\n\nLudwigWittgenstein\n\n\n1953\nWiley-Blackwell\nNew York, NY, USA"
+    }
+]

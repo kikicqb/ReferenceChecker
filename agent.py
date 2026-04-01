@@ -133,10 +133,20 @@ def run_agent_verification(raw_citation):
     "3. **Refined Search**: Use the *best available* information. If the title is unknown, search using 'Author + Key Keywords from Raw Text + Year'.\n\n"
     
     "### CLASSIFICATION LEVELS:\n"
-    "- LEVEL 1 (Perfect Match): The paper exists. Even if the input title was 'Unknown', if you successfully recovered the correct title from 'raw_text' and found a 100% match in databases, it is LEVEL 1.\n"
-    "- LEVEL 2 (Minor Flaw / Real Entity): The paper exists, but the citation has hallucinations, typos, or incorrect metadata (e.g., misspelled authors, slightly altered title). It is a real entity with flawed details.\n"
-    "- LEVEL 3 (Completely Fake): No convincing match is found in ANY of the 4 databases after trying multiple search variations based on 'raw_text'.\n\n"
-    
+    """
+    - LEVEL 1 (Perfect Match): The provided metadata EXACTLY matches the official database records. The title must be complete (including subtitles), the author list must be highly accurate, and the year must match. If an expected DOI is provided in the input, it MUST perfectly match the official DOI. (Exception: If Grobid failed and output 'Unknown Title', but you found the flawless, exact title/authors in the 'raw_text', you may classify it as LEVEL 1).
+
+    - LEVEL 2 (Minor Flaw / Real Entity): The academic paper exists in reality, BUT the provided input data contains errors. 
+    **STRICT TRIGGERS FOR LEVEL 2:**
+    1. DOI Mismatch: An expected DOI is provided, but it is fake, broken, or points to a different paper.
+    2. Title Flaws: Missing subtitles, typos, slightly altered words, or incomplete titles.
+    3. Author Flaws: Missing co-authors, severely misspelled names.
+    4. Year Mismatch: The year is incorrect (e.g., off by 1-2 years).
+    *Rule of thumb: If you had to mentally "fix", "guess", or "ignore" an error in the input to find the real paper in the database, it MUST be classified as LEVEL 2.*
+
+    - LEVEL 3 (Completely Fake): No convincing match is found in ANY of the databases after trying multiple search variations. The entity appears to be hallucinated or completely fabricated.
+    """
+
     "### OUTPUT INSTRUCTIONS:\n"
     "Provide a brief reasoning explaining your discovery process (especially if you recovered a title from raw text). "
     "Your final response MUST end with exactly ONE of the following labels on a new line:\n"
@@ -202,7 +212,7 @@ def run_agent_verification(raw_citation):
 # =====================
 if __name__ == "__main__":
     
-    input_file_path = "grobid/test.json"  
+    input_file_path = "grobid_datasets/test.json"  
     
     try:
         with open(input_file_path, 'r', encoding='utf-8') as f:

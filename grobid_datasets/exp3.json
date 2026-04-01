@@ -1,0 +1,135 @@
+[
+    {
+        "title": "A method for calibrating false-match rates in record linkage",
+        "author": "T Belin, D Rubin",
+        "year": "1997",
+        "link": "N/A",
+        "raw_text": "A method for calibrating false-match rates in record linkage\n\nTRBelin\n\n\nDBRubin\n\n\n\nRecord Linkage -1997: Proceedings of an International Workshop and Exposition\n\n1997"
+    },
+    {
+        "title": "Learning to combine trained distance metrics for duplicate detection in databases",
+        "author": "M Bilenko, R Mooney",
+        "year": "2002",
+        "link": "https://doi.org/10.1016/j.foodqual.2024.104123",
+        "raw_text": "Learning to combine trained distance metrics for duplicate detection in databases\n\nMBilenko\n\n\nRMooney\n\n10.1016/j.foodqual.2024.104123\n\n\n2002\n\n\nArtificial Intelligence Lab, University of\n\n\nTechnical Report Technical Report\nAnswer Set Programming for Optimizing Pizza Topping Placements"
+    },
+    {
+        "title": "A Fine-Grained Complexity View on Pruning Bonsai Trees",
+        "author": "Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.1007/s11252-023-01234-5",
+        "raw_text": "A Fine-Grained Complexity View on Pruning Bonsai Trees\n\nVictorLagerkvist\n\n10.1007/s11252-023-01234-5\n\n2023"
+    },
+    {
+        "title": "Origami Folding with Deep Convolutional Neural Networks",
+        "author": "Erik Demaine, Andrew Ng",
+        "year": "2024",
+        "link": "https://doi.org/10.1111/jofi.13245",
+        "raw_text": "Origami Folding with Deep Convolutional Neural Networks\n\nErikDDemaine\n\n\nAndrewNg\n\n10.1111/jofi.13245\n\n2024"
+    },
+    {
+        "title": "Generative Adversarial Networks for Hypertree Decompositions",
+        "author": "Georg Gottlob, Yoshua Bengio",
+        "year": "2023",
+        "link": "N/A",
+        "raw_text": "Generative Adversarial Networks for Hypertree Decompositions\n\nGeorgGottlob\n\n\nYoshuaBengio\n\n\n2023"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Victor Lagerkvist, Tim Cook",
+        "year": "2026",
+        "link": "N/A",
+        "raw_text": "VictorLagerkvist\n\n\nTimCook\n\nClone Theory and the Exponential Time Hypothesis in Compilers\n\n2026"
+    },
+    {
+        "title": "Fine-Grained Complexity of Backdoor Sets in Propositional Abduction",
+        "author": "Victor Lagerkvist, Stefan Szeider",
+        "year": "2026",
+        "link": "https://doi.org/10.1145/3999999.3999999",
+        "raw_text": "Fine-Grained Complexity of Backdoor Sets in Propositional Abduction\n\nVictorLagerkvist\n\n\nStefanSzeider\n\n10.1145/3999999.3999999\n\n\n2026"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Thomas Eiter, Daniel Gnad",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/ijcai.2025/999",
+        "raw_text": "ThomasEiter\n\n\nDanielGnad\n\n10.24963/ijcai.2025/999\n\nEvaluating Epistemic Logic Programs via Decoupled State Space Search\n\n2025"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Thomas Eiter, Wolfgang Faber",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.05555",
+        "raw_text": "ThomasEiter\n\n\nWolfgangFaber\n\n\nNeuro-Symbolic Equilibrium Logic: Semantics and Algorithms\n\n2026"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Victor Lagerkvist, Peter Jonsson",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.06666",
+        "raw_text": "VictorLagerkvist\n\n\nPeterJonsson\n\n\nTight Lower Bounds for the Constraint Satisfaction Problem over Finite Semirings\n\n2026"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "Daniel Gnad, Jendrik Seipp",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.01111",
+        "raw_text": "DanielGnad\n\n\nJendrikSeipp\n\n\nDecoupled Search for Multi-Agent Path Finding in Highly Constrained Environments\n\n2026"
+    },
+    {
+        "title": "Multiple imputation analysis of records linked using mixture models",
+        "author": "M Larsen",
+        "year": "1999",
+        "link": "N/A",
+        "raw_text": "Multiple imputation analysis of records linked using mixture models\n\nMLarsen\n\n\n\nStatistical Society of Canada Proceedings of the Survey Methods Section\nMontreal\n\nMcGill University\n1999"
+    },
+    {
+        "title": "Efficient clustering of high-dimensional data sets with application to reference matching",
+        "author": "A Mccallum, K Nigam, L Ungar",
+        "year": "2000",
+        "link": "N/A",
+        "raw_text": "Efficient clustering of high-dimensional data sets with application to reference matching\n\nAMccallum\n\n\nKNigam\n\n\nLHUngar\n\n\n\nKnowledge Discovery and Data Mining\n\n2000"
+    },
+    {
+        "title": "The field-matching problem: algorithm and applications",
+        "author": "A Monge, C Elkan",
+        "year": "1996",
+        "link": "N/A",
+        "raw_text": "The field-matching problem: algorithm and applications\n\nAMonge\n\n\nCElkan\n\n\n\nProceedings of the Second International Conference on Knowledge Discovery and Data Mining\nthe Second International Conference on Knowledge Discovery and Data Mining\n\n1996"
+    },
+    {
+        "title": "An efficient domain-independent algorithm for detecting approximately duplicate database records",
+        "author": "A Monge, C Elkan",
+        "year": "1997",
+        "link": "N/A",
+        "raw_text": "An efficient domain-independent algorithm for detecting approximately duplicate database records\n\nAMonge\n\n\nCElkan\n\n\n\nThe proceedings of the SIGMOD 1997 workshop on data mining and knowledge discovery\n\n1997"
+    },
+    {
+        "title": "Identity uncertainty and citation matching",
+        "author": "H Pasula, B Marthi, B Milch, S Russell, I Shpitser",
+        "year": "2002",
+        "link": "N/A",
+        "raw_text": "Identity uncertainty and citation matching\n\nHPasula\n\n\nBMarthi\n\n\nBMilch\n\n\nSRussell\n\n\nIShpitser\n\n\n\nAdvances in Neural Processing Systems 15\nVancouver, British Columbia\n\nMIT Press\n2002"
+    },
+    {
+        "title": "Potter's wheel: An interactive data cleaning system",
+        "author": "V Raman, J Hellerstein",
+        "year": "2001",
+        "link": "N/A",
+        "raw_text": "Potter's wheel: An interactive data cleaning system\n\nVRaman\n\n\nJHellerstein\n\n\n\nThe VLDB Journal\n\n2001"
+    },
+    {
+        "title": "Learning string edit distance",
+        "author": "E Ristad, P Yianilos",
+        "year": "1998",
+        "link": "N/A",
+        "raw_text": "Learning string edit distance\n\nESRistad\n\n\nPNYianilos\n\n\n\nIEEE Transactions on Pattern Analysis and Machine Intelligence\n\n20\n5\n\n1998"
+    },
+    {
+        "title": "Learning object identification rules for information integration",
+        "author": "S Tejada, C Knoblock, S Minton",
+        "year": "2001",
+        "link": "N/A",
+        "raw_text": "Learning object identification rules for information integration\n\nSTejada\n\n\nCAKnoblock\n\n\nSMinton\n\n\n\nInformation Systems\n\n26\n8\n\n2001"
+    }
+]

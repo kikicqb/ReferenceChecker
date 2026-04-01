@@ -30,10 +30,10 @@ def clean_doi(doi_str):
         doi_str = doi_str.replace(p, "")
     return doi_str.strip()
 
-def check_author_match(expected_author, found_authors_str):
+def calculate_author_overlap(expected_author, found_authors_str):
     try:
         if not expected_author or not found_authors_str.strip(): 
-            return True
+            return 1.0 
             
         expected_clean = clean_text(expected_author)
         found_clean = clean_text(found_authors_str)
@@ -47,27 +47,26 @@ def check_author_match(expected_author, found_authors_str):
         valid_found = {w for w in found_words if len(w) > 1 and w not in stop_words}
         
         if not valid_expected or not valid_found: 
-            return True 
+            return 1.0 
         
         overlap = valid_expected.intersection(valid_found)
-        min_length = min(len(valid_expected), len(valid_found))
+        min_length = max(len(valid_expected), len(valid_found))
         
         if min_length == 0:
-            return False
+            return 0.0
             
-        overlap_ratio = len(overlap) / min_length
-        return overlap_ratio >= 0.6
+        return len(overlap) / min_length
         
     except Exception as e:
         print(f"\n  check_author_match break: {e}")
-        return False
+        return 0.0
 
-def check_year_match(expected_year, found_year):
-    if not expected_year or not found_year: return True
+def calculate_year_diff(expected_year, found_year):
+    if not expected_year or not found_year: return 0
     try:
-        return abs(int(expected_year) - int(found_year)) <= 1
+        return abs(int(expected_year) - int(found_year))
     except ValueError:
-        return str(expected_year) == str(found_year)
+        return 0 if str(expected_year) == str(found_year) else 999
 
 
 # ========================
@@ -84,26 +83,35 @@ def generic_verify_logic(db_name, items, extractor_func, exp_title, exp_author, 
             
             if not found_title: continue
             
-            # 1. Check title
-            if calculate_similarity(exp_title, found_title) > 0.9:
-                best_status = "AUTHOR_MISMATCH"
-                msg = f" Reject: Author Mismatch (Found in {db_name}, but author '{exp_author}' not matched)"
-                
-                # 2. Check author
-                if check_author_match(exp_author, found_authors):
+            title_sim = calculate_similarity(exp_title, found_title)
+            author_overlap = calculate_author_overlap(exp_author, found_authors)
+            year_diff = calculate_year_diff(exp_year, found_year)
+            
+            is_valid_exp_doi = exp_doi and str(exp_doi).strip().upper() != "N/A"
+            doi_mismatch = False
+            if is_valid_exp_doi:
+                if found_doi and clean_doi(exp_doi) != clean_doi(found_doi):
+                    doi_mismatch = True
+
+          
+            if title_sim >= 0.98 and author_overlap >= 0.85 and year_diff == 0 and not doi_mismatch:
+                return "VERIFIED", f" Verified (Source: {db_name})"
+            
+          
+            if title_sim > 0.85:
+                if doi_mismatch:
+                    best_status = "DOI_MISMATCH"
+                    msg = f" Reject: FAKE/Incorrect DOI in {db_name} (Found official DOI: {found_doi})"
+                elif author_overlap < 0.85: 
+                    best_status = "AUTHOR_MISMATCH"
+                    msg = f" Reject: Author incomplete/mismatched in {db_name}"
+                elif title_sim < 0.98:
+                    best_status = "TITLE_MISMATCH"
+                    msg = f" Reject: Title has typos or differences (Found: {found_title})"
+                elif year_diff != 0:
                     best_status = "YEAR_MISMATCH"
-                    msg = f" Reject: Year Mismatch (Found in {db_name}, but year is {found_year}, expected {exp_year})"
-                    
-                    # 3. Check year
-                    if check_year_match(exp_year, found_year):
-                        # 4. Check DOI
-                        if exp_doi:
-                            if found_doi and clean_doi(exp_doi) != clean_doi(found_doi):
-                                best_status = "DOI_MISMATCH"
-                                msg = f" Reject: FAKE DOI (Title/Author match, but official DOI is {found_doi})"
-                                continue 
+                    msg = f" Reject: Year mismatch in {db_name}"
                         
-                        return "VERIFIED", f" Verified (Source: {db_name})"
         except Exception:
             continue
             
@@ -200,7 +208,6 @@ def verify_citation(title, author=None, year=None, expected_doi=None):
     for check_func in [check_crossref, check_semantic_scholar, check_openalex, check_dblp]:
         status, msg = check_func(title, author, year, expected_doi)
         
-        # Level 1: Perfect match
         if status == "VERIFIED":
             return "LEVEL_1_PERFECT", msg  
             
@@ -208,19 +215,10 @@ def verify_citation(title, author=None, year=None, expected_doi=None):
         
     statuses = [r[0] for r in results]
     
-    # Level 2: Exists but has minor flaws
-    if "DOI_MISMATCH" in statuses:
-        msg = next(r[1] for r in results if r[0] == "DOI_MISMATCH")
-        return "LEVEL_2_FLAWED", msg
+    flaw_types = ["DOI_MISMATCH", "TITLE_MISMATCH", "AUTHOR_MISMATCH", "YEAR_MISMATCH"]
+    for flaw in flaw_types:
+        if flaw in statuses:
+            msg = next(r[1] for r in results if r[0] == flaw)
+            return "LEVEL_2_FLAWED", msg
         
-    elif "YEAR_MISMATCH" in statuses:
-        msg = next(r[1] for r in results if r[0] == "YEAR_MISMATCH")
-        return "LEVEL_2_FLAWED", msg
-        
-    elif "AUTHOR_MISMATCH" in statuses:
-        msg = next(r[1] for r in results if r[0] == "AUTHOR_MISMATCH")
-        return "LEVEL_2_FLAWED", msg
-        
-    # Level 3: Fabricated
-    else:
-        return "LEVEL_3_FAKE", "Reject: Title Not Found in any database"
+    return "LEVEL_3_FAKE", "Reject: Title Not Found in any database or metadata too distorted"

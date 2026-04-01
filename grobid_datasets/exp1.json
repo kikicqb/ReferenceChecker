@@ -1,204 +1,149 @@
 [
     {
-        "title": "A method for calibrating false-match rates in record linkage",
-        "year": "1997",
-        "author": [
-            "Belin T",
-            "Rubin D"
-        ],
-        "raw_text": "A method for calibrating false-match rates in record linkage\n\nTRBelin\n\n\nDBRubin\n\n\n\nRecord Linkage -1997: Proceedings of an International Workshop and Exposition\n\n1997"
-    },
-    {
         "title": "Learning to combine trained distance metrics for duplicate detection in databases",
+        "author": "M Bilenko, R Mooney",
         "year": "2002",
-        "author": [
-            "Bilenko M",
-            "Mooney R"
-        ],
+        "link": "http://www.cs.utexas.edu/users/ml/papers/marlin-tr-02.pdf",
         "raw_text": "Learning to combine trained distance metrics for duplicate detection in databases\n\nMBilenko\n\n\nRMooney\n\nAI 02-296\n\n\n2002\n\n\nArtificial Intelligence Lab, University of\n\n\nTechnical Report Technical Report"
     },
     {
         "title": "Learning to match and cluster large high-dimensional data sets for data integration",
+        "author": "W Cohen, J Richman",
         "year": "2002",
-        "author": [
-            "Cohen W",
-            "Richman J"
-        ],
+        "link": "N/A",
         "raw_text": "Learning to match and cluster large high-dimensional data sets for data integration\n\nWWCohen\n\n\nJRichman\n\n\n\nProceedings of The Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining\nThe Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining\n\n2002. 2002"
     },
     {
         "title": "Data integration using similarity joins and a word-based information representation language",
+        "author": "W Cohen",
         "year": "2000",
-        "author": [
-            "Cohen W"
-        ],
+        "link": "N/A",
         "raw_text": "Data integration using similarity joins and a word-based information representation language\n\nWWCohen\n\n\n\nACM Transactions on Information Systems\n\n18\n3\n\n2000"
     },
     {
         "title": "Similarity-based models of word cooccurrence probabilities",
+        "author": "I Dagan, L Lee, F Pereira",
         "year": "1999",
-        "author": [
-            "Dagan I",
-            "Lee L",
-            "Pereira F"
-        ],
+        "link": "N/A",
         "raw_text": "Similarity-based models of word cooccurrence probabilities\n\nIDagan\n\n\nLLee\n\n\nFPereira\n\n\n\nMachine Learning\n\n34\n1-3\n1999"
     },
     {
         "title": "Biological sequence analysis -Probabilistic models of proteins and nucleic acids",
+        "author": "R Durban, S Eddy, A Krogh, G Mitchison",
         "year": "1998",
-        "author": [
-            "Durban R",
-            "Eddy S",
-            "Krogh A",
-            "Mitchison G"
-        ],
+        "link": "N/A",
         "raw_text": "Biological sequence analysis -Probabilistic models of proteins and nucleic acids\n\nRDurban\n\n\nSREddy\n\n\nAKrogh\n\n\nGMitchison\n\n\n1998\nCambridge University Press\nCambridge"
     },
     {
         "title": "A theory for record linkage",
+        "author": "I Fellegi, A Sunter",
         "year": "1969",
-        "author": [
-            "Fellegi I",
-            "Sunter A"
-        ],
+        "link": "N/A",
         "raw_text": "A theory for record linkage\n\nIPFellegi\n\n\nABSunter\n\n\n\nJournal of the American Statistical Society\n\n64\n\n1969"
     },
     {
         "title": "An extensible framework for data cleaning",
+        "author": "H Galhardas, D Florescu, D Shasha, E Simon",
         "year": "2000",
-        "author": [
-            "Galhardas H",
-            "Florescu D",
-            "Shasha D",
-            "Simon E"
-        ],
+        "link": "N/A",
         "raw_text": "An extensible framework for data cleaning\n\nHGalhardas\n\n\nDFlorescu\n\n\nDShasha\n\n\nESimon\n\n\n\nICDE\n\n2000\n312"
     },
     {
         "title": "The merge/purge problem for large databases",
+        "author": "M Hernandez, S Stolfo",
         "year": "1995",
-        "author": [
-            "Hernandez M",
-            "Stolfo S"
-        ],
+        "link": "N/A",
         "raw_text": "The merge/purge problem for large databases\n\nMHernandez\n\n\nSStolfo\n\n\n\nProceedings of the 1995 ACM SIGMOD\nthe 1995 ACM SIGMOD\n\n1995"
     },
     {
         "title": "Advances in record-linkage methodology as applied to matching the 1985 census of Tampa, Florida",
+        "author": "M Jaro",
         "year": "1989",
-        "author": [
-            "Jaro M"
-        ],
+        "link": "N/A",
         "raw_text": "Advances in record-linkage methodology as applied to matching the 1985 census of Tampa, Florida\n\nMAJaro\n\n\n\nJournal of the American Statistical Association\n\n84\n\n1989"
     },
     {
         "title": "Probabilistic linkage of large public health data files (disc: P687-689)",
+        "author": "M Jaro",
         "year": "1995",
-        "author": [
-            "Jaro M"
-        ],
+        "link": "N/A",
         "raw_text": "Probabilistic linkage of large public health data files (disc: P687-689)\n\nMAJaro\n\n\n\nStatistics in Medicine\n\n14\n\n1995"
     },
     {
         "title": "Unknown Title",
+        "author": "T Joachims",
         "year": "2002",
-        "author": [
-            "Joachims T"
-        ],
+        "link": "N/A",
         "raw_text": "TJoachims\n\nLearning to Classify Text Using Support Vector Machines\n\nKluwer\n2002"
     },
     {
         "title": "A study of smoothing methods for language models applied to ad hoc information retrieval",
+        "author": "J Lafferty, C Zhai",
         "year": "2001",
-        "author": [
-            "Lafferty J",
-            "Zhai C"
-        ],
+        "link": "N/A",
         "raw_text": "A study of smoothing methods for language models applied to ad hoc information retrieval\n\nJLafferty\n\n\nCZhai\n\n\n\n2001 ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)\n\n2001"
     },
     {
         "title": "Multiple imputation analysis of records linked using mixture models",
+        "author": "M Larsen",
         "year": "1999",
-        "author": [
-            "Larsen M"
-        ],
+        "link": "N/A",
         "raw_text": "Multiple imputation analysis of records linked using mixture models\n\nMLarsen\n\n\n\nStatistical Society of Canada Proceedings of the Survey Methods Section\nMontreal\n\nMcGill University\n1999"
     },
     {
         "title": "Efficient clustering of high-dimensional data sets with application to reference matching",
+        "author": "A Mccallum, K Nigam, L Ungar",
         "year": "2000",
-        "author": [
-            "Mccallum A",
-            "Nigam K",
-            "Ungar L"
-        ],
+        "link": "N/A",
         "raw_text": "Efficient clustering of high-dimensional data sets with application to reference matching\n\nAMccallum\n\n\nKNigam\n\n\nLHUngar\n\n\n\nKnowledge Discovery and Data Mining\n\n2000"
     },
     {
         "title": "The field-matching problem: algorithm and applications",
+        "author": "A Monge, C Elkan",
         "year": "1996",
-        "author": [
-            "Monge A",
-            "Elkan C"
-        ],
+        "link": "N/A",
         "raw_text": "The field-matching problem: algorithm and applications\n\nAMonge\n\n\nCElkan\n\n\n\nProceedings of the Second International Conference on Knowledge Discovery and Data Mining\nthe Second International Conference on Knowledge Discovery and Data Mining\n\n1996"
     },
     {
         "title": "An efficient domain-independent algorithm for detecting approximately duplicate database records",
+        "author": "A Monge, C Elkan",
         "year": "1997",
-        "author": [
-            "Monge A",
-            "Elkan C"
-        ],
+        "link": "N/A",
         "raw_text": "An efficient domain-independent algorithm for detecting approximately duplicate database records\n\nAMonge\n\n\nCElkan\n\n\n\nThe proceedings of the SIGMOD 1997 workshop on data mining and knowledge discovery\n\n1997"
     },
     {
         "title": "Identity uncertainty and citation matching",
+        "author": "H Pasula, B Marthi, B Milch, S Russell, I Shpitser",
         "year": "2002",
-        "author": [
-            "Pasula H",
-            "Marthi B",
-            "Milch B",
-            "Russell S",
-            "Shpitser I"
-        ],
+        "link": "N/A",
         "raw_text": "Identity uncertainty and citation matching\n\nHPasula\n\n\nBMarthi\n\n\nBMilch\n\n\nSRussell\n\n\nIShpitser\n\n\n\nAdvances in Neural Processing Systems 15\nVancouver, British Columbia\n\nMIT Press\n2002"
     },
     {
         "title": "Potter's wheel: An interactive data cleaning system",
+        "author": "V Raman, J Hellerstein",
         "year": "2001",
-        "author": [
-            "Raman V",
-            "Hellerstein J"
-        ],
+        "link": "N/A",
         "raw_text": "Potter's wheel: An interactive data cleaning system\n\nVRaman\n\n\nJHellerstein\n\n\n\nThe VLDB Journal\n\n2001"
     },
     {
         "title": "Learning string edit distance",
+        "author": "E Ristad, P Yianilos",
         "year": "1998",
-        "author": [
-            "Ristad E",
-            "Yianilos P"
-        ],
+        "link": "N/A",
         "raw_text": "Learning string edit distance\n\nESRistad\n\n\nPNYianilos\n\n\n\nIEEE Transactions on Pattern Analysis and Machine Intelligence\n\n20\n5\n\n1998"
     },
     {
         "title": "Learning object identification rules for information integration",
+        "author": "S Tejada, C Knoblock, S Minton",
         "year": "2001",
-        "author": [
-            "Tejada S",
-            "Knoblock C",
-            "Minton S"
-        ],
+        "link": "N/A",
         "raw_text": "Learning object identification rules for information integration\n\nSTejada\n\n\nCAKnoblock\n\n\nSMinton\n\n\n\nInformation Systems\n\n26\n8\n\n2001"
     },
     {
         "title": "The state of record linkage and current research problems. Statistics of Income Division",
+        "author": "W Winkler",
         "year": "1999",
-        "author": [
-            "Winkler W"
-        ],
+        "link": "http://www.census.gov/srd/www/byname.html",
         "raw_text": "The state of record linkage and current research problems. Statistics of Income Division\n\nWEWinkler\n\n\n\n1999\n\n\nInternal Revenue Service Publication R99/04"
     }
 ]

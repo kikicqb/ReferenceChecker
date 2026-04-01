@@ -1,0 +1,162 @@
+[
+    {
+        "title": "Learning to combine trained distance metrics for duplicate detection in databases",
+        "author": "Bilenko, M., and Mooney, R.",
+        "year": "2002",
+        "link": "http://www.cs.utexas.edu/users/ml/papers/marlin-tr-02.pdf",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Learning to match and cluster large high-dimensional data sets for data integration",
+        "author": "Cohen, W. W., and Richman, J.",
+        "year": "2002",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Data integration using similarity joins and a word-based information representation language",
+        "author": "Cohen, W. W.",
+        "year": "2000",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Similarity-based models of word cooccurrence probabilities",
+        "author": "Dagan, I.; Lee, L.; and Pereira, F.",
+        "year": "1999",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Biological sequence analysis - Probabilistic models of proteins and nucleic acids",
+        "author": "Durbin, R.; Eddy, S. R.; Krogh, A.; and Mitchison, G.",
+        "year": "1998",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "A theory for record linkage",
+        "author": "Fellegi, I. P., and Sunter, A. B.",
+        "year": "1969",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "An extensible framework for data cleaning",
+        "author": "Galhardas, H.; Florescu, D.; Shasha, D.; and Simon, E.",
+        "year": "2000",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "The merge/purge problem for large databases",
+        "author": "Hernandez, M., and Stolfo, S.",
+        "year": "1995",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Advances in record-linkage methodology as applied to matching the 1985 census of Tampa, Florida",
+        "author": "Jaro, M. A.",
+        "year": "1989",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Probabilistic linkage of large public health data files",
+        "author": "Jaro, M. A.",
+        "year": "1995",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Learning to Classify Text Using Support Vector Machines",
+        "author": "Joachims, T.",
+        "year": "2002",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "A study of smoothing methods for language models applied to ad hoc information retrieval",
+        "author": "Lafferty, J., and Zhai, C.",
+        "year": "2001",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Efficient clustering of high-dimensional data sets with application to reference matching",
+        "author": "McCallum, A.; Nigam, K.; and Ungar, L. H.",
+        "year": "2000",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "The field-matching problem: algorithm and applications",
+        "author": "Monge, A., and Elkan, C.",
+        "year": "1996",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "An efficient domain-independent algorithm for detecting approximately duplicate database records",
+        "author": "Monge, A., and Elkan, C.",
+        "year": "1997",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Identity uncertainty and citation matching",
+        "author": "Pasula, H.; Marthi, B.; Milch, B.; Russell, S.; and Shpitser, I.",
+        "year": "2002",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Potter’s wheel: An interactive data cleaning system",
+        "author": "Raman, V., and Hellerstein, J.",
+        "year": "2001",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Learning string edit distance",
+        "author": "Ristad, E. S., and Yianilos, P. N.",
+        "year": "1998",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "Learning object identification rules for information integration",
+        "author": "Tejada, S.; Knoblock, C. A.; and Minton, S.",
+        "year": "2001",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group A"
+    },
+    {
+        "title": "The state of record linkage and current research problems",
+        "author": "Winkler, W. E.",
+        "year": "1999",
+        "link": "http://www.census.gov/srd/www/byname.html",
+        "is_real": true,
+        "group": "Group A"
+    }
+]

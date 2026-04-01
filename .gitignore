@@ -11,3 +11,4 @@ env/
 Thumbs.db
 *_results.json
 test*.json
+json_to_text.py

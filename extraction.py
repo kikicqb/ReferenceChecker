@@ -19,15 +19,15 @@ def extract_citations(pdf_path):
         citations = []
         
         for bib in soup.find_all("biblStruct"):
-            # extract title
+            # 1. extract title
             title = bib.find("title", type="main")
             title_text = title.getText() if title else "Unknown Title"
             
-            # extract year
+            # 2. extract year
             date = bib.find("date", type="published")
             year = date["when"] if date and date.has_attr("when") else "Unknown Year"
 
-            # extract author
+            # 3. extract author
             authors = []
             for author_node in bib.find_all("author"):
                 pers_name = author_node.find("persName")
@@ -36,20 +36,35 @@ def extract_citations(pdf_path):
                     forename = pers_name.find("forename")
                     
                     name_parts = []
-                    if surname: name_parts.append(surname.get_text())
                     if forename: name_parts.append(forename.get_text())
+                    if surname: name_parts.append(surname.get_text())
                     
                     if name_parts:
                         authors.append(" ".join(name_parts))
             
             authors_text = ", ".join(authors) if authors else "Unknown Author"
             
+            # 4. extract doi/link
+            link = "N/A"
+            doi_tag = bib.find("idno", type="DOI")
+            if doi_tag:
+                link = f"https://doi.org/{doi_tag.text.strip()}"
+            else:
+                ptr_tag = bib.find("ptr")
+                if ptr_tag and ptr_tag.has_attr("target"):
+                    link = ptr_tag["target"]
+                else:
+                    arxiv_tag = bib.find("idno", type="arXiv")
+                    if arxiv_tag:
+                        link = f"https://arxiv.org/abs/{arxiv_tag.text.strip()}"
+
             raw_text = bib.getText().strip()
             
             citations.append({
                 "title": title_text,
+                "author": authors_text, 
                 "year": year,
-                "author": authors,
+                "link": link,          
                 "raw_text": raw_text
             })
             
@@ -66,7 +81,7 @@ def extract_citations(pdf_path):
         return []
 
 if __name__ == "__main__":
-    target_pdf = "grobid/exp1.pdf" 
+    target_pdf = "grobid/exp5.pdf" 
     
     path_obj = Path(target_pdf)
     output_name = str(path_obj.parent / f"{path_obj.stem}.json")

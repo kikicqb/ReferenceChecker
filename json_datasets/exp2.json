@@ -1,0 +1,162 @@
+[
+    {
+        "title": "The Parameterized Complexity of Tying a Perfect Windsor Knot",
+        "author": "Stefan Szeider",
+        "year": "2025",
+        "link": "https://doi.org/10.1080/1362704X.2025.1234567",
+        "is_real": false,
+        "group": "Group A"
+    },
+    {
+        "title": "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach",
+        "author": "Elizabeth R DeLong, David M DeLong, and Daniel L Clarke-Pearson",
+        "year": "1988",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "An introduction to roc analysis",
+        "author": "Tom Fawcett",
+        "year": "2006",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Making pre-trained language models better few-shot learners",
+        "author": "Tianyu Gao, Adam Fisch, and Danqi Chen",
+        "year": "2021",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "A Survey on Automated Fact-Checking",
+        "author": "Zhijiang Guo, Michael Schlichtkrull, and Andreas Vlachos",
+        "year": "2022",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Simfluence: Modeling the Influence of Individual Training Examples by Simulating Training Runs",
+        "author": "Kelvin Guu, Albert Webson, Ellie Pavlick, Lucas Dixon, Ian Tenney, and Tolga Bolukbasi",
+        "year": "2023",
+        "link": "https://arxiv.org/abs/2303.08114",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Survey of Hallucination in Natural Language Generation",
+        "author": "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Ye Jin Bang, Andrea Madotto, and Pascale Fung",
+        "year": "2023",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "How can we know what language models know?",
+        "author": "Zhengbao Jiang, Frank F Xu, Jun Araki, and Graham Neubig",
+        "year": "2020",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Fantastically ordered prompts and where to find them: Overcoming few-shot prompt order sensitivity",
+        "author": "Yao Lu, Max Bartolo, Alastair Moore, Sebastian Riedel, and Pontus Stenetorp",
+        "year": "2022",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+        "author": "Potsawee Manakul, Adian Liusie, and Mark J. F. Gales",
+        "year": "2023",
+        "link": "https://arxiv.org/abs/2303.08896",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Interrater reliability: the kappa statistic",
+        "author": "Mary L McHugh",
+        "year": "2012",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "New york lawyers sanctioned for using fake chatgpt cases in legal brief",
+        "author": "Sara Merken",
+        "year": "2023",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Training language models to follow instructions with human feedback",
+        "author": "Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll L. Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, and Ryan Lowe",
+        "year": "2022",
+        "link": "https://arxiv.org/abs/2203.02155",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Major update to ACM’s Computing Classification System",
+        "author": "Bernard Rous",
+        "year": "2012",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Autoprompt: Eliciting knowledge from language models with automatically generated prompts",
+        "author": "Taylor Shin, Yasaman Razeghi, Robert L Logan IV, Eric Wallace, and Sameer Singh",
+        "year": "2020",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Beyond the imitation game: Quantifying and extrapolating the capabilities of language models",
+        "author": "Aarohi Srivastava, Abhinav Rastogi, Abhishek Rao, Abu Awal Md Shoeb, Abubakar Abid, Adam Fisch, Adam R. Brown, Adam Santoro, Aditya Gupta, Adrià Garriga-Alonso, Agnieszka Kluska, Aitor Lewkowycz, Akshat Agarwal, Alethea Power, Alex Ray, Alex Warstadt, Alexander W. Kocurek, ...(421-others), and Ziyi Wu",
+        "year": "2022",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "What are the biases in my word embedding?",
+        "author": "Nathaniel Swinger, Maria De-Arteaga, Neil Thomas Heffernan IV, Mark DM Leiserson, and Adam Tauman Kalai",
+        "year": "2019",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Llama 2: Open foundation and fine-tuned chat models",
+        "author": "Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al.",
+        "year": "2023",
+        "link": "https://arxiv.org/abs/2307.09288",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "The Inconsistent Suspect: A Systematic Review of Different Types of Consistency in Truth Tellers and Liars",
+        "author": "Annelies Vredeveldt, Peter J. van Koppen, and Pär Anders Granhag",
+        "year": "2014",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    },
+    {
+        "title": "Philosophical Investigations",
+        "author": "Ludwig Wittgenstein",
+        "year": "1953",
+        "link": "N/A",
+        "is_real": true,
+        "group": "Group F"
+    }
+]

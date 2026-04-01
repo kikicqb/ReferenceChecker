@@ -1,0 +1,142 @@
+[
+    {
+        "title": "The Geometric Structure of the Minotaur's Labyrinth: A Bronze Age Analysis",
+        "author": "E Demaine, Daedalus",
+        "year": "2023",
+        "link": "https://doi.org/10.1016/j.jas.2023.104567",
+        "raw_text": "The Geometric Structure of the Minotaur's Labyrinth: A Bronze Age Analysis\n\nEDDemaine\n\n\nDaedalus\n\n10.1016/j.jas.2023.104567\n\n2023"
+    },
+    {
+        "title": "Datalog Queries for Evaluating the Efficacy of Hogwarts Potions",
+        "author": "G Gottlob, S Snape",
+        "year": "2024",
+        "link": "https://doi.org/10.1145/3589334.3589335",
+        "raw_text": "Datalog Queries for Evaluating the Efficacy of Hogwarts Potions\n\nGGottlob\n\n\nSSnape\n\n10.1145/3589334.3589335\n\n2024"
+    },
+    {
+        "title": "Answer Set Programming for Optimizing Pizza Topping Placements",
+        "author": "T Eiter",
+        "year": "Unknown Year",
+        "link": "N/A",
+        "raw_text": "Answer Set Programming for Optimizing Pizza Topping Placements\n\nTEiter"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "S Szeider, L Torvalds",
+        "year": "2024",
+        "link": "https://doi.org/10.1038/s41591-024-01234-x",
+        "raw_text": "SSzeider\n\n\nLTorvalds\n\n10.1038/s41591-024-01234-x\nBoolean Satisfiability in the Linux Kernel Schedulers\n\n2024"
+    },
+    {
+        "title": "Evaluating Answer Set Programs using AlphaGo",
+        "author": "T Eiter, D Hassabis",
+        "year": "2025",
+        "link": "https://doi.org/10.1056/NEJMoa2501234",
+        "raw_text": "Evaluating Answer Set Programs using AlphaGo\n\nTEiter\n\n\nDHassabis\n\n10.1056/NEJMoa2501234\n\n2025"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "T Eiter, W Faber",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.05555",
+        "raw_text": "TEiter\n\n\nWFaber\n\n\nNeuro-Symbolic Equilibrium Logic: Semantics and Algorithms\n\n2026"
+    },
+    {
+        "title": "Tight Lower Bounds for the Constraint Satisfaction Problem over Finite Semirings",
+        "author": "V Lagerkvist, P Jonsson",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.06666",
+        "raw_text": "Tight Lower Bounds for the Constraint Satisfaction Problem over Finite Semirings\n\nVLagerkvist\n\n\nPJonsson\n\n\n\n2026"
+    },
+    {
+        "title": "Parameterized Complexity of Algorithmic Origami and Geometric Constraint Satisfaction",
+        "author": "E Demaine, S Szeider",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/aaai.v39i1.12345",
+        "raw_text": "Parameterized Complexity of Algorithmic Origami and Geometric Constraint Satisfaction\n\nEDDemaine\n\n\nSSzeider\n\n10.1609/aaai.v39i1.12345\n\n\n2025"
+    },
+    {
+        "title": "The Computational Complexity of Super Mario Bros",
+        "author": "E Demaine, J Lynch",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.02222",
+        "raw_text": "The Computational Complexity of Super Mario Bros\n\nEDDemaine\n\n\nJLynch\n\n\n\n2026"
+    },
+    {
+        "title": "Bridging Datalog+/-and Large Language Models for Scalable Ontology Reasoning",
+        "author": "G Gottlob, A Pieris",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2601.03333",
+        "raw_text": "Bridging Datalog+/-and Large Language Models for Scalable Ontology Reasoning\n\nGGottlob\n\n\nAPieris\n\n\n\n2026"
+    },
+    {
+        "title": "The Golden Fleece Algorithm: A Distributed Consensus Protocol for Mount Olympus",
+        "author": "Hesiod Homer",
+        "year": "2024",
+        "link": "https://doi.org/10.1000/greek.myth.101",
+        "raw_text": "The Golden Fleece Algorithm: A Distributed Consensus Protocol for Mount Olympus\n\nHesiodHomer\n\n10.1000/greek.myth.101\n\n\n2024"
+    },
+    {
+        "title": "Alice's Adventures in Polynomial Time",
+        "author": "L Carroll, A Turing",
+        "year": "2025",
+        "link": "https://doi.org/10.1000/wonderland.1865",
+        "raw_text": "Alice's Adventures in Polynomial Time\n\nLCarroll\n\n\nATuring\n\n10.1000/wonderland.1865\n\n\n\nGraph Coloring in Wonderland\n\n2025"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "G Gottlob, S Szeider",
+        "year": "2014",
+        "link": "https://doi.org/10.1016/j.artint.2014.10.005",
+        "raw_text": "GGottlob\n\n\nSSzeider\n\n10.1016/j.artint.2014.10.005\n\nParameterized Tractability of Hypertree Decompositions in Constraint Satisfaction\n\n2014"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "D Gnad, T Eiter",
+        "year": "2019",
+        "link": "https://doi.org/10.1609/aaai.v33i01.4444",
+        "raw_text": "DGnad\n\n\nTEiter\n\n10.1609/aaai.v33i01.4444\n\nExploiting Leaf-Node Topologies in Decoupled State Space Search\n\n2019"
+    },
+    {
+        "title": "Origamizer: A Practical Algorithm for Folding Any Polyhedron",
+        "author": "E Demaine, V Lagerkvist",
+        "year": "2017",
+        "link": "https://doi.org/10.4230/LIPIcs.SoCG.2017.34",
+        "raw_text": "Origamizer: A Practical Algorithm for Folding Any Polyhedron\n\nEDDemaine\n\n\nVLagerkvist\n\n10.4230/LIPIcs.SoCG.2017.34\n\n\n2017"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "G Gottlob, V Lagerkvist",
+        "year": "2024",
+        "link": "https://arxiv.org/abs/2405.09999",
+        "raw_text": "GGottlob\n\n\nVLagerkvist\n\n\nThe Complexity of Hypertree Decompositions in Post's Lattice\n\n2024"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "T Eiter, D Gnad",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/ijcai.2025/999",
+        "raw_text": "TEiter\n\n\nDGnad\n\n10.24963/ijcai.2025/999\n\nEvaluating Epistemic Logic Programs via Decoupled State Space Search\n\n2025"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "D Gnad, Á Torralba, J Hoffmann",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.01234",
+        "raw_text": "DGnad\n\n\nÁTorralba\n\n\nJHoffmann\n\n\nDeep Reinforcement Learning for State Space Partitioning in Decoupled Search\n\n2026"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "S Szeider, R Ganian",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.09876",
+        "raw_text": "SSzeider\n\n\nRGanian\n\n\nSolving #SAT on Instances with Bounded Twin-Width via Dynamic Programming\n\n2026"
+    },
+    {
+        "title": "Unknown Title",
+        "author": "E Demaine, M Demaine, J Ku",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2604.05555",
+        "raw_text": "EDDemaine\n\n\nMLDemaine\n\n\nJKu\n\n\nThe Computational Complexity of 3D Printed Hinged Dissections\n\n2026"
+    }
+]

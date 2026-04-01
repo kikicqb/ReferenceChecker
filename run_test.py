@@ -2,7 +2,7 @@ import json
 from verification import verify_citation
 
 def run_benchmark():
-    json_file_path = "grobid/exp1_test.json"  
+    json_file_path = "grobid_datasets/test.json"  
     
     try:
         with open(json_file_path, 'r', encoding='utf-8') as f:

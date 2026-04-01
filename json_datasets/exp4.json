@@ -1,0 +1,142 @@
+[
+    {
+        "title": "Efficient full-matrix adaptive regularization",
+        "author": "N. Agarwal, B. Bullins, X. Chen, E. Hazan, K. Singh, C. Zhang, and Y. Zhang",
+        "year": "2019",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "The convergence of sparsified gradient methods",
+        "author": "D. Alistarh, T. Hoefler, M. Johansson, N. Konstantinov, S. Khirirat, and C. Renggli",
+        "year": "2018",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Information geometry and its applications, volume 194",
+        "author": "S.-i. Amari",
+        "year": "2016",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Memory efficient adaptive optimization",
+        "author": "R. Anil, V. Gupta, T. Koren, and Y. Singer",
+        "year": "2019",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Think you have solved question answering? try arc, the ai2 reasoning challenge",
+        "author": "P. Clark, I. Cowhey, O. Etzioni, T. Khot, A. Sabharwal, C. Schoenick, and O. Tafjord",
+        "year": "2018",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "8-bit optimizers via block-wise quantization",
+        "author": "Dettmers, M. Lewis, S. Shleifer, and L. Zettlemoyer",
+        "year": "2021",
+        "link": "https://arxiv.org/abs/2110.02861",
+        "is_real": true
+    },
+    {
+        "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+        "author": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova",
+        "year": "2018",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Convergence of adam for non-convex objectives: Relaxed hyperparameters and non-ergodic case",
+        "author": "Y. Liang, M. He, J. Liu, and D. Xu",
+        "year": "2023",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Measuring massive multitask language understanding",
+        "author": "D. Hendrycks, C. Burns, S. Basart, A. Zou, M. Mazeika, D. Song, and J. Steinhardt",
+        "year": "2021",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Error feedback fixes SignSGD and other gradient compression schemes",
+        "author": "S. P. Karimireddy, Q. Rebjock, S. U. Stich, and M. Jaggi",
+        "year": "2019",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning",
+        "author": "D. Gnad, L. Alon, E. Weiss, and A. Shleyfman",
+        "year": "2025",
+        "link": "https://doi.org/10.1609/aaai.v39i25.99999",
+        "is_real": true
+    },
+    {
+        "title": "You can't solve these Super Mario Bros. levels: Undecidable Mario games",
+        "author": "E.D. Demaine, H. Hall, H. Layers, R. Ruiz, and N. Venkat",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/j.tcs.2026.999999",
+        "is_real": true
+    },
+    {
+        "title": "A General Theoretical Framework for Learning Smallest Interpretable Models",
+        "author": "S. Ordyniak, G. Paesani, M. Rychlicki, and S. Szeider",
+        "year": "2026",
+        "link": "https://doi.org/10.1016/j.artint.2026.999999",
+        "is_real": true
+    },
+    {
+        "title": "An XAI View on Explainable ASP: Methods, Systems, and Perspectives",
+        "author": "T. Eiter, T. Geibinger, and Z.G. Saribatur",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2601.99999",
+        "is_real": true
+    },
+    {
+        "title": "Complexity of Faceted Explanations in Propositional Abduction",
+        "author": "J. Schmidt, M. Maizia, V. Lagerkvist, and J.K. Fichte",
+        "year": "2025",
+        "link": "https://doi.org/10.1017/s147106842500999",
+        "is_real": true
+    },
+    {
+        "title": "Efficient Evaluation of Large Abstractions for Decoupled Search",
+        "author": "D. Gnad, S. Sievers, and Á. Torralba",
+        "year": "2023",
+        "link": "https://doi.org/10.1609/icaps.v33i1.27188",
+        "is_real": true
+    },
+    {
+        "title": "Complexity of Faced Explanation in Propositional Abduction",
+        "author": "J. Schmidt, M. Maizia, V. Lagerkvist, and J.K. Fichte",
+        "year": "2025",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Locked and Unlocked Polygonal Chains in 3D",
+        "author": "T. Biedl and E.D. Demaine",
+        "year": "1995",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Structure-Guided Query Evaluation: Towards Bridging the Gap from Theory to Practice",
+        "author": "G. Gottlob",
+        "year": "2023",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Breaking Symmetries in Quantified Graph Search: A Comparative Study",
+        "author": "M. Janota, M. Kirchweger, T. Biedl, and S. Szeider",
+        "year": "2025",
+        "link": "N/A",
+        "is_real": true
+    }
+]

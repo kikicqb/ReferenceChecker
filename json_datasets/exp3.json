@@ -1,0 +1,142 @@
+[
+    {
+        "title": "A method for calibrating false-match rates in record linkage",
+        "author": "Belin, T. R., and Rubin, D. B.",
+        "year": "1997",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Learning to combine trained distance metrics for duplicate detection in databases",
+        "author": "Bilenko, M., and Mooney, R.",
+        "year": "2002",
+        "link": "http://www.cs.utexas.edu/users/ml/papers/marlin-tr-02.pdf",
+        "is_real": true
+    },
+    {
+        "title": "Answer Set Programming for Optimizing Pizza Topping Placements",
+        "author": "Thomas Eiter",
+        "year": "2024",
+        "link": "https://doi.org/10.1016/j.foodqual.2024.104123",
+        "is_real": false
+    },
+    {
+        "title": "A Fine-Grained Complexity View on Pruning Bonsai Trees",
+        "author": "Victor Lagerkvist",
+        "year": "2023",
+        "link": "https://doi.org/10.1007/s11252-023-01234-5",
+        "is_real": false
+    },
+    {
+        "title": "Origami Folding with Deep Convolutional Neural Networks",
+        "author": "Erik D. Demaine, Andrew Ng",
+        "year": "2024",
+        "link": "https://doi.org/10.1111/jofi.13245",
+        "is_real": false
+    },
+    {
+        "title": "Generative Adversarial Networks for Hypertree Decompositions",
+        "author": "Georg Gottlob, Yoshua Bengio",
+        "year": "2023",
+        "link": "https://doi.org/10.1016/j.cell.2023.09.012",
+        "is_real": false
+    },
+    {
+        "title": "Clone Theory and the Exponential Time Hypothesis in Compilers",
+        "author": "Victor Lagerkvist, Tim Cook",
+        "year": "2026",
+        "link": "https://doi.org/10.1103/PhysRevLett.136.050012",
+        "is_real": false
+    },
+    {
+        "title": "Fine-Grained Complexity of Backdoor Sets in Propositional Abduction",
+        "author": "Victor Lagerkvist, Stefan Szeider",
+        "year": "2026",
+        "link": "https://dl.acm.org/doi/10.1145/3999999.3999999",
+        "is_real": false
+    },
+    {
+        "title": "Evaluating Epistemic Logic Programs via Decoupled State Space Search",
+        "author": "Thomas Eiter, Daniel Gnad",
+        "year": "2025",
+        "link": "https://doi.org/10.24963/ijcai.2025/999",
+        "is_real": false
+    },
+    {
+        "title": "Neuro-Symbolic Equilibrium Logic: Semantics and Algorithms",
+        "author": "Thomas Eiter, Wolfgang Faber",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2602.05555",
+        "is_real": false
+    },
+    {
+        "title": "Tight Lower Bounds for the Constraint Satisfaction Problem over Finite Semirings",
+        "author": "Victor Lagerkvist, Peter Jonsson",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.06666",
+        "is_real": false
+    },
+    {
+        "title": "Decoupled Search for Multi-Agent Path Finding in Highly Constrained Environments",
+        "author": "Daniel Gnad, Jendrik Seipp",
+        "year": "2026",
+        "link": "https://arxiv.org/abs/2603.01111",
+        "is_real": false
+    },
+    {
+        "title": "Multiple imputation analysis of records linked using mixture models",
+        "author": "Larsen, M.",
+        "year": "1999",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Efficient clustering of high-dimensional data sets with application to reference matching",
+        "author": "McCallum, A.; Nigam, K.; and Ungar, L. H.",
+        "year": "2000",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "The field-matching problem: algorithm and applications",
+        "author": "Monge, A., and Elkan, C.",
+        "year": "1996",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "An efficient domain-independent algorithm for detecting approximately duplicate database records",
+        "author": "Monge, A., and Elkan, C.",
+        "year": "1997",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Identity uncertainty and citation matching",
+        "author": "Pasula, H.; Marthi, B.; Milch, B.; Russell, S.; and Shpitser, I.",
+        "year": "2002",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Potter’s wheel: An interactive data cleaning system",
+        "author": "Raman, V., and Hellerstein, J.",
+        "year": "2001",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Learning string edit distance",
+        "author": "Ristad, E. S., and Yianilos, P. N.",
+        "year": "1998",
+        "link": "N/A",
+        "is_real": true
+    },
+    {
+        "title": "Learning object identification rules for information integration",
+        "author": "Tejada, S.; Knoblock, C. A.; and Minton, S.",
+        "year": "2001",
+        "link": "N/A",
+        "is_real": true
+    }
+]
