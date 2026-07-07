@@ -142,7 +142,8 @@ def run_agent_verification(raw_citation):
     2. Title Flaws: Missing subtitles, typos, slightly altered words, or incomplete titles.
     3. Author Flaws: Missing co-authors, severely misspelled names.
     4. Year Mismatch: The year is incorrect (e.g., off by 1-2 years).
-    *Rule of thumb: If you had to mentally "fix", "guess", or "ignore" an error in the input to find the real paper in the database, it MUST be classified as LEVEL 2.*
+    For noisy GROBID input, the structured fields may contain extraction errors. Do not treat these field-level errors as citation flaws if the complete and correct reference can be recovered from raw_text. Classify the citation as LEVEL_1_PERFECT when raw_text identifies a real paper and the recovered title, authors, year, and DOI/link are consistent with database records. Classify it as LEVEL_2_FLAWED only when the reference information in raw_text itself contains a metadata error.
+
 
     - LEVEL 3 (Completely Fake): No convincing match is found in ANY of the databases after trying multiple search variations. The entity appears to be hallucinated or completely fabricated.
     """
@@ -212,7 +213,7 @@ def run_agent_verification(raw_citation):
 # =====================
 if __name__ == "__main__":
     
-    input_file_path = "grobid_datasets/test.json"  
+    input_file_path = "grobid_datasets/exp1.json"  
     
     try:
         with open(input_file_path, 'r', encoding='utf-8') as f:
@@ -265,15 +266,15 @@ if __name__ == "__main__":
                 print(f"   Expected: {'Real Paper' if is_real else 'Fake Paper'}")
                 if is_real and clean_verdict in ["LEVEL_1_PERFECT", "LEVEL_2_FLAWED"]:
                     is_correct = True
-                    print(f"   -> ✅ Agent Correct!")
+                    print("   -> Agent correct")
                     score += 1
                 elif not is_real and clean_verdict == "LEVEL_3_FAKE":
                     is_correct = True
-                    print("   -> ✅ Agent Intercepted!")
+                    print("   -> Agent intercepted")
                     score += 1
                 else:
                     is_correct = False
-                    print(f"   -> ❌ Agent Failed!")
+                    print("   -> Agent failed")
             else:
                 print(f"   -> [Inference Mode] No label, Result: {clean_verdict}")
             
@@ -288,7 +289,7 @@ if __name__ == "__main__":
             })
             
         except Exception as e:
-            print(f"❌ Error testing this paper: {e}")
+            print(f"Error testing this paper: {e}")
             
         time.sleep(2) 
         

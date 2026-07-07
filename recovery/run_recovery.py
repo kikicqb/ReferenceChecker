@@ -1,11 +1,4 @@
-"""
-run_recovery.py
-
-按四层流水线批量处理 agent 验证系统输出的 JSON。
-
-用法：
-    python run_recovery.py --pdf paper.pdf --results agent_results.json
-"""
+"""Batch-run the citation recovery pipeline over verifier results."""
 
 import json
 import time
@@ -60,9 +53,7 @@ def _is_supported(r: dict) -> bool:
 
 
 def _build_summary_lines(results: list[dict], pdf_path: str, results_path: str) -> list[str]:
-    """
-    生成汇总报告的文本行，供写文件和打印复用。
-    """
+    """Build summary lines for console and report output."""
     total  = len(results)
     failed = sum(1 for r in results if r.get("final_status") == "failed")
 
@@ -81,7 +72,6 @@ def _build_summary_lines(results: list[dict], pdf_path: str, results_path: str) 
         "=" * 60,
     ]
 
-    # ── Layer 2 Repair rate ──────────────────────────────────────
     if l2_all:
         n             = len(l2_all)
         repaired      = sum(1 for r in l2_all if r.get("layer2_status") == "repaired")
@@ -89,19 +79,18 @@ def _build_summary_lines(results: list[dict], pdf_path: str, results_path: str) 
         not_reached   = sum(1 for r in l2_all if r.get("final_status") == "failed")
         lines += [
             "",
-            f"【Layer 2 · Repair Rate】  (L2 n={n})",
+            f"Layer 2 - Repair Rate  (L2 n={n})",
             f"  Repaired:                    {repaired}/{n}  ({repaired/n:.0%})",
-            f"  Repair failed (→ treat L3):  {repair_failed}/{n}  ({repair_failed/n:.0%})",
+            f"  Repair failed (treat as L3):  {repair_failed}/{n}  ({repair_failed/n:.0%})",
             f"  Not reached (pipeline fail): {not_reached}/{n}  ({not_reached/n:.0%})",
         ]
 
-    # ── Layer 3 Semantic support rate ────────────────────────────
     supported_all = sum(1 for r in results if _is_supported(r))
     not_sup_all   = total - supported_all
     lines += [
         "",
-        f"【Layer 3 · Semantic Support Rate】  (all n={total})",
-        f"  Supported (S + PS, conf≥0.5):  {supported_all}/{total}  ({supported_all/total:.0%})",
+        f"Layer 3 - Semantic Support Rate  (all n={total})",
+        f"  Supported (S + PS, conf>=0.5):  {supported_all}/{total}  ({supported_all/total:.0%})",
         f"  Not supported / uncertain:     {not_sup_all}/{total}  ({not_sup_all/total:.0%})",
         f"    of which pipeline failed:    {failed}/{total}  ({failed/total:.0%})",
     ]
@@ -118,7 +107,6 @@ def _build_summary_lines(results: list[dict], pdf_path: str, results_path: str) 
     if breakdown:
         lines.append("  By level:  " + "    ".join(breakdown))
 
-    # ── Layer 4 Retrieval rate ───────────────────────────────────
     not_supported = [r for r in results if not _is_supported(r)]
     l4_verified   = [r for r in not_supported
                      if r.get("layer4_status") in ("retrieved", "partial")]
@@ -129,19 +117,18 @@ def _build_summary_lines(results: list[dict], pdf_path: str, results_path: str) 
     if n_ns:
         lines += [
             "",
-            f"【Layer 4 · Alternative Retrieval Rate】  (not-supported n={n_ns})",
+            f"Layer 4 - Alternative Retrieval Rate  (not-supported n={n_ns})",
             f"  Retrieved candidates:          {len(l4_found)}/{n_ns}  ({len(l4_found)/n_ns:.0%})",
             f"  Verified support (R+partial):  {len(l4_verified)}/{n_ns}  ({len(l4_verified)/n_ns:.0%})",
             f"  Retrieved but unverified:      {len(l4_unverified)}/{n_ns}  ({len(l4_unverified)/n_ns:.0%})",
             f"  Not retrieved / not reached:   {n_ns-len(l4_found)}/{n_ns}  ({(n_ns-len(l4_found))/n_ns:.0%})",
         ]
 
-    # ── Final status breakdown ───────────────────────────────────
     status_counts: dict[str, int] = {}
     for r in results:
         s = r.get("final_status", "unknown")
         status_counts[s] = status_counts.get(s, 0) + 1
-    lines += ["", f"【Final Status Breakdown】  (total={total})"]
+    lines += ["", f"Final Status Breakdown  (total={total})"]
     for s, c in sorted(status_counts.items()):
         lines.append(f"  {s}: {c}")
 
@@ -154,9 +141,7 @@ def _save_report(
     results_path: str,
     report_path: str
 ) -> None:
-    """
-    生成 .txt 报告文件：汇总在前，逐条 report 在后。
-    """
+    """Write summary and detailed reports to a text file."""
     summary_lines = _build_summary_lines(results, pdf_path, results_path)
 
     detail_lines = [
@@ -214,7 +199,6 @@ def run_pipeline(pdf_path: str, results_path: str) -> None:
         if i < len(to_process) - 1:
             time.sleep(5)
 
-    # 终端打印汇总（保留，方便实时查看）
     for line in _build_summary_lines(results, pdf_path, results_path):
         print(line)
 
@@ -222,12 +206,10 @@ def run_pipeline(pdf_path: str, results_path: str) -> None:
     json_path   = stem + "_pipeline.json"
     report_path = stem + "_pipeline_report.txt"
 
-    # 保存 JSON
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(citations, f, ensure_ascii=False, indent=2)
     print(f"\nJSON  saved to: {json_path}")
 
-    # 保存报告文件
     _save_report(results, pdf_path, results_path, report_path)
 
 

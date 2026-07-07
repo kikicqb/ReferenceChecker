@@ -1,7 +1,4 @@
-"""
-Step 0: 补跑 Grobid 提取正文
-你之前只跑了 processReferences，现在需要 processFulltextDocument
-"""
+"""Extract full text TEI from GROBID for semantic recovery."""
 import httpx
 import hashlib
 import time
@@ -58,15 +55,11 @@ def _load_or_request_xml(pdf_path: str) -> bytes:
 
 
 def extract_fulltext(pdf_path: str) -> tuple[str, etree._Element]:
-    """
-    返回: (纯文本正文, XML根节点)
-    - 纯文本: fallback 用于正则定位
-    - XML根节点: 首选，用 XPath 精准定位 <ref> 标签
-    """
+    """Return plain body text and the parsed TEI XML root."""
     xml_bytes = _load_or_request_xml(pdf_path)
     root = etree.fromstring(xml_bytes)
 
-    # 只取 body 部分，排除 reference list（避免定位到文末书目区域）
+    # Restrict extraction to the body so bibliography entries are not matched.
     body = root.find(".//tei:body", NAMESPACE)
     raw_text = " ".join(body.itertext()).strip() if body is not None else ""
 

@@ -5,7 +5,7 @@ import build_exp5_tex_bib as builder
 
 def main() -> None:
     builder.PDF_PATH = builder.Path(
-        "/Users/jiangxiaoqi/Desktop/毕设/References/"
+        "source_papers/"
         "Duplicate_Record_Detection_A_Survey.pdf"
     )
     builder.JSON_PATH = builder.ROOT / "json_datasets" / "exp3.json"

@@ -1,11 +1,4 @@
-"""
-retrieval.py  —  检索引擎
-
-Layer 2 Repair  → route_a_all(title)              CrossRef → S2 → OpenAlex → DBLP 依次查，任一命中即返回
-                  route_a_crossref(title)          CrossRef title 精准查（仍可单独调用）
-Layer 3/4       → route_b_semantic_scholar(claim) S2 语义查
-Layer 3 L1      → fetch_abstract_for_level1(title) S2/CrossRef 取 abstract
-"""
+"""Retrieval helpers for citation repair and semantic recovery."""
 
 import re
 import time
@@ -102,9 +95,7 @@ def _dedupe_candidates(candidates: list[dict]) -> list[dict]:
 
 
 def make_low_cost_queries(claim: str, max_queries: int = 3) -> list[str]:
-    """
-    规则生成短 query，不调用 Gemini。
-    """
+    """Generate short deterministic queries without an LLM call."""
     if not claim or claim.strip().upper() == "UNCERTAIN":
         return []
 
@@ -136,9 +127,8 @@ def make_low_cost_queries(claim: str, max_queries: int = 3) -> list[str]:
     return unique[:max_queries]
 
 
-# ── Layer 3 L1 专用：用 title 拿 abstract ────────────────────────────────
 def fetch_abstract_for_level1(title: str) -> dict | None:
-    """先查 S2，找不到 fallback 到 OpenAlex/CrossRef。"""
+    """Fetch an abstract for a known citation title."""
     if not title:
         return None
     result = _s2_by_title(title)
@@ -211,10 +201,10 @@ def route_a_by_doi(doi: str) -> tuple[list[dict], str]:
         resp.raise_for_status()
         item = resp.json().get("message", {})
         if item.get("title"):
-            print(f"  [Route A·DOI] CrossRef found: {item['title'][0][:60]}")
+            print(f"  [Route A DOI] CrossRef found: {item['title'][0][:60]}")
             return [_crossref_item_to_paper(item, "crossref_doi", 100)], "A_crossref_doi"
     except Exception as e:
-        print(f"  [Route A·DOI] CrossRef missed: {e}")
+        print(f"  [Route A DOI] CrossRef missed: {e}")
 
     try:
         resp = httpx.get(
@@ -228,20 +218,16 @@ def route_a_by_doi(doi: str) -> tuple[list[dict], str]:
         if paper.get("title"):
             paper["_source"] = "semantic_scholar_doi"
             paper["_fuzzy_score"] = 100
-            print(f"  [Route A·DOI] S2 found: {paper['title'][:60]}")
+            print(f"  [Route A DOI] S2 found: {paper['title'][:60]}")
             return [paper], "A_s2_doi"
     except Exception as e:
-        print(f"  [Route A·DOI] S2 missed: {e}")
+        print(f"  [Route A DOI] S2 missed: {e}")
 
     return [], "A_doi_no_match"
 
 
-# ── Layer 2 Repair：CrossRef title 检索 ──────────────────────────────────
 def route_a_crossref(title: str) -> tuple[list[dict], str]:
-    """
-    返回 (candidates, route_label)
-    candidates 按 fuzzy score 降序排列
-    """
+    """Search CrossRef by title and return fuzzy-matched candidates."""
     params  = {"query.title": title, "rows": 5,
                "select": "title,author,published,DOI,abstract"}
     headers = {"User-Agent": f"CitationRecovery/1.0 (mailto:{MAILTO})"}
@@ -273,12 +259,8 @@ def route_a_crossref(title: str) -> tuple[list[dict], str]:
     return [], "A_no_match"
 
 
-# ── Layer 2 Repair：OpenAlex title 检索 ──────────────────────────────────
 def route_a_openalex(title: str, fuzzy_threshold: int = 80) -> tuple[list[dict], str]:
-    """
-    用 OpenAlex 按 title 检索，补充 CrossRef/S2 覆盖不到的文献（书章节、灰色文献等）。
-    返回 (candidates, route_label)
-    """
+    """Search OpenAlex by title for candidates missed by CrossRef or S2."""
     params  = {"search": title, "per-page": 5,
                "select": "title,authorships,publication_year,doi,abstract_inverted_index"}
     try:
@@ -319,20 +301,16 @@ def route_a_openalex(title: str, fuzzy_threshold: int = 80) -> tuple[list[dict],
 
     if matched:
         matched.sort(key=lambda x: x["_fuzzy_score"], reverse=True)
-        print(f"  [Route A·OpenAlex] Matched {len(matched)} papers, "
+        print(f"  [Route A OpenAlex] Matched {len(matched)} papers, "
               f"best score={matched[0]['_fuzzy_score']}")
         return matched, "A_openalex"
 
-    print(f"  [Route A·OpenAlex] No fuzzy match (threshold={fuzzy_threshold})")
+    print(f"  [Route A OpenAlex] No fuzzy match (threshold={fuzzy_threshold})")
     return [], "A_openalex_no_match"
 
 
-# ── Layer 2 Repair：DBLP title 检索 ──────────────────────────────────────
 def route_a_dblp(title: str, fuzzy_threshold: int = 80) -> tuple[list[dict], str]:
-    """
-    用 DBLP 按 title+author 检索，覆盖 CS 领域会议论文。
-    返回 (candidates, route_label)
-    """
+    """Search DBLP by title for computer-science proceedings."""
     params = {"q": title, "format": "json", "h": 5}
     try:
         resp = httpx.get(DBLP_URL, params=params, timeout=15.0)
@@ -362,7 +340,7 @@ def route_a_dblp(title: str, fuzzy_threshold: int = 80) -> tuple[list[dict], str
                 "title": dblp_title,
                 "authors": authors,
                 "year": info.get("year"),
-                "abstract": "",          # DBLP 不提供 abstract
+                "abstract": "",
                 "externalIds": {"DOI": doi},
                 "citationCount": None,
                 "_source": "dblp",
@@ -371,48 +349,37 @@ def route_a_dblp(title: str, fuzzy_threshold: int = 80) -> tuple[list[dict], str
 
     if matched:
         matched.sort(key=lambda x: x["_fuzzy_score"], reverse=True)
-        print(f"  [Route A·DBLP] Matched {len(matched)} papers, "
+        print(f"  [Route A DBLP] Matched {len(matched)} papers, "
               f"best score={matched[0]['_fuzzy_score']}")
         return matched, "A_dblp"
 
-    print(f"  [Route A·DBLP] No fuzzy match (threshold={fuzzy_threshold})")
+    print(f"  [Route A DBLP] No fuzzy match (threshold={fuzzy_threshold})")
     return [], "A_dblp_no_match"
 
 
-# ── Layer 2 Repair：统一入口，四库依次查 ─────────────────────────────────
 def route_a_all(title: str) -> tuple[list[dict], str]:
-    """
-    CrossRef → S2 → OpenAlex → DBLP 依次检索，任一命中即返回。
-    DBLP 无 abstract，命中后尝试用 S2 补充 abstract。
-
-    返回 (candidates, route_label)
-    """
-    # 1. CrossRef
+    """Cascade CrossRef, S2, OpenAlex, and DBLP until one source matches."""
     candidates, route = route_a_crossref(title)
     if candidates:
         return candidates, route
 
-    # 2. Semantic Scholar（title 精准查，复用 _s2_by_title 封装成列表）
-    print("  [Route A] CrossRef missed → trying S2...")
+    print("  [Route A] CrossRef missed -> trying S2...")
     s2_paper = _s2_by_title(title)
     if s2_paper:
         s2_paper["_source"] = "semantic_scholar_repair"
         return [s2_paper], "A_s2"
 
-    # 3. OpenAlex
-    print("  [Route A] S2 missed → trying OpenAlex...")
+    print("  [Route A] S2 missed -> trying OpenAlex...")
     candidates, route = route_a_openalex(title)
     if candidates:
         return candidates, route
 
-    # 4. DBLP（CS 会议论文覆盖最强）
-    print("  [Route A] OpenAlex missed → trying DBLP...")
+    print("  [Route A] OpenAlex missed -> trying DBLP...")
     candidates, route = route_a_dblp(title)
     if candidates:
-        # DBLP 没有 abstract，尝试用 S2 补一下
         best = candidates[0]
         if not best.get("abstract"):
-            print("  [Route A·DBLP] No abstract, fetching from S2...")
+            print("  [Route A DBLP] No abstract, fetching from S2...")
             s2_paper = _s2_by_title(best["title"])
             if s2_paper and s2_paper.get("abstract"):
                 best["abstract"]      = s2_paper["abstract"]
@@ -424,17 +391,12 @@ def route_a_all(title: str) -> tuple[list[dict], str]:
     return [], "A_all_no_match"
 
 
-# ── Layer 3/4：S2 语义检索 ────────────────────────────────────────────────
 def route_b_semantic_scholar(
     claim: str,
     year_upper_bound: int | None = None,
     max_retries: int = 3
 ) -> tuple[list[dict], str]:
-    """
-    返回 (candidates, route_label)。
-    候选会标记 _has_abstract；没有 abstract 的候选仍保留给 retrieval 统计，
-    但后续只能算 retrieved_unverified，不能算 verified support。
-    """
+    """Search Semantic Scholar for semantic-recovery candidates."""
     if not claim or claim == "UNCERTAIN":
         print("  [Route B] Skipped: no valid claim")
         return [], "B_no_claim"
@@ -463,7 +425,6 @@ def route_b_semantic_scholar(
             resp.raise_for_status()
             data = resp.json().get("data", [])
 
-            # 有年份过滤但没结果 → 去掉年份重试一次
             if not data and year_upper_bound and "year" in params:
                 print("  [Route B] No results with year filter, retrying without...")
                 params.pop("year")
@@ -585,15 +546,12 @@ def route_b_multi_source(
     max_queries: int = 3,
     max_candidates: int = 12
 ) -> tuple[list[dict], str]:
-    """
-    Layer 4 用的低成本多路检索。
-    不调用 Gemini；每条 claim 最多生成 3 个短 query。
-    """
+    """Run low-cost multi-source retrieval for Layer 4 recovery."""
     queries = make_low_cost_queries(claim, max_queries=max_queries)
     if not queries:
         return [], "B_multi_no_claim"
 
-    print("  [Route B·Multi] Queries:")
+    print("  [Route B Multi] Queries:")
     for q in queries:
         print(f"    - {q}")
 
@@ -602,7 +560,6 @@ def route_b_multi_source(
         s2_candidates, _ = route_b_semantic_scholar(query, max_retries=1)
         all_candidates.extend(s2_candidates[:5])
 
-        # S2 对短 query 有时仍然 miss；OpenAlex/CrossRef 作为低成本补充。
         if i < 2:
             all_candidates.extend(_search_openalex_general(query, per_page=5))
             all_candidates.extend(_search_crossref_general(query, rows=5))
@@ -615,6 +572,6 @@ def route_b_multi_source(
     candidates = candidates[:max_candidates]
 
     with_abstract = sum(1 for p in candidates if p.get("_has_abstract"))
-    print(f"  [Route B·Multi] {len(candidates)} unique candidates, "
+    print(f"  [Route B Multi] {len(candidates)} unique candidates, "
           f"{with_abstract} with abstracts")
     return candidates, "B_multi"

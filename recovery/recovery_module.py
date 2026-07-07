@@ -1,18 +1,4 @@
-"""
-recovery_module.py  —  四层流水线
-
-Layer 1: Verification（由上游 agent 完成，输入 clean_verdict）
-Layer 2: Repair       仅 LEVEL_2_FLAWED，修正元数据 → canonical paper
-                      失败时降级为 LEVEL_3_FAKE 继续走
-Layer 3: Semantic check  仅验证已定位/已修复的 citation 是否支持 claim
-Layer 4: Retrieval    对 L3 或 Not Supported 的 citation 检索替代文献
-
-输出 result 字段说明
-  layer2_status   : "repaired" | "repair_failed" | "skipped"
-  semantic_verdict: "SUPPORTED" | "PARTIALLY_SUPPORTED" | "UNSUPPORTED" | "UNCERTAIN"
-  layer4_status   : "retrieved" | "partial" | "unverified" | "not_retrieved" | "skipped"
-  final_status    : 最终一句话结论
-"""
+"""Four-layer citation recovery pipeline."""
 
 import re
 from dataclasses import dataclass, field, asdict
@@ -32,37 +18,30 @@ from retrieval import (
 from verifier import rank_candidates, rank_candidates_batch, verify_one_candidate
 
 
-# ── 数据结构 ──────────────────────────────────────────────────────────────
 @dataclass
 class PipelineResult:
     original_title: str
-    input_verdict: str          # LEVEL_1_PERFECT / LEVEL_2_FLAWED / LEVEL_3_FAKE
+    input_verdict: str
 
-    # ── claim 提取 ──────────────────────────────────────────────────
     claim: str
     claim_confidence: float
     context_used: str
 
-    # ── Layer 2 ─────────────────────────────────────────────────────
     layer2_status: Literal["repaired", "repair_failed", "skipped"]
-    canonical_paper: dict | None        # repair 成功时有值
+    canonical_paper: dict | None
 
-    # ── Layer 3 ─────────────────────────────────────────────────────
-    semantic_verdict: str               # SUPPORTED / PARTIALLY_SUPPORTED / UNSUPPORTED / UNCERTAIN
+    semantic_verdict: str
     semantic_confidence: float
     semantic_justification: str
-    paper_used_for_semantic: dict | None   # L1/L2修复成功时就是那篇论文，否则为 None
+    paper_used_for_semantic: dict | None
 
-    # ── Layer 4 ─────────────────────────────────────────────────────
     layer4_status: Literal["retrieved", "partial", "unverified", "not_retrieved", "skipped"]
     alternative_papers: list[dict]  # ranked candidates, each has _verdict/_confidence/_justification
 
-    # ── 汇总 ────────────────────────────────────────────────────────
     final_status: str
     report: str
 
 
-# ── 辅助函数 ──────────────────────────────────────────────────────────────
 def _extract_year(text: str) -> int | None:
     matches = re.findall(r'\b(19|20)\d{2}\b', text)
     return min(int(m) for m in matches) if matches else None
@@ -116,7 +95,6 @@ def _has_retrievable_claim(claim: str, confidence: float) -> bool:
     return bool(claim and claim.strip().upper() != "UNCERTAIN")
 
 
-# ── 主模块 ────────────────────────────────────────────────────────────────
 class RecoveryModule:
     def __init__(self, gemini_api_key: str, pdf_path: str):
         self.client = genai.Client(api_key=gemini_api_key)
@@ -124,15 +102,12 @@ class RecoveryModule:
         self.raw_text, self.xml_root = extract_fulltext(pdf_path)
         print(f"[Pipeline] Fulltext ready ({len(self.raw_text)} chars)")
 
-    # ── 公开入口 ─────────────────────────────────────────────────────────
     def process(self, citation: dict) -> dict:
-        """
-        对单条 citation 跑完整四层流水线，返回 dict（可序列化）。
-        """
+        """Run the full pipeline for one citation."""
         title   = citation.get("title", "")
         verdict = citation.get("clean_verdict", "")
 
-        # Unknown Title → 尝试从 raw_agent_response 里提取
+        # Recover a usable title when GROBID produced a placeholder.
         if title == "Unknown Title":
             extracted = _extract_title_from_response(
                 citation.get("raw_agent_response", "")
@@ -149,7 +124,7 @@ class RecoveryModule:
         print(f"\n{'='*60}")
         print(f"[Pipeline] {verdict} | {title[:70]}")
 
-        # ── Claim 提取（所有 level 都需要）────────────────────────────
+        # Every layer needs a citation-local claim.
         print("\n[Claim] Locating citation and extracting claim...")
         claim, claim_conf, context = get_claim_for_citation(
             title=title,
@@ -166,18 +141,16 @@ class RecoveryModule:
             claim_conf = 0.1
             context = ""
 
-        # ── Layer 2: Repair（仅 LEVEL_2_FLAWED）─────────────────────
         layer2_status   = "skipped"
         canonical_paper = None
-        effective_verdict = verdict   # repair 失败时改为 LEVEL_3_FAKE
+        effective_verdict = verdict
 
         if verdict == "LEVEL_2_FLAWED":
             layer2_status, canonical_paper = self._layer2_repair(citation, title)
             if layer2_status == "repair_failed":
                 effective_verdict = "LEVEL_3_FAKE"
-                print("  [Layer 2] Repair failed → treating as LEVEL_3_FAKE")
+                print("  [Layer 2] Repair failed -> treating as LEVEL_3_FAKE")
 
-        # ── Layer 3: Semantic check ───────────────────────────────────
         print("\n[Layer 3] Semantic check...")
         sem_verdict, sem_conf, sem_just, paper_for_sem = self._layer3_semantic(
             claim=claim,
@@ -189,7 +162,6 @@ class RecoveryModule:
         )
         print(f"  semantic={sem_verdict} ({sem_conf:.0%})")
 
-        # ── Layer 4: Retrieval（仅 Not Supported）────────────────────
         layer4_status     = "skipped"
         alternative_papers = []
 
@@ -198,10 +170,9 @@ class RecoveryModule:
                 print("\n[Layer 4] Skipped: no reliable claim for retrieval")
                 layer4_status = "not_retrieved"
             else:
-                print("\n[Layer 4] Not supported → retrieving alternatives...")
+                print("\n[Layer 4] Not supported -> retrieving alternatives...")
                 layer4_status, alternative_papers = self._layer4_retrieval(claim)
 
-        # ── 汇总 ─────────────────────────────────────────────────────
         final_status = self._final_status(
             verdict, layer2_status, sem_verdict, sem_conf, layer4_status
         )
@@ -230,15 +201,10 @@ class RecoveryModule:
             final_status=final_status,
             report=report
         )
-        print(f"\n[Pipeline] Done → {final_status}")
+        print(f"\n[Pipeline] Done -> {final_status}")
         return asdict(result)
-
-    # ── Layer 2 ───────────────────────────────────────────────────────────
     def _layer2_repair(self, citation: dict, title: str) -> tuple[str, dict | None]:
-        """
-        修正元数据，并尽量补齐 abstract 供后续语义验证。
-        返回 (status, paper_or_None)
-        """
+        """Repair flawed metadata and enrich the canonical paper when possible."""
         raw_response = citation.get("raw_agent_response", "") or ""
 
         doi = _extract_doi_from_response(raw_response)
@@ -277,8 +243,6 @@ class RecoveryModule:
         print(f"  [Layer 2] Repaired: {best.get('title','?')[:60]} "
               f"(score={best.get('_fuzzy_score')})")
         return "repaired", best
-
-    # ── Layer 3 ───────────────────────────────────────────────────────────
     def _layer3_semantic(
         self,
         claim: str,
@@ -288,10 +252,7 @@ class RecoveryModule:
         raw_title: str,
         raw_year: int | None
     ) -> tuple[str, float, str, dict | None]:
-        """
-        返回 (semantic_verdict, confidence, justification, paper_used)
-        """
-        # L1：先拿 abstract，再验证
+        """Run semantic support checking for the cited paper entity."""
         if verdict == "LEVEL_1_PERFECT":
             paper = fetch_abstract_for_level1(raw_title)
             if not paper:
@@ -301,28 +262,20 @@ class RecoveryModule:
             )
             return sem_v, sem_c, sem_j, paper
 
-        # L2 修复成功：直接验证 canonical paper
         if verdict == "LEVEL_2_FLAWED" and canonical_paper is not None:
             sem_v, sem_c, sem_j = verify_one_candidate(
                 claim, canonical_paper, self.client, is_route_a=True
             )
             return sem_v, sem_c, sem_j, canonical_paper
 
-        # L3 / L2 repair failed：原 citation 没有可验证文献实体。
-        # 不在 Layer 3 里检索替代论文，否则会把 recovery 误算成 citation support。
+        # Alternative papers are handled only in Layer 4, not counted as citation support.
         return "UNSUPPORTED", 1.0, (
             "Input citation is Level 3 or repair-failed; no cited paper entity "
             "is available for semantic verification. Alternative evidence is "
             "handled in Layer 4 retrieval."
         ), None
-
-    # ── Layer 4 ───────────────────────────────────────────────────────────
     def _layer4_retrieval(self, claim: str) -> tuple[str, list[dict]]:
-        """
-        语义检索替代文献候选列表。
-        一次 Gemini 批量调用对所有候选打分，返回 (status, scored_papers)。
-        status 由得分最高的候选决定；所有通过的候选都返回供人类 review。
-        """
+        """Retrieve and rank alternative evidence candidates."""
         candidates, route = route_b_multi_source(claim)
         if not candidates:
             return "not_retrieved", []
@@ -356,11 +309,10 @@ class RecoveryModule:
             scored = candidates[:5]
         else:
             status = "not_retrieved"
-            scored = []   # 没有够格的候选，清空
+            scored = []
 
         return status, scored
 
-    # ── 汇总状态 ─────────────────────────────────────────────────────────
     def _final_status(
         self,
         verdict: str,
@@ -407,7 +359,6 @@ class RecoveryModule:
             else "L3_not_retrieved"
         )
 
-    # ── 报告生成 ──────────────────────────────────────────────────────────
     def _build_report(
         self,
         title, verdict, claim,
@@ -429,18 +380,18 @@ class RecoveryModule:
             if layer2_status == "repaired":
                 doi = (canonical_paper or {}).get("externalIds", {}).get("DOI", "N/A")
                 lines += [
-                    f"Layer 2 · Repair:  ✓ repaired",
+                    f"Layer 2 - Repair: repaired",
                     f"  Canonical paper: {(canonical_paper or {}).get('title','?')[:70]}",
                     f"  DOI:             {doi}",
                 ]
             else:
-                lines += ["Layer 2 · Repair:  ✗ failed → treated as Level 3"]
+                lines += ["Layer 2 - Repair: failed -> treated as Level 3"]
             lines.append("")
 
         # Layer 3
-        icon = "✓" if _is_supported(sem_verdict, sem_conf) else "✗"
+        icon = "yes" if _is_supported(sem_verdict, sem_conf) else "no"
         lines += [
-            f"Layer 3 · Semantic: {icon} {sem_verdict} ({sem_conf:.0%})",
+            f"Layer 3 - Semantic: {icon} {sem_verdict} ({sem_conf:.0%})",
             f"  {sem_just}",
         ]
         if paper_for_sem:
@@ -451,11 +402,11 @@ class RecoveryModule:
 
         # Layer 4
         if layer4_status == "skipped":
-            lines.append("Layer 4 · Retrieval: skipped (citation is supported)")
+            lines.append("Layer 4 - Retrieval: skipped (citation is supported)")
         elif layer4_status == "not_retrieved" or not alternative_papers:
-            lines.append("Layer 4 · Retrieval: ✗ no suitable alternative found")
+            lines.append("Layer 4 - Retrieval: ✗ no suitable alternative found")
         elif layer4_status == "unverified":
-            lines.append(f"Layer 4 · Retrieval: ? unverified  ({len(alternative_papers)} candidates)")
+            lines.append(f"Layer 4 - Retrieval: ? unverified  ({len(alternative_papers)} candidates)")
             for rank, alt in enumerate(alternative_papers, 1):
                 doi     = alt.get("externalIds", {}).get("DOI", "N/A")
                 authors = ", ".join(a.get("name", "") for a in alt.get("authors", [])[:3])
@@ -465,11 +416,11 @@ class RecoveryModule:
                 lines += [
                     f"  [{rank}] {alt.get('title','?')[:70]}",
                     f"       Authors: {authors or 'N/A'}  |  Year: {alt.get('year','N/A')}  |  DOI: {doi}",
-                    f"       UNCERTAIN — {just}",
+                    f"       UNCERTAIN - {just}",
                 ]
         else:
-            icon4 = "✓" if layer4_status == "retrieved" else "~"
-            lines.append(f"Layer 4 · Retrieval: {icon4} {layer4_status}  ({len(alternative_papers)} candidates)")
+            icon4 = "yes" if layer4_status == "retrieved" else "~"
+            lines.append(f"Layer 4 - Retrieval: {icon4} {layer4_status}  ({len(alternative_papers)} candidates)")
             for rank, alt in enumerate(alternative_papers, 1):
                 doi     = alt.get("externalIds", {}).get("DOI", "N/A")
                 authors = ", ".join(a.get("name", "") for a in alt.get("authors", [])[:3])
@@ -481,12 +432,11 @@ class RecoveryModule:
                 lines += [
                     f"  [{rank}] {alt.get('title','?')[:70]}",
                     f"       Authors: {authors}  |  Year: {alt.get('year','N/A')}  |  DOI: {doi}",
-                    f"       {v} ({conf:.0%}) — {just}",
+                    f"       {v} ({conf:.0%}) - {just}",
                 ]
         lines += ["", f"Final status: {final_status}"]
         return "\n".join(lines)
 
-    # ── 失败快速返回 ──────────────────────────────────────────────────────
     def _make_failed(self, title: str, verdict: str, reason: str) -> dict:
         return asdict(PipelineResult(
             original_title=title, input_verdict=verdict,

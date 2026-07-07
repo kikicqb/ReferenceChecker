@@ -1,9 +1,4 @@
-"""
-Step 3: 语义支持度验证
-
-对所有文献（LEVEL 1/2/3）验证 abstract 是否支持 claim。
-输出四级分类：SUPPORTED / PARTIALLY_SUPPORTED / UNSUPPORTED / UNCERTAIN
-"""
+"""Verify whether candidate paper evidence supports a citation claim."""
 
 import json
 import time
@@ -43,15 +38,12 @@ def verify_one_candidate(
     client,
     is_route_a: bool = False
 ) -> tuple[str, float, str]:
-    """
-    返回 (verdict, confidence, justification)
-    verdict: SUPPORTED / PARTIALLY_SUPPORTED / UNSUPPORTED / UNCERTAIN
-    """
+    """Return a semantic verdict, confidence, and short justification."""
     title = paper.get("title", "Unknown")
     abstract = (paper.get("abstract") or "").strip()
     year = paper.get("year", "Unknown")
 
-    # abstract 缺失时不能判断语义支持；title match 只能说明 metadata repair 可信。
+    # A title match can repair metadata, but semantic support needs evidence text.
     if not abstract:
         return "UNCERTAIN", 0.0, "No abstract available for semantic verification."
 
@@ -90,7 +82,7 @@ def verify_one_candidate(
         confidence = float(result.get("confidence", 0.0))
         justification = result.get("justification", "No justification provided.")
 
-        # 合법性检查
+        # Normalize invalid model output into a conservative fallback.
         valid_verdicts = ("SUPPORTED", "PARTIALLY_SUPPORTED", "UNSUPPORTED", "UNCERTAIN")
         if verdict not in valid_verdicts:
             verdict = "UNCERTAIN"
@@ -116,10 +108,7 @@ def rank_candidates(
     client,
     route: str
 ) -> list[tuple[dict, float, str]]:
-    """
-    对每篇候选论文做验证，过滤掉 UNSUPPORTED，按 confidence 降序返回。
-    LEVEL 1 只有一篇，直接验证返回。
-    """
+    """Verify candidates and keep non-unsupported results by confidence."""
     is_route_a = route == "A"
     ranked = []
 
@@ -130,7 +119,7 @@ def rank_candidates(
         verdict, confidence, justification = verify_one_candidate(
             claim, paper, client, is_route_a=is_route_a
         )
-        print(f"    → {verdict} ({confidence:.0%}): {justification[:80]}")
+        print(f"    -> {verdict} ({confidence:.0%}): {justification[:80]}")
 
         if verdict != "UNSUPPORTED":
             ranked.append((paper, confidence, justification, verdict))
@@ -138,7 +127,6 @@ def rank_candidates(
     ranked.sort(key=lambda x: x[1], reverse=True)
     return ranked
 
-# ── Layer 4 专用：批量验证，一次 Gemini 调用 ─────────────────────────────
 BATCH_NLI_PROMPT = """You are a scientific evidence evaluator.
 
 CLAIM (the assertion that needs to be supported):
@@ -166,18 +154,13 @@ def rank_candidates_batch(
     client,
     max_candidates: int = 5
 ) -> list[dict]:
-    """
-    一次 Gemini 调用对所有候选批量打分，返回 scored candidate list。
-    每个元素是原 paper dict 加上 verdict / confidence / justification 三个字段。
-    按 confidence 降序排列，过滤掉 UNSUPPORTED。
-    """
+    """Batch-rank candidates and keep non-unsupported results."""
     if not candidates:
         return []
 
     papers = candidates[:max_candidates]
     VALID = ("SUPPORTED", "PARTIALLY_SUPPORTED", "UNSUPPORTED", "UNCERTAIN")
 
-    # 构建 papers_block
     blocks = []
     for i, p in enumerate(papers, 1):
         abstract = (p.get("abstract") or "").strip()[:800]
@@ -206,13 +189,12 @@ def rank_candidates_batch(
             raw = raw.replace("```json", "").replace("```", "").strip()
             results = json.loads(raw)
 
-            # 解析并附加到 paper dict
             scored = []
             for item in results:
                 idx = item.get("index", 0) - 1
                 if not (0 <= idx < len(papers)):
                     continue
-                paper = dict(papers[idx])  # 拷贝，不污染原始数据
+                paper = dict(papers[idx])
                 verdict = item.get("verdict", "UNCERTAIN")
                 if verdict not in VALID:
                     verdict = "UNCERTAIN"
@@ -224,10 +206,9 @@ def rank_candidates_batch(
                 paper["_justification"] = justification
                 scored.append(paper)
 
-            # 过滤 UNSUPPORTED，按 confidence 降序
             scored = [p for p in scored if p["_verdict"] != "UNSUPPORTED"]
             scored.sort(key=lambda p: p["_confidence"], reverse=True)
-            print(f"  [Batch NLI] {len(papers)} candidates → {len(scored)} passed")
+            print(f"  [Batch NLI] {len(papers)} candidates -> {len(scored)} passed")
             return scored
 
         except json.JSONDecodeError:
