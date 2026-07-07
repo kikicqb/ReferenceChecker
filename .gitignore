@@ -1,14 +1,33 @@
 .env
+.env.*
+!.env.example
 config.ini
 secrets.json
 
 __pycache__/
+*.py[cod]
+.pytest_cache/
 
 venv/
 env/
+.venv/
 
 .DS_Store
 Thumbs.db
+
+# Local services and generated artifacts
+.grobid_cache/
+outputs/
+artifacts/
+source_papers/
+academic_references.txt
+artifacts/pdf_pages/
+grobid_datasets/*.pdf
 *_results.json
+*_pipeline.json
+*_pipeline_report.txt
+recovery/*.pdf
+recovery/semanticcite_dataset_cache.json
+recovery/semanticcite*.json
 test*.json
 json_to_text.py

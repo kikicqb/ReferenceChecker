@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 from pathlib import Path
 
-def extract_citations(pdf_path):
+def extract_citations(pdf_path, output_path=None):
     print(f"Parsing PDF: {pdf_path}...")
     
     # GROBID 
@@ -11,8 +11,10 @@ def extract_citations(pdf_path):
     
     try:
         # Send PDF
-        files = {'input': open(pdf_path, 'rb')}
-        resp = requests.post(url, files=files)
+        with open(pdf_path, 'rb') as pdf_file:
+            files = {'input': pdf_file}
+            resp = requests.post(url, files=files)
+        resp.raise_for_status()
         
         # Parse XML result
         soup = BeautifulSoup(resp.text, 'xml')
@@ -68,22 +70,23 @@ def extract_citations(pdf_path):
                 "raw_text": raw_text
             })
             
-        print(f"✅ Sucessfully extracted {len(citations)} citations。")
+        print(f"Successfully extracted {len(citations)} citations.")
 
-        with open(output_name, 'w', encoding='utf-8') as f:
-            json.dump(citations, f, ensure_ascii=False, indent=4)
+        if output_path:
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(citations, f, ensure_ascii=False, indent=4)
             
-        print(f"Results saved to: {output_name}")
+            print(f"Results saved to: {output_path}")
         return citations
 
     except Exception as e:
-        print(f"❌ Something went wrong with Grobid: {e}")
+        print(f"Something went wrong with Grobid: {e}")
         return []
 
 if __name__ == "__main__":
-    target_pdf = "grobid/exp5.pdf" 
+    target_pdf = "grobid_datasets/exp2.pdf" 
     
     path_obj = Path(target_pdf)
     output_name = str(path_obj.parent / f"{path_obj.stem}.json")
     
-    extract_citations(target_pdf)
+    extract_citations(target_pdf, output_name)
